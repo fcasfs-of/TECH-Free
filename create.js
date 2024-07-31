@@ -1,5 +1,5 @@
  var inpss454fod5rwles = document.getElementById('formingi');
- var inpss45435rwles_oid="";//video/*,audio/*
+ var inpss45435rwles_oid="video/*,audio/*
  var inpss454ftu35rwles_oid="";
   //if(listfrr_is["parameters"].mode=="1"){        var_versplayerpg=1;   var inpss454ftu35rwles_oid=" de Vídeo";  var inpss45435rwles_oid="video/*";   }
   //if(listfrr_is["parameters"].mode=="2"){     var_versplayerpg=2;   var inpss454ftu35rwles_oid=" de Áudio";  var inpss45435rwles_oid="audio/*";   }
