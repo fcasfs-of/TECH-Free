@@ -18,11 +18,11 @@ if(cc<1){
 }
 
 if(cc==1){  
-   fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":"https"+"://drive.cloud-fs.net/p/player.html",  });   
+   fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",  });   
  }
 
 if(cc>1){ 
-   fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":"https"+"://drive.cloud-fs.net/p/player.html",   });   
+   fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",   });   
 }
 
 
