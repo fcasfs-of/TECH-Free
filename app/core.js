@@ -1,5 +1,35 @@
 
-var settingsplayer={  color_icons:"FFFFFF", color_texts:"FFFFFF", config:" ", controls:0,  };   var listfrr_is={};   var fdplayeri;
+var settingsplayer={  
+id:"fs11",
+active:"yes",
+controls:0,
+typeplayer:1,
+modeplayer:"url",
+loop:0,
+autoplay:1,
+title:"",
+poster:"",
+files:#,
+fontstyle:"",
+textdecoration:"",
+texttransform:"",
+fontweight:"blod",
+colortexts:"FFFFFF",
+coloricons:"FFFFFF",
+volume:1,
+mute:0,
+menu:0,
+seek:0,
+share:0,
+showplaylist:0,
+fullscreen:0,
+contextmenu_display:"yes",
+share_disp:"no",
+contextmenu_namedisplay:"TECH - PLAYER: BETA",
+error:"",
+ }; 
+
+var listfrr_is={};   var fdplayeri;
 
 
 function stringno_valtext(id,g) {   var dfyyggdfgetLastdRofw=id;   if(id=="undefined"){     dfyyggdfgetLastdRofw=g;    }       if(id==undefined){     dfyyggdfgetLastdRofw=g;    }    return dfyyggdfgetLastdRofw;    }
