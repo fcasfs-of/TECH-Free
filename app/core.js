@@ -79,13 +79,13 @@ if(stringno_valtext(config.modeplayer,"")=="playlist"){       var settifgfgngmdo
 
 
 if(stringno_valtext(config.modeplayer,"")=="url"){       
-   settifgfgngmdoefillsfd=stringno_valtext(links,"");  
+   settifgfgngmdoefillsfd=links  
   if(stringno_valtext(links,"")==""){       settifgfgngmdoefillsfd="#";    }
 
     }
 
 if(stringno_valtext(config.modeplayer,"")=="playlist"){       
-   settifgfgngmdoefillsfd=stringno_valtext(links,"");  
+   settifgfgngmdoefillsfd=links;
   if(stringno_valtext(links,"")==""){       settifgfgngmdoefillsfd="#";    }
 
     }
