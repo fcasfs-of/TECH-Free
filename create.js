@@ -10,4 +10,4 @@
 inpss454fod5rwles.innerHTML='<inp'+'ut type="file" class="lk" id="inpssle" multiple="multiple" name="files" accept="'+inpss45435rwles_oid+'"/><br/><button class="btn" onclick="run_modelop();" id="infdfpssle" style="transition: 0.2s;width:90%"><div style="padding:4px;">Abrir Arquivo'+inpss454ftu35rwles_oid+'</div></button> ';
 
 
-isopenduuf(document.getElementById("zplayler"));
+//isopenduuf(document.getElementById("zplayler"));
