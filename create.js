@@ -1,7 +1,4 @@
 
-  var mdpl_handleFileSelectsa=[];    var mdpl_handleFilehistoicr=[];
-
-
  var inpss454fod5rwles = document.getElementById('formingi'); var inpss45435rwles_oid="video/*,audio/*"; var inpss454ftu35rwles_oid="";  var var_versplayerpg=1; 
 
   //if(listfrr_is["parameters"].mode=="1"){        var_versplayerpg=1;   var inpss454ftu35rwles_oid=" de Vídeo";  var inpss45435rwles_oid="video/*";   }
