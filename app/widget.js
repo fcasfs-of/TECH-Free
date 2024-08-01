@@ -167,7 +167,7 @@ inpssf45435rwles.onchange=function(){   opendtNav();    //insss667ddd.innerHTML=
 }
 
 
-isopenduuf(insss667ddd);
+//isopenduuf(insss667ddd);
 
 
  var inpss4infdfpssle5435rwles = document.getElementById('infdfpssle');
