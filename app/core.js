@@ -36,7 +36,7 @@ contextmenu_namedisplay:"TECH - PLAYER: BETA",
 error:"",
  }; 
 
-var listfrr_is={};   var fplayeri;
+var listfrr_is={};   var fplayeri;   var var_versionpropg="";
 
 
 function stringno_valtext(id,g) {   var dfyyggdfgetLastdRofw=id;   if(id=="undefined"){     dfyyggdfgetLastdRofw=g;    }       if(id==undefined){     dfyyggdfgetLastdRofw=g;    }    return dfyyggdfgetLastdRofw;    }
