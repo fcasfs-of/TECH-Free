@@ -1,5 +1,12 @@
 
 var settingsplayer={  
+ color_icons:"#63B8FF", color_texts:"#00EEEE", config:{
+fontstyle:"none",
+textdecoration:"none",
+texttransform:"none",
+textbold:true,
+}, controls:true,
+ 
 id:"fs11",
 active:"yes",
 controls:0,
