@@ -121,26 +121,26 @@ var inpsspldsetcusotmdfsddfszz = document.getElementById("zplayler");
 inpsspldsetcusotmdfsddfszz.innerHTML="";
 
 
-if(stringno_valtext(config.modeplayer,"")=="playlist"){       
-  var inpsdffyerd5rwles=settifgfgngmdoefillsfd.split(";");
+//  if(stringno_valtext(config.modeplayer,"")=="playlist"){       
+//   var inpsdffyerd5rwles=settifgfgngmdoefillsfd.split(";");
 
-      inpsdflffdddplaydrd5rwles=[];
+//       inpsdflffdddplaydrd5rwles=[];
 
- for(var xf=0;xf<inpsdffyerd5rwles.length;xf++){
+//  for(var xf=0;xf<inpsdffyerd5rwles.length;xf++){
 
-var inpsdfldfd_odles=":  ";
-    if(settifgfgngsplatitle==""){   inpsdfldfd_odles="";   }
+// var inpsdfldfd_odles=":  ";
+//     if(settifgfgngsplatitle==""){   inpsdfldfd_odles="";   }
 
-var inpsdf_ddfilelinkl=inpsdffyerd5rwles[xf];
-if(inpsdf_ddfilelinkl!=""){
+// var inpsdf_ddfilelinkl=inpsdffyerd5rwles[xf];
+// if(inpsdf_ddfilelinkl!=""){
 
-var inpsdf_ddfilelinklsf=inpsdflffdddplaydrd5rwles.length;
-  if(inpsdf_ddfilelinklsf<1){   inpsdf_ddfilelinklsf=0;  }
+// var inpsdf_ddfilelinklsf=inpsdflffdddplaydrd5rwles.length;
+//   if(inpsdf_ddfilelinklsf<1){   inpsdf_ddfilelinklsf=0;  }
 
-inpsdflffdddplaydrd5rwles[inpsdf_ddfilelinklsf]={ title:settifgfgngsplatitle+inpsdfldfd_odles+(inpsdf_ddfilelinklsf+1), file:inpsdf_ddfilelinkl };
-}
+// inpsdflffdddplaydrd5rwles[inpsdf_ddfilelinklsf]={ title:settifgfgngsplatitle+inpsdfldfd_odles+(inpsdf_ddfilelinklsf+1), file:inpsdf_ddfilelinkl };
+// }
 
-}
+// }
 
 
 //var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");
