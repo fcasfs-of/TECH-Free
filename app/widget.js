@@ -1,4 +1,4 @@
-  var mdpl_handleFileSelectsa=[];   var mdpl_handleFilehistoicr=[];
+   mdpl_handleFileSelectsa=[];    mdpl_handleFilehistoicr=[];
 
 
 function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
