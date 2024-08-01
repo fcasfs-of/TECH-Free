@@ -53,6 +53,50 @@ function stringno_valtext(id,g) {   var dfyyggdfgetLastdRofw=id;   if(id=="undef
 
 function is_playerd_allid(config, links, fplayeri){
 
+ var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");
+ fplayeri.api("unmute");
+
+
+fplayeri.api("volume", Number(stringno_valtext(config.volume,"1")));
+if(stringno_valtext(config.volume,"")==""){   fplayeri.api("volume", 1);    }
+
+
+
+ if(stringno_valtext(config.mute,"0")=="1"){   fplayeri.api("mute");    }
+
+ //if(stringno_valtext(config.mute,"0")=="0"){   fplayeri.api("unmute");    }
+
+
+
+ if(stringno_valtext(config.menu,"0")=="1"){   fplayeri.api("menu");    }
+
+
+
+fplayeri.api('seek',Number(stringno_valtext(config.pos_time,"0")));
+
+
+
+if(stringno_valtext(config.share,"0")=="1"){   fplayeri.api("share");    }
+
+if(stringno_valtext(config.showplaylist,"0")=="1"){   fplayeri.api("showplaylist");    }
+
+
+ if(stringno_valtext(config.fullscreen,"0")=="1"){   fplayeri.api("fullscreen");    }
+
+
+var configdcontextmenu_display="visible";
+if(config.contextmenu_display=="yes"){     configdcontextmenu_display="hidden";    }
+
+var configfcontextmenu_dnameisplay=stringno_valtext(config.contextmenu_namedisplay,"");
+if(configfcontextmenu_dnameisplay==""){     configfcontextmenu_dnameisplay="FCAS TECH:  Player";    }
+
+//var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");
+inpsspldsetcusotmdfsdfszz.innerHTML=inpsspldsetcusotmdfsdfszz.innerHTML+"<sty"+"le>pjsdiv[i=\"9\"]:before{  visibility: "+configdcontextmenu_display+";   content:'"+configfcontextmenu_dnameisplay+"'; }   #zplayler *, #zplayler *:before, #zplayler *:after{    "+settifgfgndsdddfsfontrollsfd+settifgfgngdfdsfsfontrollsfd+settifgfgngsplafyercontrollsfd+settifgfgngsplafyercontdrollsfd+settifgfgngsplafyercdsontrollsfd+settifgfgngsplafyercdsontsdrollsfd+"   }</st"+"yle>";
+
+
+//var inploaddedicontcusotmdfsddfszz = document.getElementById("loaddedicon");
+//inploaddedicontcusotmdfsddfszz.innerHTML="";
+
 
 }
 
