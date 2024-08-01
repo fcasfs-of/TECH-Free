@@ -4,8 +4,11 @@
 function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
 if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
 if(cc<1){  /*mdpl_handleselect(evt, [{"file":"#","title":"file","poster":"", "url":'',"timer":""},]);*/  }
-if(cc==1){     fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",  });    }
-if(cc>1){    fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",   });   }
+if(cc==1){      is_playerd_allid(settingsplayer, call, fdplayeri);
+  //fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",  });    }
+if(cc>1){    is_playerd_allid(settingsplayer, call, fdplayeri);
+  //fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",   }); 
+  }
 }
 
 
