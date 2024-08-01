@@ -1,67 +1,33 @@
+  var mdpl_handleFileSelectsa=[];   var mdpl_handleFilehistoicr=[];
 
 
+function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
+if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
 
-  var mdpl_handleFileSelectsa=[];
-
-var mdpl_handleFilehistoicr=[];
-
-
-function mdpl_handleselect(evt, call, cc, bmg){
-
-var mdpl_handleselectcontoels=0;
-if(settingsplayer){
-  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }
-}
-
-if(cc<1){
-  //mdpl_handleselect(evt, [{"file":"#","title":"file","poster":"", "url":'',"timer":""},]);
-}
-
-if(cc==1){  
-   fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",  });   
- }
-
-if(cc>1){ 
-   fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",   });   
-}
-
+if(cc<1){  /*mdpl_handleselect(evt, [{"file":"#","title":"file","poster":"", "url":'',"timer":""},]);*/  }
+if(cc==1){     fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",  });    }
+if(cc>1){    fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":"https"+"://fcasfs-of.github.io/TECH-Free",   });   }
 
 }
 
 
 function mdpl_hzandleselect(cc,cl){
 if(cc<1){cl();}
-
 else if(cc==1){ cl(); }
-
 else if(cc>1){ cl(); }
-
-
 }
 
 
 
-function mdpl_handleFileSelect(evt, call){
- mdpl_handleFileSelectsa=[];
-
-for(var x=0;x<evt.files.length;x++){
-mdpl_handleFileSelectsa[x]={"file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x)};
-}
-
-call(mdpl_handleFileSelectsa, evt.files.length);
-}
+function mdpl_handleFileSelect(evt, call){    mdpl_handleFileSelectsa=[];
+for(var x=0;x<evt.files.length;x++){  mdpl_handleFileSelectsa[x]={"file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x)};} call(mdpl_handleFileSelectsa, evt.files.length);   }
 
 
-var inpss45dfsdfszz = document.getElementById("myNav");
-var insss667ddd = document.getElementById("zplayler");
-var insss667zassddd = document.getElementById("zass");
+var inpss45dfsdfszz = document.getElementById("myNav");  var insss667ddd = document.getElementById("zplayler");   var insss667zassddd = document.getElementById("zass");
 
 
 function openNsdsd() {  
-
-var insss667zassdddaaddd = document.getElementById("zass");
-var zasss_ddfsfdsfsfd = pl_dispNav('contols_pls');
-
+var insss667zassdddaaddd = document.getElementById("zass");   var zasss_ddfsfdsfsfd = pl_dispNav('contols_pls');
 
 if(zasss_ddfsfdsfsfd.style.bottom=="0px"){
 if(var_versionpropg=="true"){
@@ -70,97 +36,68 @@ appsetupdfssplzzpronotsar.style.display="block";
 if(fullscreen===true){   
 appsetupdfssplzzpronotsar.style.display="none";
 }
-
 }
-
 insss667zassdddaaddd.style.bottom="94px";
-
 if(var_versionpropg=="true"){
 var appsetupdfssplzzpronotsar = document.getElementById('dfsspl-pronot');
 appsetupdfssplzzpronotsar.style.display="none";
 }
-
 }
 if(zasss_ddfsfdsfsfd.style.bottom=="-80px"){
 insss667zassdddaaddd.style.bottom="10px";
-
 if(var_versionpropg=="true"){
 var appsetupdfssplzzpronotsar = document.getElementById('dfsspl-pronot');
 appsetupdfssplzzpronotsar.style.display="block";
 if(fullscreen===true){   
 appsetupdfssplzzpronotsar.style.display="none";
 }
-
+}
 }
 
 }
 
-}
 
 
-
-var inpmyNavrunzz = document.getElementById("myNavrun");
-
-
-var batiir="false";
+var inpmyNavrunzz = document.getElementById("myNavrun");   var batiir="false";
 
 
 function opendtNav() {  var inpmyNavrunzz = document.getElementById("myNavrun");
 inpmyNavrunzz.innerHTML= '<div id="myNav" class="overlay">  <a href="javascript:void(0)" id="zass" class="closebtn csdslosebtn" onclick="closeNav(\'true\');">X</a>  <div class="overlay-content" style="transition: 0.2s;">  <div id="zplayler" style="width:100%;  height:100%;  transition: 0.2s;"></div>  </div>  </div>';  
-
-var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");
-inpsspldsetcusotmdfsdfszz.innerHTML="";
+var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");    inpsspldsetcusotmdfsdfszz.innerHTML="";
 if(settingsplayer){
-
-var settingsplayerhgonfig=""; 
+var settingsplayerhgonfig="";    
 if(settingsplayer.config){
-
 var custom_playersetti_gdu="font-style: "+settingsplayer.config.fontstyle+";   ";
 if(settingsplayer.config.fontstyle=="none"){    var custom_playersetti_gdu=" ";  }
 var customds_playersetti_gdu="text-decoration: "+settingsplayer.config.textdecoration+";   ";
 if(settingsplayer.config.textdecoration=="none"){    var customds_playersetti_gdu=" ";  }
 var custom_pfdlayersetti_gdu="text-transform: "+settingsplayer.config.texttransform+";   ";
 if(settingsplayer.config.texttransform=="none"){    var custom_pfdlayersetti_gdu=" ";  }
-
 var custom_pffgrsetti_gdu=" ";
 if(settingsplayer.config.textbold==true){    var custom_pffgrsetti_gdu="font-weight: bold; ";  }
-
 var settingsplayerhgonfig=custom_playersetti_gdu+customds_playersetti_gdu+custom_pfdlayersetti_gdu+custom_pffgrsetti_gdu;
-
-
 }
-
-
-
 inpsspldsetcusotmdfsdfszz.innerHTML="<sty"+"le>#zplayler *, #zplayler *:before, #zplayler *:after{     color:"+settingsplayer.color_texts+";  fill:"+settingsplayer.color_icons+";  "+settingsplayerhgonfig+"   }</st"+"yle>";
 }
-
+                      
 }
 
-function closedtNNav(cd) {  var inpmyNavrunzz = document.getElementById("myNavrun");
- inpmyNavrunzz.innerHTML="";    }
+function closedtNNav(cd) {  var inpmyNavrunzz = document.getElementById("myNavrun");     inpmyNavrunzz.innerHTML="";    }
 
 
 
-
-function openNav() {
-//penNsdsess="true";	
+function openNav() {    //penNsdsess="true";	
 var inpss45dfsdfszz = document.getElementById("myNav");
 var insss667ddd = document.getElementById("zplayler");
 var insss667zassddd = document.getElementById("zass");
-
 var inpss45dfsdfszz = document.getElementById("myNav");
-inpss45dfsdfszz.style.display = "block";
-
-//openNsdsd();
+inpss45dfsdfszz.style.display = "block";   //openNsdsd();
 }
 
 
 
 
-function run_modelop() {
-var inpss45435rwles = document.getElementById('inpssle');   inpss45435rwles.click();
-}
+function run_modelop() {    var inpss45435rwles = document.getElementById('inpssle');   inpss45435rwles.click();     }
 
 
 
