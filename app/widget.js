@@ -1,5 +1,3 @@
-   mdpl_handleFileSelectsa=[];    mdpl_handleFilehistoicr=[];
-
 
 function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
 if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
