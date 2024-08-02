@@ -9,7 +9,6 @@ textbold:true,
  
 id:"fs11",
 active:"yes",
-controls:"0",
 typeplayer:"1",
 modeplayer:"url",
 loop:"0",
