@@ -1,4 +1,11 @@
 
+function getUrlVars(fd) {
+    var vars = {};
+    var parts = fd.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+    function(m,key,value) {      vars[key] = value;    });
+    return vars;     }
+
+
 var settingsplayer={  
  color_icons:"#63B8FF", color_texts:"#00EEEE", config:{
 fontstyle:"none",
