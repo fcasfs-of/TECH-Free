@@ -38,7 +38,7 @@ is_playerd_allid(settingsplayer, call, fplayeri);
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);    
         }
 
-openf_osdcd(document.getElementById("zplayler"),3e3;
+openf_osdcd(document.getElementById(evt),3e3;
 
 }
 
