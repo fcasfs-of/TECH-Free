@@ -3,7 +3,9 @@
   var mdpl_handleFileSelectsa=[];    var mdpl_handleFilehistoicr=[];
 
   var osdposito="top-left";    var osdpositdo="absolute";
-  
+
+var api_tok={ link_def:"https://fcasfs-of.github.io/", file_def:"TECH-Free/", api_link_def:"https://drive-files.cloud-fs.net", api_link_file_def:"/p/player-embed.html" };
+
 
 
  function openf_osdcd(plsayer, timf){     var openf_osdcd_time=timf;
@@ -33,10 +35,10 @@ var vars = fplayeri.api("vars");
 function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
 if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
 if(cc<1){  /*mdpl_handleselect(evt, [{"file":"#","title":"file","poster":"", "url":'',"timer":""},]);*/  }
-if(cc==1){     fplayeri = new Playerjs({vars:{}, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":location.href,  });    
+if(cc==1){     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":location.href,  });    
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);      
-if(cc>1){    fplayeri = new Playerjs({vars:{}, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,   }); 
+if(cc>1){    fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,   }); 
 is_playerd_allid(settingsplayer, call, fplayeri);    
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);   
         } 
