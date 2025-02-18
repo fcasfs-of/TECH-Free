@@ -4,14 +4,23 @@
 
   var osdposito="top-left";    var osdpositdo="absolute";
 
+var vars={};   var vars_v={};
+
 var api_tok={ link_def:"https://fcasfs-of.github.io/", file_def:"TECH-Free/", api_link_def:"https://drive-files.cloud-fs.net", api_link_file_def:"/p/player-embed.html" };
 
 
 
  function openf_osdcd(plsayer, timf){     var openf_osdcd_time=timf;
 
-     plsayer.addEventListener("init",function(){        
-   var vars = fplayeri.api("vars");
+     plsayer.addEventListener("init",function(){    
+       var seytif="";
+    vars = fplayeri.api("vars");
+    vars_v=api_tok;
+
+       for(var xapi_tok=0;xapi_tok<api_tok.length;xapi_tok++){ 
+       if(api_tok[xapi_tok]!="" && api_tok[xapi_tok]!=null){   seytif=seytif+api_tok[xapi_tok]+"&";   }
+       }
+    plsayer.setAttribute("vars",seytif);
        
     });  
                                      
