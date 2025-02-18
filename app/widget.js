@@ -34,14 +34,11 @@ if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcont
 if(cc<1){  /*mdpl_handleselect(evt, [{"file":"#","title":"file","poster":"", "url":'',"timer":""},]);*/  }
 if(cc==1){     fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":location.href,  });    
 is_playerd_allid(settingsplayer, call, fplayeri);  
- is_playerd_allid(getUrlVars(location.href), call, fplayeri);           }
+ is_playerd_allid(getUrlVars(location.href), call, fplayeri);       openf_osdcd(document.getElementById(evt),3e3);    }
 if(cc>1){    fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,   }); 
 is_playerd_allid(settingsplayer, call, fplayeri);    
- is_playerd_allid(getUrlVars(location.href), call, fplayeri);    
+ is_playerd_allid(getUrlVars(location.href), call, fplayeri);    openf_osdcd(document.getElementById(evt),3e3);
         }
-
-openf_osdcd(document.getElementById("zplayler"),3e3);
-
 }
 
 
