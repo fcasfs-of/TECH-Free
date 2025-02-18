@@ -16,7 +16,7 @@ var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files
     vars = fplayeri.api("vars");
     vars_v=api_tok;
 
-    plsayer.setAttribute("vars",api_tok.join("&");
+    plsayer.setAttribute("vars",api_tok.join("&"));
        
     });  
                                      
