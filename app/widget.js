@@ -12,9 +12,10 @@ var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files
 
  function openf_osdcd(plsayer, timf){     var openf_osdcd_time=timf;
 
+  plsayer.setAttribute("vars"," ");
      plsayer.addEventListener("init",function(){    
     vars = fplayeri.api("vars");
-    plsayer.setAttribute("vars",api_tok.join("&"));
+    plsayer.setAttribute("vars",vars.join("&"));
     });  
                                      
    plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
