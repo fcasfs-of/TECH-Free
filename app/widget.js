@@ -2,6 +2,8 @@
 
   var mdpl_handleFileSelectsa=[];    var mdpl_handleFilehistoicr=[];
 
+  var osdposito="top-left";    var osdpositdo="absolute";
+  
 
 
  function openf_osdcd(plsayer, timf){     var openf_osdcd_time=timf;
