@@ -15,9 +15,10 @@ var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files
   plsayer.setAttribute("vars"," ");
      plsayer.addEventListener("init",function(){    
     vars = fplayeri.api("vars");
-    plsayer.setAttribute("vars",kl.join("&"));
     });  
-                                     
+    if(kl && kl.join("&")!="&" && kl.join("&")!=null){  plsayer.setAttribute("vars",kl.join("&"));  }
+                                        
+                                        
    plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
     plsayer.addEventListener("new",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
     plsayer.addEventListener("exitfullscreen",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Saindo da Tela Cheia', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
