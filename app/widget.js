@@ -4,7 +4,7 @@
 
   var osdposito="top-left";    var osdpositdo="absolute";
 
-var vars={};   var vars_v={};
+var vars=[];   var vars_v=[];
 
 var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files.cloud-fs.net", "/p/player-embed.html" ];
 
