@@ -13,14 +13,10 @@ var api_tok={ link_def:"https://fcasfs-of.github.io/", file_def:"TECH-Free/", ap
  function openf_osdcd(plsayer, timf){     var openf_osdcd_time=timf;
 
      plsayer.addEventListener("init",function(){    
-       var seytif="";
+       
     vars = fplayeri.api("vars");
     vars_v=api_tok;
-
-       for(var xapi_tok=0;xapi_tok<api_tok.length;xapi_tok++){ 
-       if(api_tok[xapi_tok]!="" || api_tok[xapi_tok]!=null){   seytif=seytif+api_tok[xapi_tok]+"&";   }
-       }
-    plsayer.setAttribute("vars",seytif);
+    plsayer.setAttribute("vars",api_tok.join("&"));
        
     });  
                                      
