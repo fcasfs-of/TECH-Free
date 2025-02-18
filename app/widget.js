@@ -10,13 +10,14 @@ var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files
 
 
 
- function openf_osdcd(plsayer, timf,kl){     var openf_osdcd_time=timf;
+ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
 
-  plsayer.setAttribute("vars"," ");
+  if(obb){  obb.innerHTML="";   }
+
      plsayer.addEventListener("init",function(){    
     vars = fplayeri.api("vars");
     });  
-    if(kl && kl.join("&")!="&" && kl.join("&")!="" && kl.join("&")!=null){  plsayer.setAttribute("vars",kl.join("&"));  }
+    if(kl && kl.join("&")!="&" && kl.join("&")!="" && kl.join("&")!=null){  if(obb){  obb.innerHTML="<scr"+"pt>{\""+kl.join(",\"")+"}</scr"+"pt>";   }    }
                                         
                                         
    plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
@@ -50,7 +51,7 @@ if(cc>1){    fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_hand
 is_playerd_allid(settingsplayer, call, fplayeri);    
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);   
         } 
- openf_osdcd(document.getElementById("zplayler"),3e3, api_tok);    }
+ openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok);    }
 }
 
 
@@ -101,7 +102,7 @@ appsetupdfssplzzpronotsar.style.display="none";
 var inpmyNavrunzz = document.getElementById("myNavrun");   var batiir="false";
 
 function opendtNav() {  var inpmyNavrunzz = document.getElementById("myNavrun");
-inpmyNavrunzz.innerHTML= '<div id="myNav" class="overlay">  <a href="javascript:void(0)" id="zass" class="closebtn csdslosebtn" onclick="closeNav(\'true\');">X</a>  <div class="overlay-content" style="transition: 0.2s;">  <div id="zplayler" style="width:100%;  height:100%;  transition: 0.2s;"></div>  </div>  </div>';  
+inpmyNavrunzz.innerHTML= '<div id="myNav" class="overlay">  <a href="javascript:void(0)" id="zass" class="closebtn csdslosebtn" onclick="closeNav(\'true\');">X</a>  <div class="overlay-content" style="transition: 0.2s;">  <span id="zplaylert"></span>  <div id="zplayler" style="width:100%;  height:100%;  transition: 0.2s;"></div>  </div>  </div>';  
 var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");    inpsspldsetcusotmdfsdfszz.innerHTML="";
 if(settingsplayer){
 var settingsplayerhgonfig="";    
