@@ -9,7 +9,11 @@ var api_tok={ link_def:"https://fcasfs-of.github.io/", file_def:"TECH-Free/", ap
 
 
  function openf_osdcd(plsayer, timf){     var openf_osdcd_time=timf;
-var vars = fplayeri.api("vars");
+
+     plsayer.addEventListener("init",function(){        
+   var vars = fplayeri.api("vars");
+       
+    });  
                                      
    plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
     plsayer.addEventListener("new",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
