@@ -4,6 +4,29 @@
 
 
 
+ function openf_osdcd(plsayer, timf){     var openf_osdcd_time=timf;
+     
+   plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plsayer.addEventListener("new",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plsayer.addEventListener("exitfullscreen",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Saindo da Tela Cheia', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
+    plsayer.addEventListener("fullscreen",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Tela Cheia', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+    plsayer.addEventListener("end",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Finalizando', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+    plsayer.addEventListener("finish",function(){       Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Terminado', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+    plsayer.addEventListener("volume",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(fplayeri.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
+    plsayer.addEventListener("seek",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(fplayeri.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
+    plsayer.addEventListener("userseek",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(adpi.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
+    plsayer.addEventListener("unmute",function(){      Snackbar.show({ duration:openf_osdcd_time, text: 'Som Ativo', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+    plsayer.addEventListener("mute",function(){     Snackbar.show({ duration:openf_osdcd_time, text: 'Mutado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plsayer.addEventListener("pause",function(){      Snackbar.show({ duration:openf_osdcd_time, text: 'Pausado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plsayer.addEventListener("stop",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Parado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'     });      });
+    plsayer.addEventListener("play",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Reproduzindo', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
+     plsayer.addEventListener("next",function(){       Snackbar.show({ duration:openf_osdcd_time, text: ''+fplayeri.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
+    plsayer.addEventListener("previous",function(){       Snackbar.show({ duration:openf_osdcd_time, text: ''+fplayeri.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
+    plsayer.addEventListener("speed",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Velocidade: '+fplayeri.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
+ }
+
+
+
 function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
 if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
 if(cc<1){  /*mdpl_handleselect(evt, [{"file":"#","title":"file","poster":"", "url":'',"timer":""},]);*/  }
@@ -14,6 +37,9 @@ if(cc>1){    fplayeri = new Playerjs({id:evt, nocontrols:mdpl_handleselectcontoe
 is_playerd_allid(settingsplayer, call, fplayeri);    
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);    
         }
+
+openf_osdcd(document.getElementById("zplayler"),3e3;
+
 }
 
 
