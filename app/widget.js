@@ -17,8 +17,10 @@ var api_tok={ link_def:"https://fcasfs-of.github.io/", file_def:"TECH-Free/", ap
     vars = fplayeri.api("vars");
     vars_v=api_tok;
 
-       for (var prop in api_tok) {
-        if(api_tok[prop]!="" && api_tok[prop]!=null) {   api_toks=api_toks+api_tok[prop]+"&";  }
+       api_tok.forEach(function(entry) {
+  if(entry!="" && entry!=null) {   api_toks=api_toks+entry+"&";  }
+});
+       
 }
     plsayer.setAttribute("vars",api_toks);
        
