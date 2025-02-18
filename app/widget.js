@@ -4,7 +4,7 @@
 
   var osdposito="top-left";    var osdpositdo="absolute";
 
-var vars=[];   var vars_v=[];
+var vars={};   
 
 var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files.cloud-fs.net", "/p/player-embed.html" ];
 
@@ -14,10 +14,7 @@ var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files
 
      plsayer.addEventListener("init",function(){    
     vars = fplayeri.api("vars");
-    vars_v=api_tok;
-
     plsayer.setAttribute("vars",api_tok.join("&"));
-       
     });  
                                      
    plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
