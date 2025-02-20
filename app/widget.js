@@ -11,7 +11,7 @@ var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files
 
 var mdpl_handlefFileSelectsa=[];
 
-function mdpld_handleFileSelect(evt, call,mkk, jj){
+function mdpld_handleFileSelect(evt, call, mkk, jj){
  mdpl_handlefFileSelectsa=[];
 
 for(var x=0;x<evt.files.length;x++){
@@ -62,11 +62,12 @@ if(cc==1){     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_ha
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);      
 if(cc>1){   
-  mdpld_handleFileSelect(evt, function(tb, cc, mk, jhj){
-    fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:tb, poster:"", player:bmg,"url":location.href,   }); 
+  var localhs={};
+  mdpld_handleFileSelect(evt, function(tb, cc, mk, jhj){   localhs= tb;  }, 0, 0);
+
+     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:localhs, poster:"", player:bmg,"url":location.href,   }); 
 is_playerd_allid(settingsplayer, call, fplayeri);    
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);   
-  },0, 0);
         } 
  openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok);    }
 }
