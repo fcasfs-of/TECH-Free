@@ -63,14 +63,11 @@ else if(cc==1){     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:md
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);      
 else if(cc>1){   
-   localhs=[];
-for(var x=0;x<evt.files.length;x++){
-localhs[x]={ "file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x), id:"sv"+(x) };
-}
-     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:localhs, poster:"", player:bmg,"url":location.href,  });    
+     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,  });    
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);   
         } 
+                                               
  openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok);    }
 }
 
