@@ -62,9 +62,10 @@ if(cc==1){     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_ha
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);      
 if(cc>1){   
-  var localhs={};
-  mdpld_handleFileSelect(evt, function(tb, cc, mk, jhj){   localhs= tb;  }, 0, 0);
-
+  var localhs=[];
+for(var x=0;x<evt.files.length;x++){
+localhs[x]={ "file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x), id:"sv"+(x)};
+}
      fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:localhs, poster:"", player:bmg,"url":location.href,   }); 
 is_playerd_allid(settingsplayer, call, fplayeri);    
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);   
