@@ -9,16 +9,16 @@ var vars={};
 var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files.cloud-fs.net", "/p/player-embed.html" ];
 
 
-var mdpl_handleFileSelectsa=[];
+var mdpl_handlefFileSelectsa=[];
 
-function mdpl_handleFileSelect(evt, call,mkk, jj){
- mdpl_handleFileSelectsa=[];
+function mdpld_handleFileSelect(evt, call,mkk, jj){
+ mdpl_handlefFileSelectsa=[];
 
 for(var x=0;x<evt.files.length;x++){
-mdpl_handleFileSelectsa[x]={ "file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x), id:"sv"+(x)};
+mdpl_handlefFileSelectsa[x]={ "file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x), id:"sv"+(x)};
 }
 
-call(mdpl_handleFileSelectsa, evt.files.length, mkk, jj);
+call(mdpl_handlefFileSelectsa, evt.files.length, mkk, jj);
 }
 
 
@@ -62,7 +62,7 @@ if(cc==1){     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_ha
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);      
 if(cc>1){   
-  mdpl_handleFileSelect(evt, function(tb, cc, mk, jhj){
+  mdpld_handleFileSelect(evt, function(tb, cc, mk, jhj){
     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:tb, poster:"", player:bmg,"url":location.href,   }); 
 is_playerd_allid(settingsplayer, call, fplayeri);    
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);   
