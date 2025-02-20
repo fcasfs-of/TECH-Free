@@ -4,7 +4,7 @@
 
   var osdposito="top-left";    var osdpositdo="absolute";
 
-var vars={};   
+var vars={};     var  localhs=[];
 
 var api_tok=[ "https://fcasfs-of.github.io/", "TECH-Free/", "https://drive-files.cloud-fs.net", "/p/player-embed.html" ];
 
@@ -57,14 +57,15 @@ call(mdpl_handlefFileSelectsa, evt.files.length, mkk, jj);
 
 function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
 if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
-if(cc<1){  /*mdpl_handleselect(evt, [{"file":"#","title":"file","poster":"", "url":'',"timer":""},]);*/  }
+                                               
+if(cc<1){    }
 else if(cc==1){     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":location.href,  });    
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);      
 else if(cc>1){   
-  var localhs=[];
+   localhs=[];
 for(var x=0;x<evt.files.length;x++){
-localhs[x]={ "file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x), id:"sv"+(x)};
+localhs[x]={ "file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x), id:"sv"+(x) };
 }
      fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:1, loop:0, title:"", file:localhs, poster:"", player:bmg,"url":location.href,   }); 
 is_playerd_allid(settingsplayer, call, fplayeri);    
