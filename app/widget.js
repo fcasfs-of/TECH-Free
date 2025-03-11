@@ -121,7 +121,7 @@ appsetupdfssplzzpronotsar.style.display="none";
 var inpmyNavrunzz = document.getElementById("myNavrun");   var batiir="false";
 
 function opendtNav() {  var inpmyNavrunzz = document.getElementById("myNavrun");
-inpmyNavrunzz.innerHTML= '<div id="myNav" class="overlay">  <a href="javascript:void(0)" id="zass" class="closebtn csdslosebtn" onclick="closeNav(\'true\');">X</a>  <div class="overlay-content" style="transition: 0.2s;">  <span id="zplaylert"></span>  <div id="zplayler" style="width:100%;  height:100%;  transition: 0.2s;"></div>  </div>  </div>';  
+inpmyNavrunzz.innerHTML= '<div id="myNav" class="overlay">  <button style="cursor:pointer;" id="zass" class="closebtn csdslosebtn" onclick="closeNav(\'true\');">X</button>  <div class="overlay-content" style="transition: 0.2s;">  <span id="zplaylert"></span>  <div id="zplayler" style="width:100%;  height:100%;  transition: 0.2s;"></div>  </div>  </div>';  
 var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");    inpsspldsetcusotmdfsdfszz.innerHTML="";
 if(settingsplayer){
 var settingsplayerhgonfig="";    
