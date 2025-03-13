@@ -177,7 +177,8 @@ inpss45dfsdfszz.style.display = "none";     insss667zassddd.style.display="none"
 
 if(cd=="true"){  
  batiir="false";    insss667ddd.innerHTML="";   pl_dispNav("zplayler").innerHTML="";
-  //inpss45dfsdfszz.style.display="none";   //location.reload();
+  //inpss45dfsdfszz.style.display="none";   
+  location.reload();
    }
 else if(cd=="false"){       batiir="true";    
   }
