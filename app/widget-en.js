@@ -28,3 +28,26 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
  }
 
 
+
+function opendtNav() {  var inpmyNavrunzz = document.getElementById("myNavrun");
+inpmyNavrunzz.innerHTML= '<div id="myNav" class="overlay">  <button style="cursor:pointer;" id="zass" class="closebtn csdslosebtn" onclick="closeNav(\'true\');" data-tooltip="Close File" data-flow="right">X</button>  <div class="overlay-content" style="transition: 0.2s;">  <span id="zplaylert"></span>  <div id="zplayler" style="width:100%;  height:100%;  transition: 0.2s;"></div>  </div>  </div>';  
+var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");    inpsspldsetcusotmdfsdfszz.innerHTML="";
+if(settingsplayer){
+var settingsplayerhgonfig="";    
+if(settingsplayer.config){
+var custom_playersetti_gdu="font-style: "+settingsplayer.config.fontstyle+";   ";
+if(settingsplayer.config.fontstyle=="none"){    var custom_playersetti_gdu=" ";  }
+var customds_playersetti_gdu="text-decoration: "+settingsplayer.config.textdecoration+";   ";
+if(settingsplayer.config.textdecoration=="none"){    var customds_playersetti_gdu=" ";  }
+var custom_pfdlayersetti_gdu="text-transform: "+settingsplayer.config.texttransform+";   ";
+if(settingsplayer.config.texttransform=="none"){    var custom_pfdlayersetti_gdu=" ";  }
+var custom_pffgrsetti_gdu=" ";
+if(settingsplayer.config.textbold==true){    var custom_pffgrsetti_gdu="font-weight: bold; ";  }
+var settingsplayerhgonfig=custom_playersetti_gdu+customds_playersetti_gdu+custom_pfdlayersetti_gdu+custom_pffgrsetti_gdu;
+}
+inpsspldsetcusotmdfsdfszz.innerHTML="<sty"+"le>#zplayler *, #zplayler *:before, #zplayler *:after{     color:"+settingsplayer.color_texts+";  fill:"+settingsplayer.color_icons+";  "+settingsplayerhgonfig+"   }</st"+"yle>";
+}
+                      
+                     }
+
+
