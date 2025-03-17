@@ -12,7 +12,7 @@ var getdisble=getUrlParameter("btn_lang");
 
 var sdsgetdisble ='';
 if(fsPageURL.split('?')){
-     sdsgetdisble ='<br/><br/><button class="btn" onclick="mchangelag(\\\'/en?'+fsPageURL.split('?')[1]+'\\\');" style="transition: 0.2s;width:90%"><div style="padding:4px;">Mudar Idioma para Inglês</div></button>';
+     //sdsgetdisble ='<br/><br/><button class="btn" onclick="mchangelag(\\\'/en?'+fsPageURL.split('?')[1]+'\\\');" style="transition: 0.2s;width:90%"><div style="padding:4px;">Mudar Idioma para Inglês</div></button>';
 }
 if(getdisble && getdisble=="no"){   sdsgetdisble='';    }
 
