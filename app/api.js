@@ -22,6 +22,15 @@ function convertSecondsDurationto(duration){
 
 
 
+  function PlayerSize(df,wid,hei){
+       var inssdsd = document.getElementById(df);  
+       if(inssdsd){
+           if(wid && wid!="" && wid!=null && wid!="undefined"){   inssdsd.style.width=wid;    }
+           if(hei && hei!="" && hei!=null && hei!="undefined"){   inssdsd.style.height=hei;    }
+       }
+  }
+
+
   function startOSD(df){
 function get_odsd(id){  var get_odsdhy=document.body;       var insssd = document.getElementById("oframe"+id);     if(insssd){   get_odsdhy=insssd;     }      return get_odsdhy;  }
 
