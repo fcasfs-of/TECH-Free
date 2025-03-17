@@ -2,7 +2,7 @@
 function get_odsd(id){  var get_odsdhy=document;
 var insssd = document.getElementById(id); 
 if(insssd){   get_odsdhy=insssd;   }
-return ;  }
+return get_odsdhy;  }
 
 
  
