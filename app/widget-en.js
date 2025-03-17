@@ -1,3 +1,7 @@
+function onget_d(df){  return df+" Files"; }
+
+
+
 function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
 
   if(obb){  obb.innerHTML="";   }
