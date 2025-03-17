@@ -13,7 +13,7 @@ inpss454fod5rwles.innerHTML='<inp'+'ut type="file" class="lk" id="inpssle" multi
 
 var sdsgetdisble ='';
 if(fsPageURL.split('?')){
-     sdsgetdisble ='<br/><br/><button class="btn" onclick="mchangelag(\\\'/en?'+fsPageURL.split('?')[1]+'\\\');" style="transition: 0.2s;width:90%"><div style="padding:4px;">Mudar Idioma para Inglês</div></button>';
+     sdsgetdisble ='<br/><br/><button class="btn" onclick="mchangelag(\'/en?'+fsPageURL.split('?')[1]+'\');" style="transition: 0.2s;width:90%"><div style="padding:4px;">Mudar Idioma para Inglês</div></button>';
 }
 if(getdisble=="no"){   sdsgetdisble='';    }
 inpss454fod5rwles.innerHTML=inpss454fod5rwles.innerHTML+sdsgetdisble;
