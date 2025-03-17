@@ -1,7 +1,7 @@
 
 
 var getdisble=getUrlParameter("btn_lang");
-    var fsPageURL = decodeURIComponent(location.href);
+    var fsPageURL = location.href;
 
 
  var inpss454fod5rwles = document.getElementById('formingi');   var inpss45435rwles_oid="video/*,audio/*"; var inpss454ftu35rwles_oid="";   var var_versplayerpg=1; 
@@ -11,7 +11,7 @@ var getdisble=getUrlParameter("btn_lang");
 
 
 var sdsgetdisble ='';
-if(fsPageURL.split('?')){
+if(fsPageURL && fsPageURL.split('?')){
      //sdsgetdisble ='<br/><br/><button class="btn" onclick="mchangelag(\\\'/en?'+fsPageURL.split('?')[1]+'\\\');" style="transition: 0.2s;width:90%"><div style="padding:4px;">Mudar Idioma para Inglês</div></button>';
 }
 if(getdisble && getdisble=="no"){   sdsgetdisble='';    }
