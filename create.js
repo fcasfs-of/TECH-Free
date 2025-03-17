@@ -12,7 +12,7 @@ var getdisble=getUrlParameter("btn_lang");
 inpss454fod5rwles.innerHTML='<inp'+'ut type="file" class="lk" id="inpssle" multiple="multiple" name="files" accept="'+inpss45435rwles_oid+'"/><br/><button class="btn" onclick="run_modelop();" id="infdfpssle" style="transition: 0.2s;width:90%"><div style="padding:4px;">Abrir Arquivo'+inpss454ftu35rwles_oid+'</div></button> ';
 
 
-var sdsgetdisble ='<br/><br/><button class="btn" onclick="mchangelag(\'/en?'+fsPageURL.split('?')[1]+'\');" style="transition: 0.2s;width:90%"><div style="padding:4px;">Abrir Arquivo</div></button>';
+var sdsgetdisble ='<br/><br/><button class="btn" onclick="mchangelag(\\\'/en?'+fsPageURL.split('?')[1]+'\\\');" style="transition: 0.2s;width:90%"><div style="padding:4px;">Mudar Idioma para Inglês</div></button>';
 if(getdisble=="no"){   sdsgetdisble='';    }
 inpss454fod5rwles.innerHTML=inpss454fod5rwles.innerHTML+sdsgetdisble;
 
