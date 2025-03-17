@@ -1,3 +1,5 @@
+function onget_d(df){  return df+" Arquivos"; }
+
 
 
   var mdpl_handleFileSelectsa=[];    var mdpl_handleFilehistoicr=[];
@@ -66,8 +68,9 @@ is_playerd_allid(settingsplayer, call, fplayeri);
 
 openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);
 }
+
 else if(cc>=2){   
-     fplayeri = new Playerjs({vars:api_tok, id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,  });    
+     fplayeri = new Playerjs({vars:api_tok, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,  });    
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);   
  openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);   
