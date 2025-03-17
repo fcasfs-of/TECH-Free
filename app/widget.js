@@ -62,7 +62,7 @@ if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcont
                                                
 if(cc<1){    }
 
-else if(cc==1){     fplayeri = new Playerjs({vars:api_tok, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":location.href,  });    
+else if(cc==1){     fplayeri = new Playerjs({vars:api_tok, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:call[0].title, file:call[0].file, poster:"", player:bmg,"url":location.href,  });   startOSD(); 
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);      
 
@@ -70,7 +70,7 @@ openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zp
 }
 
 else if(cc>=2){   
-     fplayeri = new Playerjs({vars:api_tok, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,  });    
+     fplayeri = new Playerjs({vars:api_tok, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,  });    startOSD();
 is_playerd_allid(settingsplayer, call, fplayeri);  
  is_playerd_allid(getUrlVars(location.href), call, fplayeri);   
  openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);   
