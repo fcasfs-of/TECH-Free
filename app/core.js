@@ -11,6 +11,12 @@ function getUrlParameter(sParam) {  var dgetUrlParameterd="";
 return dgetUrlParameterd;  }
 
 
+function mchangelag(nn) {
+if(nn){  location.href=nn;  }
+}
+
+
+
   
   
   
