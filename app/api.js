@@ -25,8 +25,8 @@ function convertSecondsDurationto(duration){
   function PlayerSize(df,wid,hei){
        var inssdsd = document.getElementById(df);  
        if(inssdsd){
-           if(wid && wid!="" && wid!=null && wid!="undefined"){   inssdsd.style.width=wid;    }
-           if(hei && hei!="" && hei!=null && hei!="undefined"){   inssdsd.style.height=hei;    }
+           if(wid && wid!="" && wid!=null && wid!="undefined"){   inssdsd.style.width=wid+" !important";    }
+           if(hei && hei!="" && hei!=null && hei!="undefined"){   inssdsd.style.height=hei+" !important";    }
        }
   }
 
