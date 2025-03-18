@@ -222,10 +222,10 @@ insss667zassddd.style.display="block";
 function preventDefaults(e) {  e.preventDefault();  e.stopPropagation();  }
 
 function handleFiles(files) {
-mdpl_handleFileSelect(inpssf45435rwles, function(tb, cc){  opendtNav(cc); 
-  mdpl_handleselect("zplayler", tb, cc, var_versplayerpg);   
- openNav();    
-});
+//mdpl_handleFileSelect(inpssf45435rwles, function(tb, cc){  opendtNav(cc); 
+ // mdpl_handleselect("zplayler", tb, cc, var_versplayerpg);   
+ //openNav();    
+//});
 }
 
 function handleDrop(e) {
@@ -234,7 +234,7 @@ function handleDrop(e) {
  var inpssf45435rwles = document.getElementById('inpssle');
   if (files.length) {
     inpssf45435rwles.files = files;
-    handleFiles(files);
+   // handleFiles(files);
   }
 }
 
@@ -261,13 +261,13 @@ document.querySelector(".darkmode").addEventListener('dragover', preventDefaults
 document.querySelector(".darkmode").addEventListener('dragenter', preventDefaults);
 document.querySelector(".darkmode").addEventListener('dragleave', preventDefaults);
 
-document.querySelector(".darkmode").addEventListener('drop', handleDrop);
+//document.querySelector(".darkmode").addEventListener('drop', handleDrop);
                                  
 inpssf45435rwles.addEventListener('dragover', preventDefaults);
 inpssf45435rwles.addEventListener('dragenter', preventDefaults);
 inpssf45435rwles.addEventListener('dragleave', preventDefaults);
 
-inpssf45435rwles.addEventListener('drop', handleDrop);
+//inpssf45435rwles.addEventListener('drop', handleDrop);
 
 }
 
