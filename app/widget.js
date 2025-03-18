@@ -236,8 +236,8 @@ inpssf45435rwles.onchange=function(){   opendtNav();    //insss667ddd.innerHTML=
  openNav();      //pl_dispNav("plvideo").addEventListener('ended', function(){   closeNav("false");    });
 });};
  
-document.querySelector("darkmode").addEventListener('dragover', (e) => {    e.preventDefault();   });
-document.querySelector("darkmode").addEventListener('drop', (e) => {    inpssf45435rwles.files = e.dataTransfer.files;       e.preventDefault();    });
+document.querySelector(".darkmode").addEventListener('dragover', (e) => {    e.preventDefault();   });
+document.querySelector(".darkmode").addEventListener('drop', (e) => {    inpssf45435rwles.files = e.dataTransfer.files;       e.preventDefault();    });
                                      
 }
 
