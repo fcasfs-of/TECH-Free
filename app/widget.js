@@ -219,6 +219,26 @@ insss667zassddd.style.display="block";
 
 
 
+function preventDefaults(e) {  e.preventDefault();  e.stopPropagation();  }
+
+function handleFiles(files) {
+mdpl_handleFileSelect(inpssf45435rwles, function(tb, cc){  opendtNav(cc); 
+  mdpl_handleselect("zplayler", tb, cc, var_versplayerpg);   
+ openNav();    
+});
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  const files = e.dataTransfer.files;
+  if (files.length) {
+    fileInput.files = files;
+    handleFiles(files);
+  }
+}
+
+
+
 var xxcdpl_setvidedfsdfdaaa='';
 if(var_versionpropg=="true"){
 var xxcdpl_setvidedfsdfdaaa='<span id="zzdfsspl-pronotaa" style="color: #fff;"><span class="free-trial-btnz free-trial-secondary btn"> Your FREE Trial Now! <span class="btn-subtext"></span></span></span>';
@@ -236,9 +256,12 @@ inpssf45435rwles.onchange=function(){   opendtNav();    //insss667ddd.innerHTML=
  openNav();      //pl_dispNav("plvideo").addEventListener('ended', function(){   closeNav("false");    });
 });};
  
-document.querySelector(".darkmode").addEventListener('dragover', (e) => {    e.preventDefault();   });
-document.querySelector(".darkmode").addEventListener('drop', (e) => {    inpssf45435rwles.files = e.dataTransfer.files;       e.preventDefault();    });
-                                     
+document.querySelector(".darkmode").addEventListener('dragover', preventDefaults);
+document.querySelector(".darkmode").addEventListener('dragenter', preventDefaults);
+document.querySelector(".darkmode").addEventListener('dragleave', preventDefaults);
+
+document.querySelector(".darkmode").addEventListener('drop', handleDrop);
+
 }
 
 
