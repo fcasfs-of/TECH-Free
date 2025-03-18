@@ -229,16 +229,16 @@ var inpszzzszpplaas45dfsdfszz = document.getElementById("zpplaaszz");    inpszzz
 
 function isopenduuf(insss667ddd){   opendtNav();
   var inpssf45435rwles = document.getElementById('inpssle');
-
-document.querySelector("darkmode").addEventListener('dragover', (e) => {    e.preventDefault();   });
-document.querySelector("darkmode").addEventListener('drop', (e) => {    inpssf45435rwles.files = e.dataTransfer.files;       e.preventDefault();    });
-                                 
+                            
 inpssf45435rwles.onchange=function(){   opendtNav();    //insss667ddd.innerHTML="";  pl_dispNav("zplayler").innerHTML="";  
  mdpl_handleFileSelect(inpssf45435rwles, function(tb, cc){  opendtNav(cc);       //pl_dispNav("zplayler").innerHTML="";
   mdpl_handleselect("zplayler", tb, cc, var_versplayerpg);      //inpss45435rwles.multiple = "true";
  openNav();      //pl_dispNav("plvideo").addEventListener('ended', function(){   closeNav("false");    });
 });};
-                                 
+ 
+document.querySelector("darkmode").addEventListener('dragover', (e) => {    e.preventDefault();   });
+document.querySelector("darkmode").addEventListener('drop', (e) => {    inpssf45435rwles.files = e.dataTransfer.files;       e.preventDefault();    });
+                                     
 }
 
 
