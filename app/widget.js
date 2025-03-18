@@ -231,8 +231,9 @@ mdpl_handleFileSelect(inpssf45435rwles, function(tb, cc){  opendtNav(cc);
 function handleDrop(e) {
   e.preventDefault();
   const files = e.dataTransfer.files;
+ var inpssf45435rwles = document.getElementById('inpssle');
   if (files.length) {
-    fileInput.files = files;
+    inpssf45435rwles.files = files;
     handleFiles(files);
   }
 }
