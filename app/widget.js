@@ -262,6 +262,12 @@ document.querySelector(".darkmode").addEventListener('dragenter', preventDefault
 document.querySelector(".darkmode").addEventListener('dragleave', preventDefaults);
 
 document.querySelector(".darkmode").addEventListener('drop', handleDrop);
+                                 
+inpssf45435rwles.addEventListener('dragover', preventDefaults);
+inpssf45435rwles.addEventListener('dragenter', preventDefaults);
+inpssf45435rwles.addEventListener('dragleave', preventDefaults);
+
+inpssf45435rwles.addEventListener('drop', handleDrop);
 
 }
 
