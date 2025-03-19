@@ -63,7 +63,7 @@ if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcont
 if(cc<1){    }
 
 else if(cc==1){       var img_ond="";
-  if(call[0].type.split('/')){
+  if(call[0].type && call[0].type.split('/')){
     if(call[0].type.split('/')[0] === 'image') {  img_ond=call[0].file;  }
   }
    
@@ -95,7 +95,7 @@ else if(cc>1){ cl(); }
 function mdpl_handleFileSelect(evt, call){    mdpl_handleFileSelectsa=[];
 for(var x=0;x<evt.files.length;x++){  
   var img_fdondd="";
-  if(create_mdpl_file(evt).get_type(x).split('/')){
+  if(create_mdpl_file(evt).get_type(x) && create_mdpl_file(evt).get_type(x).split('/')){
     if(create_mdpl_file(evt).get_type(x).split('/')[0] === 'image') {  img_fdondd=create_mdpl_file(evt).create_url(x);  }
   }
   mdpl_handleFileSelectsa[x]={"file":create_mdpl_file(evt).create_url(x), "poster":img_fdondd, "title":create_mdpl_file(evt).get_name(x),"type":create_mdpl_file(evt).get_type(x) };} call(mdpl_handleFileSelectsa, evt.files.length);   }
