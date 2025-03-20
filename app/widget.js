@@ -67,7 +67,7 @@ else if(cc==1){       var img_ond="";
     if(call[0].type.split('/')[0] === 'image') {  img_ond=call[0].file;  }
   }
 if(call[0].type && call[0].type==="application/pdf"){
-  document.getElementById(evt).innerHTML="<ifra"+'me src="'+call[0].file+'" width="100%" height="100%" style="border:none;"></i'+"frame>";
+ // document.getElementById(evt).innerHTML="<ifra"+'me src="'+call[0].file+'" width="100%" height="100%" style="border:none;"></i'+"frame>";
 } else {   
   fplayeri = new Playerjs({vars:api_tok, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href,  }); 
 is_playerd_allid(settingsplayer, call, fplayeri);  
