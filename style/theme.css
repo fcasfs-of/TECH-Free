@@ -116,7 +116,7 @@ white-space: normal;left: 12px;bottom: 20px;    }
 .llk {   transition: 0.1s;margin: 0 auto; width:100%; padding:4px;  text-align:center;}
 
  /* Style buttons */
-.llk .btn, .llk .btn:active {  transition: 0.1s;  background-color: DodgerBlue;  border: none;  color: white;  padding: 12px 30px;  cursor: pointer;  font-size: 20px; }
+.llk .btn, .llk .btn:active {      border-radius: 20px;    transition: 0.1s;  background-color: DodgerBlue;  border: none;  color: white;  padding: 12px 30px;  cursor: pointer;  font-size: 20px; }
 
 /* Darker background on mouse-over */
 .llk .btn:hover {  transition: 0.1s;  background-color: RoyalBlue;} 
