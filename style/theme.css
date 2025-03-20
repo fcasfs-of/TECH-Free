@@ -46,11 +46,11 @@ img { display:none;}
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 30%;
-  height: 100%;
+  height: 100%; overflow:auto;
 }
 
 .tab button {
-  display: block;
+  display: block; overflow:auto;
   background-color: inherit;
   color: black;
   padding: 22px 16px;
