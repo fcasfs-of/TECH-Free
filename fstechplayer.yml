@@ -1,0 +1,19 @@
+name: 'fsTechPlayer'
+description: 'Our player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease.'
+inputs:
+  fsTechPlayer:
+    description: 'Video, Audio, Image'
+    required: true
+  readme_file_path:
+    description: 'Player'
+    required: true
+    default: 'README.md'
+outputs: {
+"index.html"
+}
+runs:
+  using: 'app/widget.js'
+  main: 'app/api.js'
+branding:
+  icon: '00FFFF'
+  color: 'FFFFFF'
