@@ -8,7 +8,133 @@
   body{
     text-align:center;padding:4px; pointer-events:none;user-select:none;
   }
+
+  /* The actual timeline (the vertical ruler) */
+.timeline {pointer-events:none;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
 </style>
+
 
   <link rel="icon" type="image/x-icon" href="https://player.fcasfs-of.cloud-fs.net/favicon.ico"/>
   
@@ -30,38 +156,67 @@ Version: "2.0"<br/>
 <h2>License Agreement</h2><br/>
 By downloading and using Tech: Player, you agree to comply with the terms and conditions outlined in this license agreement. Please read this document carefully before using the application.<br/><br/>
 
-1. Grant of License<br/>
-Tech: Player is licensed, not sold, to you. Subject to the terms and conditions of this Agreement, the Developer grants you a non-exclusive, non-transferable, limited license to use the Software for personal and non-commercial purposes.
-<br/><br/>
-2. Use of the Software<br/>
-You may use Tech: Player to:<br/>
+ <div class="timeline">
+<div class="container left">
+    <div class="content">
+     <h2> 1. Grant of License</h2>
+<p>Tech: Player is licensed, not sold, to you. Subject to the terms and conditions of this Agreement, the Developer grants you a non-exclusive, non-transferable, limited license to use the Software for personal and non-commercial purposes.</p>
+    </div>
+  </div>
+<div class="container right">
+    <div class="content">
+<h2>2. Use of the Software</h2>
+<p>You may use Tech: Player to:<br/>
 <li>Play video files</li>
 <li>Play audio files</li>
-<li>View image files</li>
-<br/><br/>
-3. Restrictions<br/>
-You may not:<br/>
+<li>View image files</li></p>
+    </div>
+  </div>
+<div class="container left">
+    <div class="content">
+ <h2>3. Restrictions</h2>
+<p>You may not:<br/>
 <li>Modify, adapt, or create derivative works of the Software.</li>
 <li>Distribute, sell, or lease the Software to third parties.</li>
 <li>Reverse engineer, decompile, or disassemble the Software.</li>
-<li>Use the Software for any unlawful purpose.</li>      
-<br/><br/>
-4. Ownership<br/>
-All rights, title, and interest in and to Tech: Player, including all intellectual property rights, are owned by the Developer. This license does not grant you any ownership rights to the Software.
-<br/><br/>
-5. Termination<br/>
-This license is effective until terminated. You may terminate it at any time by uninstalling the Software. The license will also terminate automatically if you fail to comply with any term of this Agreement.
- <br/><br/>
- 6. Disclaimer of Warranty<br/>
-Tech: Player is provided "as is" and without warranty of any kind. The Developer does not warrant that the Software will meet your requirements or that the operation of the Software will be uninterrupted or error-free.
-<br/><br/>
-7. Limitation of Liability<br/>
-In no event shall the Developer be liable for any damages arising from the use of or inability to use the Software, even if the Developer has been advised of the possibility of such damages.     
-<br/><br/>
-8. Contact Information<br/>
-For questions or support, please contact:<br/>
+<li>Use the Software for any unlawful purpose.</li>    </p>  
+    </div>
+  </div>
+<div class="container right">
+    <div class="content">
+  <h2>4. Ownership</h2>
+<p>All rights, title, and interest in and to Tech: Player, including all intellectual property rights, are owned by the Developer. This license does not grant you any ownership rights to the Software.</p>
+    </div>
+  </div>
+<div class="container left">
+    <div class="content">
+<h2>5. Termination</h2>
+<p>This license is effective until terminated. You may terminate it at any time by uninstalling the Software. The license will also terminate automatically if you fail to comply with any term of this Agreement.</p>
+    </div>
+  </div>
+<div class="container right">
+    <div class="content">
+  <h2> 6. Disclaimer of Warrantyn</h2>
+<p>Tech: Player is provided "as is" and without warranty of any kind. The Developer does not warrant that the Software will meet your requirements or that the operation of the Software will be uninterrupted or error-free.</p>
+    </div>
+  </div>
+<div class="container left">
+    <div class="content">
+ <h2> 7. Limitation of Liability</h2>
+<p>In no event shall the Developer be liable for any damages arising from the use of or inability to use the Software, even if the Developer has been advised of the possibility of such damages.     </p>
+    </div>
+  </div>
+<div class="container right">
+    <div class="content">
+<h2>8. Contact Information</h2>
+<p>For questions or support, please contact:<br/>
 <li>Email: <b><a style="pointer-events:auto;" href="mailto:fcasfs.of@cloud-fs.net">fcasfs.of@cloud-fs.net</a></b></li>
-<li>Website: <a style="pointer-events:auto;" href="https://player.fcasfs-of.cloud-fs.net/">https://player.fcasfs-of.cloud-fs.net/</a>  </li>
+<li>Website: <a style="pointer-events:auto;" href="https://player.fcasfs-of.cloud-fs.net/">https://player.fcasfs-of.cloud-fs.net/</a>  </li>    </p>
+     </div>
+  </div>
+      
+ </div>
+   
   <br/>
 <br/><br/><br/><br/>
      </div>
