@@ -3,7 +3,9 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FCAS_FS: LICENSE</title>
-  
+
+  <script src="app/core.js"></script>
+
 <style>
   body{
     text-align:center;padding:4px; pointer-events:none;user-select:none;
@@ -152,7 +154,7 @@
 <h2>License Information for Tech: Player</h2><br/><br/><br/>
  <div style="text-align: left;">
 App Name: "Tech: Player"<br/>
-Version: "2.0"<br/>
+Version: "<span id=""verapp></span>"<br/>
 
 <br/>
 <h2>License Agreement</h2><br/>
@@ -224,5 +226,14 @@ By downloading and using Tech: Player, you agree to comply with the terms and co
      </div>
       
     </div>
+
+    <script>
+     var iverappz = document.getElementById("verapp");
+if(iverappz){
+  if(app_ver!=""){  iverappz.innerHTML=app_ver;  }
+}
+    
+  </script>
+  
 </body>
 </html>
