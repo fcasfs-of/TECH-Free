@@ -39,7 +39,7 @@ function updatePositionState() {
     if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
 
                                            
-       plsayer.addEventListener("init",function(){   
+       plsayer.addEventListener("start",function(){   
          
   if ("mediaSession" in navigator) {   
   navigator.mediaSession.metadata = new MediaMetadata({
