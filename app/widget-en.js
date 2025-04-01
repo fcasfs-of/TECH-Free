@@ -22,6 +22,14 @@ if (Notification.permission == 'denied') {
 function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
 
 
+  if(obb){  obb.innerHTML="";   }
+
+     
+    if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
+
+                                           
+       plsayer.addEventListener("start",function(){   
+         
 function updatePositionState() {
   if ('setPositionState' in navigator.mediaSession) {
     navigator.mediaSession.setPositionState({
@@ -33,14 +41,6 @@ function updatePositionState() {
 }
 
 
-  if(obb){  obb.innerHTML="";   }
-
-     
-    if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
-
-                                           
-       plsayer.addEventListener("start",function(){   
-         
   if ("mediaSession" in navigator) {   
   navigator.mediaSession.metadata = new MediaMetadata({
     title: fplayeri.api("title"),
