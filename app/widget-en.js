@@ -23,7 +23,7 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
     startTime: 0,
     album: 'TECH: Player'
   });
- if(MediaMetadata && navigator.mediaSession.metadata){  get_iofd=true;   }
+ if(navigator.mediaSession.metadata){  get_iofd=true;   }
 }
          
  if(get_iofd==true){
@@ -37,6 +37,7 @@ function updatePositionState() {
     });
   }
 }
+   updatePositionState();
    
    navigator.mediaSession.setActionHandler('seekbackward', (details) => {
   const skipTime = details.seekOffset || defaultSkipTime;
