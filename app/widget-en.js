@@ -7,9 +7,9 @@ const defaultSkipTime = 10;
 
 
 function Notificationss(hh){ 
-  if(! ('Notification' in window) ){				get_ifofd= false;			}	
+  if(!('Notification' in window)){		}	
 			
-			if(get_ifofd==true){
+		else{
         Notification.requestPermission(function(permission){
 				var notification = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
 			});
