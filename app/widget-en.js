@@ -19,9 +19,12 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
   if ("mediaSession" in navigator) {   
   navigator.mediaSession.metadata = new MediaMetadata({
     title: fplayeri.api("title"),
-    artist: '',
+    artist: ' ',
     startTime: 0,
-    album: 'TECH: Player'
+    album: 'TECH: Player',
+    	artwork: [
+      { src: 'https://player.fcasfs-of.cloud-fs.net/player_banner.jpg', sizes: '128x128', type: 'image/jpg' }
+      ]
   });
  if(navigator.mediaSession){  get_iofd=true;   }
 }
