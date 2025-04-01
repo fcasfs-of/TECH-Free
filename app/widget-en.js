@@ -28,7 +28,7 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
     if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
 
                                            
-       plsayer.addEventListener("start",function(){   
+       plsayer.addEventListener("init",function(){   
          
 function updatePositionState() {
   if ('setPositionState' in navigator.mediaSession) {
@@ -105,6 +105,7 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
 Notificationss("Reproducing: "+fplayeri.api("title"));         
          
 Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
+
     plsayer.addEventListener("new",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
     plsayer.addEventListener("exitfullscreen",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Exiting FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
     plsayer.addEventListener("fullscreen",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
