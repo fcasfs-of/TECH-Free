@@ -26,8 +26,9 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
       { src: 'https://player.fcasfs-of.cloud-fs.net/player_banner.jpg', sizes: '128x128', type: 'image/jpg' }
       ]
   });
- if(navigator.mediaSession){  get_iofd=true;   }
 }
+         
+ if(navigator.mediaSession){  get_iofd=true;   }
          
  if(get_iofd==true){
    
@@ -40,7 +41,7 @@ function updatePositionState() {
     });
   }
 }
-   updatePositionState();
+   //updatePositionState();
    
    navigator.mediaSession.setActionHandler('seekbackward', (details) => {
   const skipTime = details.seekOffset || defaultSkipTime;
@@ -70,9 +71,11 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
    fplayeri.api("seek", fplayeri.api("time") + (details.seekOffset || defaultSkipTime));
   updatePositionState();
 });
-navigator.mediaSession.setActionHandler('seekto', (details) => {
-  updatePositionState();
-});
+   
+//navigator.mediaSession.setActionHandler('seekto', (details) => {
+ // updatePositionState();
+//});
+   
  }
 
          
