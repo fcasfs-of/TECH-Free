@@ -7,10 +7,8 @@ const defaultSkipTime = 10;
 
 
 function Notificationss(hh){ 
-  if(!('Notification' in window)){		}	
-			
-       
-if (Notification.permission !== 'denied') {
+
+if (Notification.permission == 'denied') {
     await Notification.requestPermission();
   }
 else if (Notification.permission === 'granted') {
