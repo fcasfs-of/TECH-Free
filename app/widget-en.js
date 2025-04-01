@@ -9,7 +9,7 @@ const defaultSkipTime = 10;
 function Notificationss(hh){ 
 
 if (Notification.permission == 'denied') {
-    Notification.requestPermission();
+    Notification.requestPermission(Notificationss);
   }
 
  if (Notification.permission == 'granted') {
@@ -101,7 +101,7 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
  
                                           
    plsayer.addEventListener("start",function(){      
-Notificationss("Reproducing:"+fplayeri.api("title"));         
+Notificationss("Reproducing: "+fplayeri.api("title"));         
          
 Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
     plsayer.addEventListener("new",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
