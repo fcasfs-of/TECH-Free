@@ -90,7 +90,7 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
   updatePositionState();
 });
    
-/*navigator.mediaSession.setActionHandler('seekto', (details) => { updatePositionState();  });*/
+//navigator.mediaSession.setActionHandler('seekto', (details) => { updatePositionState();  });
    
  }
 
