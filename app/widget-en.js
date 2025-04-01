@@ -9,7 +9,7 @@ const defaultSkipTime = 10;
 function Notificationss(hh){ 
 
 if (Notification.permission == 'denied') {
-    await Notification.requestPermission();
+    Notification.requestPermission();
   }
 else if (Notification.permission === 'granted') {
 				var notificationd = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
@@ -31,7 +31,7 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
        plsayer.addEventListener("init",function(){   
          
   if ("mediaSession" in navigator) {   
-  navigator.mediaSession.metadata = new MediaMetadata({
+  var navigator.mediaSession.metadata = new MediaMetadata({
     title: fplayeri.api("title"),
     artist: ' ',
     startTime: 0,
