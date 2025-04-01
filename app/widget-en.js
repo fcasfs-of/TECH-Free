@@ -60,7 +60,7 @@ if(navigator.mediaSession){  get_iofd=true;   }
          
   if(get_iofd==true){
    
-   updatePositionState();
+   //updatePositionState();
    
    navigator.mediaSession.setActionHandler('seekbackward', (details) => {
   const skipTime = details.seekOffset || defaultSkipTime;
