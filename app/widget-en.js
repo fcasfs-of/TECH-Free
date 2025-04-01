@@ -52,7 +52,8 @@ function updatePositionState() {
       ]
   });
 
-if(navigator.mediaSession){  get_iofd=true;   }
+if(navigator.mediaSession){   }
+get_iofd=true;   
          
 }
 
