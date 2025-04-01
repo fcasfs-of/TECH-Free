@@ -12,7 +12,7 @@ if (Notification.permission == 'denied') {
     Notification.requestPermission();
   }
 
-else if (Notification.permission == 'granted') {
+ if (Notification.permission == 'granted') {
 				var notificationd = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
     }
 
@@ -52,10 +52,11 @@ function updatePositionState() {
       ]
   });
 
-}
-
 if(navigator.mediaSession){  get_iofd=true;   }
          
+}
+
+
          
   if(get_iofd==true){
    
