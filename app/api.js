@@ -63,6 +63,6 @@ function Out(){if(video){x.posterplay!=1?vid.pause():''}else{x.posterscale===0?'
 
 
                                                                                                                                                                                                                                                                                                                                          
- var fs_PlayerJS = PlayerJS;  var fs_OSD=Snackbar;
+ var fs_Playerjs = Playerjs;  var fs_OSD=Snackbar;
 
 
