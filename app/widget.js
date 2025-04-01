@@ -297,7 +297,7 @@ isopenduuf(insss667ddd);
 
 
 
- const dropContainer = document.querySelector("darkmode");
+ const dropContainer = document.getElementsByClassName("darkmode");
   const fileInput = document.getElementById("inpssle");
 
   dropContainer.addEventListener("dragover", (e) => {
