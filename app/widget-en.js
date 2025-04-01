@@ -10,11 +10,18 @@ function Notificationss(hh){
   if(!('Notification' in window)){		}	
 			
 		else{
-        Notification.requestPermission(function(permission){
-				var notification = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
+       
+if (Notification.permission !== 'denied') {
+    await Notification.requestPermission();
+  }
+}
+
+
+ if (Notification.permission === 'granted') {
+				var notificationd = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
 			});
-		});
     }
+
 }
 
 
