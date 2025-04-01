@@ -2,7 +2,21 @@ function onget_d(df){  return df+" Files"; }
 
 
 var get_iofd= false;
+var get_ifofd= true;
 const defaultSkipTime = 10; 
+
+
+function Notificationss(hh){ 
+  if(! ('Notification' in window) ){				get_ifofd= false;			}	
+			
+			if(get_ifofd==true){
+        Notification.requestPermission(function(permission){
+				var notification = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
+			});
+		});
+    }
+}
+
 
 function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
 
@@ -78,6 +92,8 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
    
  }
 
+         
+Notificationss("Reproducing: "+fplayeri.api("title"));         
          
       });
 
