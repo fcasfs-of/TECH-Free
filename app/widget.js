@@ -316,6 +316,7 @@ isopenduuf(insss667ddd);
     e.preventDefault();
     dropContainer.classList.remove("drag-active");
     fileInput.files = e.dataTransfer.files;
+    fileInput.onchange(fileInput);
   });
 
 
