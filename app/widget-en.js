@@ -19,7 +19,6 @@ if (Notification.permission !== 'denied') {
 
  if (Notification.permission === 'granted') {
 				var notificationd = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
-			});
     }
 
 }
