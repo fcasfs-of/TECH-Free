@@ -108,7 +108,8 @@ Notificationss("Reproducing: "+fplayeri.api("title"));
 Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
 
     plsayer.addEventListener("new",function(){   
-Notppl(fplayeri,get_iofd);  
+//Notppl(fplayeri,get_iofd);  
+	    
  Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
    
  plsayer.addEventListener("exitfullscreen",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Exiting FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
