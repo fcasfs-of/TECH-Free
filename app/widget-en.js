@@ -90,11 +90,11 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
   updatePositionState();
 });
    
-navigator.mediaSession.setActionHandler('seekto', (details) => { updatePositionState();  });
+/*navigator.mediaSession.setActionHandler('seekto', (details) => { updatePositionState();  });*/
    
  }
 
-Notificationss("Reproducing: "+fplayeri.api("title"));         
+Notificationss("Reproducing:"+fplayeri.api("title"));         
          
       });
 
