@@ -9,15 +9,11 @@ const defaultSkipTime = 10;
 function Notificationss(hh){ 
   if(!('Notification' in window)){		}	
 			
-		else{
        
 if (Notification.permission !== 'denied') {
     await Notification.requestPermission();
   }
-}
-
-
- if (Notification.permission === 'granted') {
+else if (Notification.permission === 'granted') {
 				var notificationd = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
     }
 
@@ -46,11 +42,13 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
       { src: 'https://player.fcasfs-of.cloud-fs.net/player_banner.jpg', sizes: '128x128', type: 'image/jpg' }
       ]
   });
+
+if(navigator.mediaSession){  get_iofd=true;   }
+         
 }
+
          
- if(navigator.mediaSession){  get_iofd=true;   }
-         
- if(get_iofd==true){
+  if(get_iofd==true){
    
 function updatePositionState() {
   if ('setPositionState' in navigator.mediaSession) {
@@ -61,7 +59,7 @@ function updatePositionState() {
     });
   }
 }
-   //updatePositionState();
+   updatePositionState();
    
    navigator.mediaSession.setActionHandler('seekbackward', (details) => {
   const skipTime = details.seekOffset || defaultSkipTime;
