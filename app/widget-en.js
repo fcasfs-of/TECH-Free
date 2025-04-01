@@ -12,7 +12,7 @@ if (Notification.permission == 'denied') {
     Notification.requestPermission();
   }
 
-if (Notification.permission === 'granted') {
+else if (Notification.permission == 'granted') {
 				var notificationd = new Notification("TECH: Player",{body:''+hh,icon:'https://player.fcasfs-of.cloud-fs.net/icon_app.png',dir:'auto'});
     }
 
@@ -39,7 +39,7 @@ function updatePositionState() {
     if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
 
                                            
-       plsayer.addEventListener("init",function(){   
+       plsayer.addEventListener("start",function(){   
          
   if ("mediaSession" in navigator) {   
   navigator.mediaSession.metadata = new MediaMetadata({
@@ -54,10 +54,10 @@ function updatePositionState() {
 
 }
 
-if(navigator.mediaSession){  var get_iofd=true;   }
+if(navigator.mediaSession){  get_iofd=true;   }
          
          
-  if(get_iofd===true){
+  if(get_iofd==true){
    
    //updatePositionState();
    
