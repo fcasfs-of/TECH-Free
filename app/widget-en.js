@@ -16,7 +16,7 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
                                            
        plsayer.addEventListener("init",function(){   
          
-  if ("mediaSession" in navigator && MediaMetadata) {   
+  if ("mediaSession" in navigator) {   
   navigator.mediaSession.metadata = new MediaMetadata({
     title: fplayeri.api("title"),
     artist: '',
