@@ -1,6 +1,8 @@
 function onget_d(df){  return df+" Files"; }
 
 
+var get_iofd= false;
+const defaultSkipTime = 10; 
 
 function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
 
@@ -10,8 +12,67 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
     vars = fplayeri.api("vars");
     });  
     if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
-                                        
-                                        
+
+                                           
+       plsayer.addEventListener("init",function(){   
+         
+  if ("mediaSession" in navigator && MediaMetadata) {   
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: fplayeri.api("title"),
+    artist: '',
+    startTime: 0,
+    album: 'TECH: Player'
+  });
+ if(navigator.mediaSession){  get_iofd=true;   }
+}
+         
+ if(get_iofd==true){
+   
+function updatePositionState() {
+  if ('setPositionState' in navigator.mediaSession) {
+    navigator.mediaSession.setPositionState({
+      duration: fplayeri.api("duration"),
+      playbackRate: 1,
+      position: fplayeri.api("time"),
+    });
+  }
+}
+   
+   navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+  const skipTime = details.seekOffset || defaultSkipTime;
+  fplayeri.api("seek", Math.max(fplayeri.api("time") - skipTime, 0));
+});
+
+navigator.mediaSession.setActionHandler('seekforward', (details) => {
+  const skipTime = details.seekOffset || defaultSkipTime;
+  fplayeri.api("seek", Math.min(fplayeri.api("time") + skipTime, fplayeri.api("duration")));
+});
+   
+   navigator.mediaSession.setActionHandler('play', () => {
+   fplayeri.api("play"); updatePositionState();
+});
+navigator.mediaSession.setActionHandler('stop', () => {
+  fplayeri.api("stop"); updatePositionState();
+});
+navigator.mediaSession.setActionHandler('pause', () => {
+  fplayeri.api("pause"); updatePositionState();
+});
+   
+navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+  updatePositionState();
+});
+navigator.mediaSession.setActionHandler('seekforward', (details) => {
+  updatePositionState();
+});
+navigator.mediaSession.setActionHandler('seekto', (details) => {
+  updatePositionState();
+});
+ }
+
+         
+      });
+
+                                           
    plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
     plsayer.addEventListener("new",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
     plsayer.addEventListener("exitfullscreen",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Exiting FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
@@ -23,9 +84,12 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
     plsayer.addEventListener("userseek",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(adpi.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
     plsayer.addEventListener("unmute",function(){      Snackbar.show({ duration:openf_osdcd_time, text: 'Active Sound', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
     plsayer.addEventListener("mute",function(){     Snackbar.show({ duration:openf_osdcd_time, text: 'Mute', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
-    plsayer.addEventListener("pause",function(){      Snackbar.show({ duration:openf_osdcd_time, text: 'Paused', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
-    plsayer.addEventListener("stop",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Stopped', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'     });      });
-    plsayer.addEventListener("play",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Playing', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
+    plsayer.addEventListener("pause",function(){     if(get_iofd==true){    navigator.mediaSession.playbackState = 'Paused';  }
+   Snackbar.show({ duration:openf_osdcd_time, text: 'Paused', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plsayer.addEventListener("stop",function(){       if(get_iofd==true){    navigator.mediaSession.playbackState = 'Stopped';  }
+    Snackbar.show({ duration:openf_osdcd_time, text: 'Stopped', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'     });      });
+    plsayer.addEventListener("play",function(){     if(get_iofd==true){    navigator.mediaSession.playbackState = 'Playing';  }
+      Snackbar.show({ duration:openf_osdcd_time, text: 'Playing', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
      plsayer.addEventListener("next",function(){       Snackbar.show({ duration:openf_osdcd_time, text: ''+fplayeri.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
     plsayer.addEventListener("previous",function(){       Snackbar.show({ duration:openf_osdcd_time, text: ''+fplayeri.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
     plsayer.addEventListener("speed",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Speed: '+fplayeri.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
