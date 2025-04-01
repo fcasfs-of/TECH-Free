@@ -54,10 +54,10 @@ function updatePositionState() {
 
 }
 
-if(navigator.mediaSession){  get_iofd=true;   }
+if(navigator.mediaSession){  var get_iofd=true;   }
          
          
-  if(get_iofd==true){
+  if(get_iofd===true){
    
    //updatePositionState();
    
