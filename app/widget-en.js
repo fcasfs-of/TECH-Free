@@ -23,7 +23,7 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
     startTime: 0,
     album: 'TECH: Player'
   });
- if(navigator.mediaSession.metadata){  get_iofd=true;   }
+ if(navigator.mediaSession){  get_iofd=true;   }
 }
          
  if(get_iofd==true){
@@ -60,9 +60,11 @@ navigator.mediaSession.setActionHandler('pause', () => {
 });
    
 navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+   fplayeri.api("seek", fplayeri.api("time") - (details.seekOffset || defaultSkipTime));
   updatePositionState();
 });
 navigator.mediaSession.setActionHandler('seekforward', (details) => {
+   fplayeri.api("seek", fplayeri.api("time") + (details.seekOffset || defaultSkipTime));
   updatePositionState();
 });
 navigator.mediaSession.setActionHandler('seekto', (details) => {
