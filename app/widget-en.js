@@ -35,9 +35,7 @@ function updatePositionState() {
 
   if(obb){  obb.innerHTML="";   }
 
-     plsayer.addEventListener("init",function(){    
-    vars = fplayeri.api("vars");
-    });  
+     
     if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
 
                                            
@@ -61,7 +59,7 @@ if(navigator.mediaSession){  get_iofd=true;   }
          
   if(get_iofd==true){
    
-   updatePositionState();
+   //updatePositionState();
    
    navigator.mediaSession.setActionHandler('seekbackward', (details) => {
   const skipTime = details.seekOffset || defaultSkipTime;
@@ -92,7 +90,7 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
   updatePositionState();
 });
    
-//navigator.mediaSession.setActionHandler('seekto', (details) => {. updatePositionState();  });
+navigator.mediaSession.setActionHandler('seekto', (details) => { updatePositionState();  });
    
  }
 
