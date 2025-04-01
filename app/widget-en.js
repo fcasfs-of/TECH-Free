@@ -23,7 +23,7 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
     startTime: 0,
     album: 'TECH: Player'
   });
- if(navigator.mediaSession){  get_iofd=true;   }
+ if(MediaMetadata && navigator.mediaSession.metadata){  get_iofd=true;   }
 }
          
  if(get_iofd==true){
