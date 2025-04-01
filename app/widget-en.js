@@ -20,6 +20,18 @@ else if (Notification.permission === 'granted') {
 
 function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
 
+
+function updatePositionState() {
+  if ('setPositionState' in navigator.mediaSession) {
+    navigator.mediaSession.setPositionState({
+      duration: fplayeri.api("duration"),
+      playbackRate: 1,
+      position: fplayeri.api("time"),
+    });
+  }
+}
+
+
   if(obb){  obb.innerHTML="";   }
 
      plsayer.addEventListener("init",function(){    
@@ -31,7 +43,7 @@ function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
        plsayer.addEventListener("init",function(){   
          
   if ("mediaSession" in navigator) {   
-  var navigator.mediaSession.metadata = new MediaMetadata({
+  navigator.mediaSession.metadata = new MediaMetadata({
     title: fplayeri.api("title"),
     artist: ' ',
     startTime: 0,
@@ -48,15 +60,6 @@ if(navigator.mediaSession){  get_iofd=true;   }
          
   if(get_iofd==true){
    
-function updatePositionState() {
-  if ('setPositionState' in navigator.mediaSession) {
-    navigator.mediaSession.setPositionState({
-      duration: fplayeri.api("duration"),
-      playbackRate: 1,
-      position: fplayeri.api("time"),
-    });
-  }
-}
    updatePositionState();
    
    navigator.mediaSession.setActionHandler('seekbackward', (details) => {
@@ -88,18 +91,16 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
   updatePositionState();
 });
    
-//navigator.mediaSession.setActionHandler('seekto', (details) => {
- // updatePositionState();
-//});
+//navigator.mediaSession.setActionHandler('seekto', (details) => {. updatePositionState();  });
    
  }
 
-         
-Notificationss("Reproducing: "+fplayeri.api("title"));         
-         
       });
 
-                                           
+
+ Notificationss("Reproducing: "+fplayeri.api("title"));         
+         
+                                          
    plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
     plsayer.addEventListener("new",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
     plsayer.addEventListener("exitfullscreen",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Exiting FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
