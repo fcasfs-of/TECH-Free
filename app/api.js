@@ -1,5 +1,39 @@
 
 
+let app_manifest = { 
+ "name": "TECH - PLAYER",
+  "description": "Our audio and video player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease.",
+  "short_name": "FCASFS-OF_TECH-PLAYER",
+  "start_url": "https://player.fcasfs-of.cloud-fs.net/en", 
+  "scope": "https://player.fcasfs-of.cloud-fs.net/en",
+  "lang": "en",
+  "icons": [
+    {      "src": "https://player.fcasfs-of.cloud-fs.net/icon_app.png",      "sizes": "128x128", "type": "image/png"    }
+  ],
+  "related_applications": [
+    {      "platform": "web"    }
+  ],
+  "display": "standalone",
+  "categories": ["player-video","player-image","player-audio"],
+"shortcuts": [
+  {
+    "name": "TECH - PLAYER",
+    "short_name": "Our audio and video player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease.",
+    "description": "FCASFS-OF_TECH-PLAYER",
+    "url": "https://player.fcasfs-of.cloud-fs.net/en",  "start_url": "https://player.fcasfs-of.cloud-fs.net/en", 
+  "scope": "https://player.fcasfs-of.cloud-fs.net/en",
+    "icons": [
+      {
+        "src": "https://player.fcasfs-of.cloud-fs.net/icon_app.png",
+        "sizes": "128x128"
+        }
+    ]
+  }
+]
+
+};
+
+
 var settingsplayer={  
  color_icons:"#63B8FF", color_texts:"#00EEEE", config:{
 fontstyle:"none",
@@ -8,32 +42,8 @@ texttransform:"none",
 textbold:true,
 }, controls:true,
  
-id:"fs001",
-active:"yes",
-typeplayer:"1",
-modeplayer:"url",
-loop:"0",
-autoplay:"1",
-title:"",
-poster:"",
-files:"#",
-fontstyle:"",
-textdecoration:"",
-texttransform:"",
-fontweight:"bold",
-colortexts:"FFFFFF",
-coloricons:"FFFFFF",
-volume:"1",
-mute:"0",
-menu:"0",
-seek:"0",
-share:"0",
-showplaylist:"0",
-fullscreen:"0",
-contextmenu_display:"no",
-share_disp:"no",
-contextmenu_namedisplay:"TECH - PLAYER: BETA",
-error:"",
+id:"fs001",active:"yes",typeplayer:"1",modeplayer:"url",loop:"0",autoplay:"1",title:"",poster:"",files:"#",fontstyle:"",textdecoration:"",texttransform:"",fontweight:"bold",colortexts:"FFFFFF",coloricons:"FFFFFF",volume:"1",mute:"0",menu:"0",seek:"0",share:"0",showplaylist:"0",fullscreen:"0",contextmenu_display:"no",share_disp:"no",contextmenu_namedisplay:"TECH - PLAYER: BETA",
+error:""
  }; 
 
 var listfrr_is={};   var fplayeri;   var var_versionpropg="";
@@ -91,6 +101,16 @@ function convertSecondsDurationto(duration){
     }  else{      return Number(timhdfff[0]) * 60 * 60 + Number(timhdfff[1]) * 60 + Number(timhdfff[2]);   }
 }
   
+
+
+function fs_Player_App() {
+let contdent = encodeURIComponent(JSON.stringify(app_manifest));
+let urffl = "data:application/manifest+json,"+contdent;
+let ddselement = document.createElement('link');
+ddselement.setAttribute('rel', 'manifest');
+ddselement.setAttribute('href', urffl);
+document.querySelector('head').appendChild(ddselement);
+}
 
 
 
