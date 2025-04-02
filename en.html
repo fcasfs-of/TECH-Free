@@ -16,6 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href='favicon.ico' rel='icon' type='image/x-icon'/>
+<link rel="manifest" href="app-en.json"/>
 
     
 <link rel="apple-touch-icon" type="image/png" href="#">
@@ -32,46 +33,6 @@
 
     
     <script>
- var icon_app ='https://player.fcasfs-of.cloud-fs.net/icon_app.png';
-      
-let manifest = { 
- "name": "TECH - PLAYER",
-  "description": "Our audio and video player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease.",
-  "short_name": "FCASFS-OF_TECH-PALYER",
-  "start_url": location.href, 
-  "scope": location.href,
-  "lang": "en",
-  "icons": [
-    {      "src": icon_app,      "sizes": "318x300", "type": "image/png"    }
-  ],
-  "related_applications": [
-    {      "platform": "web"    }
-  ],
-  "display": "standalone",
-  "categories": ["calendario"],
-"shortcuts": [
-  {
-    "name": "TECH - PLAYER",
-    "short_name": "FCASFS-OF_TECH-PALYER",
-    "description": "Our audio and video player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease.",
-    "url": location.href,  "start_url": location.href, 
-  "scope": location.href,
-    "icons": [
-      {
-        "src": icon_app,
-        "sizes": "318x300"
-        }
-    ]
-  }
-]
-
-};
-let content = encodeURIComponent(JSON.stringify(manifest));
-let url = "data:application/manifest+json,"+content;
-let element = document.createElement('link');
-element.setAttribute('rel', 'manifest');
-element.setAttribute('href', url);
-document.querySelector('head').appendChild(element);
 
 </script>
     
