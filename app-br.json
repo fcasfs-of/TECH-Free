@@ -19,7 +19,7 @@
   ],
   "display": "standalone",
   "categories": [
-    "calendario"
+    "player-video","player-image","player-audio"
   ],
   "shortcuts": [
     {
