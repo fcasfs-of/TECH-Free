@@ -1,0 +1,40 @@
+{
+  "name": "TECH - PLAYER",
+  "description": "Our audio and video player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease.",
+  "short_name": "FCASFS-OF_TECH-PLAYER",
+  "start_url": "https://player.fcasfs-of.cloud-fs.net/en",
+  "scope": "https://player.fcasfs-of.cloud-fs.net/en",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "https://player.fcasfs-of.cloud-fs.net/icon_app.png",
+      "sizes": "318x300",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ],
+  "display": "standalone",
+  "categories": [
+    "calendario"
+  ],
+  "shortcuts": [
+    {
+      "name": "TECH - PLAYER",
+      "short_name": "FCASFS-OF_TECH-PLAYER",
+      "description": "Our audio and video player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease.",
+      "url": "https://player.fcasfs-of.cloud-fs.net/en",
+      "start_url": "https://player.fcasfs-of.cloud-fs.net/en",
+      "scope": "https://player.fcasfs-of.cloud-fs.net/en",
+      "icons": [
+        {
+          "src": "https://player.fcasfs-of.cloud-fs.net/icon_app.png",
+          "sizes": "318x300"
+        }
+      ]
+    }
+  ]
+}
