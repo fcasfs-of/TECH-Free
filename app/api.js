@@ -31,6 +31,8 @@ function convertSecondsDurationto(duration){
   }
 
 
+var fs_OSD = function(){};
+
   function startOSD(df){
 function get_odsd(id){  var get_odsdhy=document.body;       var insssd = document.getElementById("oframe"+id);     if(insssd){   get_odsdhy=insssd;     }      return get_odsdhy;  }
 
@@ -47,7 +49,7 @@ a.current.style.top="-100px",a.current.style.bottom="-100px")}.bind(a.snackbar),
                                                                                                                                                                                         
 var c=function(){var a={},b=!1,d=0,e=arguments.length;"[object Boolean]"===Object.prototype.toString.call(arguments[0])&&(b=arguments[0],d++);for(var f=function(d){for(var e in d)Object.prototype.hasOwnProperty.call(d,e)&&(b&&"[object Object]"===Object.prototype.toString.call(d[e])?a[e]=c(!0,a[e],d[e]):a[e]=d[e])};d<e;d++){var g=arguments[d];f(g)}return a};return a});
 
-  var fs_OSD=Snackbar.show;   }
+  fs_OSD=Snackbar.show;   }
 
 
 
