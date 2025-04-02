@@ -31,47 +31,7 @@
 <script src="app/api.js"></script>
 
     <script>
- var icon_app ='https://player.fcasfs-of.cloud-fs.net/icon_app.png';
-      
-let manifest = { 
- "name": "TECH - PLAYER",
-  "description": "O nosso player de áudio e vídeo oferece uma experiência de mídia envolvente e intuitiva, projetada para atender a todas as suas necessidades de entretenimento digital. Com um design moderno e funcional, ele permite que você reproduza, pause e controle suas faixas e vídeos favoritos com facilidade.",
-  "short_name": "FCASFS-OF_TECH-PALYER",
-  "start_url": location.href, 
-  "scope": location.href,
-  "lang": "pt-BR",
-  "icons": [
-    {      "src": icon_app,      "sizes": "318x300", "type": "image/png"    }
-  ],
-  "related_applications": [
-    {      "platform": "web"    }
-  ],
-  "display": "standalone",
-  "categories": ["calendario"],
-"shortcuts": [
-  {
-    "name": "TECH - PLAYER",
-    "short_name": "FCASFS-OF_TECH-PALYER",
-    "description": "O nosso player de áudio e vídeo oferece uma experiência de mídia envolvente e intuitiva, projetada para atender a todas as suas necessidades de entretenimento digital. Com um design moderno e funcional, ele permite que você reproduza, pause e controle suas faixas e vídeos favoritos com facilidade.",
-    "url": location.href,  "start_url": location.href, 
-  "scope": location.href,
-    "icons": [
-      {
-        "src": icon_app,
-        "sizes": "318x300"
-        }
-    ]
-  }
-]
-
-};
-let content = encodeURIComponent(JSON.stringify(manifest));
-let url = "data:application/manifest+json,"+content;
-let element = document.createElement('link');
-element.setAttribute('rel', 'manifest');
-element.setAttribute('href', url);
-document.querySelector('head').appendChild(element);
-
+ 
 </script>
         
 </head>
