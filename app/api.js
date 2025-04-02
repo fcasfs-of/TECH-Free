@@ -1,5 +1,44 @@
 
 
+var settingsplayer={  
+ color_icons:"#63B8FF", color_texts:"#00EEEE", config:{
+fontstyle:"none",
+textdecoration:"none",
+texttransform:"none",
+textbold:true,
+}, controls:true,
+ 
+id:"fs11",
+active:"yes",
+typeplayer:"1",
+modeplayer:"url",
+loop:"0",
+autoplay:"1",
+title:"",
+poster:"",
+files:"#",
+fontstyle:"",
+textdecoration:"",
+texttransform:"",
+fontweight:"bold",
+colortexts:"FFFFFF",
+coloricons:"FFFFFF",
+volume:"1",
+mute:"0",
+menu:"0",
+seek:"0",
+share:"0",
+showplaylist:"0",
+fullscreen:"0",
+contextmenu_display:"no",
+share_disp:"no",
+contextmenu_namedisplay:"TECH - PLAYER: BETA",
+error:"",
+ }; 
+
+var listfrr_is={};   var fplayeri;   var var_versionpropg="";
+
+
 function getUrlParameter(sParam) {  var dgetUrlParameterd="";
     var sPageURL = decodeURIComponent(location.href);//window.location.search.substring(1));
    if(sPageURL.split('?')){
