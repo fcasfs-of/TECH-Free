@@ -1,5 +1,38 @@
 
 
+function getUrlParameter(sParam) {  var dgetUrlParameterd="";
+    var sPageURL = decodeURIComponent(location.href);//window.location.search.substring(1));
+   if(sPageURL.split('?')){
+       var sURLVariables = sPageURL.split('?')[1].split('&');
+       if(sPageURL.split('?')[1].split('&')){
+    for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if(sURLVariables[i].split('=')){
+        if (sParameterName[0] == sParam) {
+            dgetUrlParameterd=sParameterName[1];
+        }  }
+    }   }
+   }
+return dgetUrlParameterd;  }
+
+
+function mchangelag(nn) {
+if(nn){  location.href=nn;  }
+}
+
+
+
+function stringno_valtext(id,g) {   var dfyyggdfgetLastdRofw=id;   if(id=="undefined"){     dfyyggdfgetLastdRofw=g;    }       if(id==undefined){     dfyyggdfgetLastdRofw=g;    }    return dfyyggdfgetLastdRofw;    }
+
+
+  function pl_dispNav(a) {  return document.getElementById(a);  }      function fmdplex_loadex_txv(t){  if(t==""){    return "";  }   if(t=="undefined"){    return "";  }     if(t==undefined){    return "";  }   else {  return t; }  }   
+
+
+  function create_mdpl_file(ob){  return { get:function(id){  return ob.files[id]; }, get_name:function(id){ return fmdplex_loadex_txv(create_mdpl_file(ob).get(id).name); }, get_size:function(id){ return fmdplex_loadex_txv(create_mdpl_file(ob).get(id).size); },get_type:function(id){  return fmdplex_loadex_txv(create_mdpl_file(ob).get(id).type);  }, create_url:function(id){  return fmdplex_loadex_txv(URL.createObjectURL(create_mdpl_file(ob).get(id))); } };   }
+
+
+
+
 function convertSecondsDurationto(duration){
      var seconds = duration; 
     var hours   = Math.floor(seconds / 3600);
