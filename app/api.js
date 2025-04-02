@@ -102,3 +102,77 @@ function Out(){if(video){x.posterplay!=1?vid.pause():''}else{x.posterscale===0?'
  var fs_Playerjs = Playerjs;   
 
 
+
+
+ function fs_Player_Config(config, links, fplayeri){
+
+ var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");
+
+
+ 
+var settifgfgngdfdsfsfontrollsfd="color: #"+stringno_valtext(config.colortexts,"FFFFFF")+";  ";
+if(stringno_valtext(config.colortexts,"#FFFFFF")==""){       settifgfgngdfdsfsfontrollsfd="";    }
+var settifgfgndsdddfsfontrollsfd="fill: #"+stringno_valtext(config.coloricons,"FFFFFF")+";  ";
+if(stringno_valtext(config.coloricons,"#FFFFFF")==""){       settifgfgndsdddfsfontrollsfd="";    }
+
+
+var settifgfgngsplafyercontrollsfd="font-style: "+stringno_valtext(config.fontstyle,"")+";  ";
+if(stringno_valtext(config.fontstyle,"")==""){       settifgfgngsplafyercontrollsfd="";    }
+var settifgfgngsplafyercontdrollsfd="text-decoration: "+stringno_valtext(config.textdecoration,"")+";  ";
+if(stringno_valtext(config.textdecoration,"")==""){       settifgfgngsplafyercontdrollsfd="";    }
+var settifgfgngsplafyercdsontrollsfd="text-transform: "+stringno_valtext(config.texttransform,"")+";  ";
+if(stringno_valtext(config.texttransform,"")==""){       settifgfgngsplafyercdsontrollsfd="";    }
+
+var settifgfgngsplafyercdsontsdrollsfd="";
+if(stringno_valtext(config.fontweight,"")=="bold"){       settifgfgngsplafyercdsontsdrollsfd="font-weight: bold; ";    }
+
+
+
+ 
+ fplayeri.api("unmute");
+
+
+fplayeri.api("volume", Number(stringno_valtext(config.volume,"1")));
+if(stringno_valtext(config.volume,"")==""){   fplayeri.api("volume", 1);    }
+
+
+
+ if(stringno_valtext(config.mute,"0")=="1"){   fplayeri.api("mute");    }
+
+ //if(stringno_valtext(config.mute,"0")=="0"){   fplayeri.api("unmute");    }
+
+
+
+ if(stringno_valtext(config.menu,"0")=="1"){   fplayeri.api("menu");    }
+
+
+
+fplayeri.api('seek',Number(stringno_valtext(config.pos_time,"0")));
+
+
+
+if(stringno_valtext(config.share,"0")=="1"){   fplayeri.api("share");    }
+
+if(stringno_valtext(config.showplaylist,"0")=="1"){   fplayeri.api("showplaylist");    }
+
+
+ if(stringno_valtext(config.fullscreen,"0")=="1"){   fplayeri.api("fullscreen");    }
+
+
+var configdcontextmenu_display="visible";
+if(config.contextmenu_display=="yes"){     configdcontextmenu_display="hidden";    }
+
+var configfcontextmenu_dnameisplay=stringno_valtext(config.contextmenu_namedisplay,"");
+if(configfcontextmenu_dnameisplay==""){     configfcontextmenu_dnameisplay="FCAS TECH:  Player";    }
+
+//var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");
+inpsspldsetcusotmdfsdfszz.innerHTML=inpsspldsetcusotmdfsdfszz.innerHTML+"<sty"+"le>pjsdiv[i=\"9\"]:before{  visibility: "+configdcontextmenu_display+";   content:'"+configfcontextmenu_dnameisplay+"'; }   #zplayler *, #zplayler *:before, #zplayler *:after{    "+settifgfgndsdddfsfontrollsfd+settifgfgngdfdsfsfontrollsfd+settifgfgngsplafyercontrollsfd+settifgfgngsplafyercontdrollsfd+settifgfgngsplafyercdsontrollsfd+settifgfgngsplafyercdsontsdrollsfd+"   }</st"+"yle>";
+
+
+//var inploaddedicontcusotmdfsddfszz = document.getElementById("loaddedicon");
+//inploaddedicontcusotmdfsddfszz.innerHTML="";
+
+
+}
+                                                                                                                                                                                                                                                                                                                                         
+    
