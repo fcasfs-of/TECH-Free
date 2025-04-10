@@ -164,8 +164,8 @@ var allpai_d={};
 function fs_Playerjs(vars){   var fs_Playerjsdd="";
   if(vars){
       if(vars.id!=""){
-    if(vars.title!=""){  vars.title="Tech: Player";  }   
-    if(vars.file!=""){  vars.file="https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4";  }  
+    if(vars.title=="" || vars.title==null){  vars.title="Tech: Player";  }   
+    if(vars.file=="" || vars.file==null){  vars.file="https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4";  }  
     
    allpai_d[vars.id] = new Playerjs(vars);
 
