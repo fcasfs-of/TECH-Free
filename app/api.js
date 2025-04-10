@@ -169,7 +169,7 @@ function fs_Playerjs(varsapi, vars){   var fs_Playerjsdd="";
     
   varsapi = new Playerjs(vars);
 
-  fs_Playerjsdd=vars.api; 
+  fs_Playerjsdd=varsapi; 
  
     if(vars.OSD==true){    startOSD(vars.id);   }
 
