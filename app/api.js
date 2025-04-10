@@ -167,9 +167,9 @@ function fs_Playerjs(vars){   var fs_Playerjsdd="";
     if(vars.title!=""){  vars.title="Tech: Player";  }   
     if(vars.file!=""){  vars.file="https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4";  }  
     
-  allpai_d[vars.id] = new Playerjs(vars);
+  var allpai_d[vars.id] = new Playerjs(vars);
 
-  fs_Playerjsdd=allpai_d[vars.id]; 
+  var fs_Playerjsdd=allpai_d[vars.id]; 
  
     if(vars.OSD==true){    startOSD(vars.id);   }
 
