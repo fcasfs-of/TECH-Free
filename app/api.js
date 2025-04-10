@@ -158,7 +158,22 @@ function Out(){if(video){x.posterplay!=1?vid.pause():''}else{x.posterscale===0?'
 
 
                                                                                                                                                                                                                                                                                                                                          
- var fs_Playerjs = Playerjs;   
+ function fs_Playerjs(vars){   var fs_Playerjsdd="";
+     var osdposito="top-left";    var osdpositdo="absolute";    var openf_osdcd_time=3e3;                           
+  if(vars){
+   if(vars.id!=""){
+    if(vars.title!=""){  vars.title="Tech: Player";  }   
+    if(vars.file!=""){  vars.file="https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4";  }  
+    
+ fs_Playerjsdd = new Playerjs(vars);
+
+    if(vars.OSD==true){    startOSD(vars.id);   }
+
+       if(vars.config){    fs_Player_Config(vars.config, vars.id, fs_Playerjsdd);   }
+
+   }
+  }
+return fs_Playerjsdd;   }
 
 
 
