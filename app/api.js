@@ -167,7 +167,7 @@ function fs_Playerjs(varsapi, vars){   var fs_Playerjsdd="";
     if(vars.title!=""){  vars.title="Tech: Player";  }   
     if(vars.file!=""){  vars.file="https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4";  }  
     
-  varsapi = new Playerjs(vars);
+  var varsapi = new Playerjs(vars);
 
   fs_Playerjsdd=varsapi; 
  
