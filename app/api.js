@@ -158,22 +158,24 @@ function Out(){if(video){x.posterplay!=1?vid.pause():''}else{x.posterscale===0?'
 
 
                                                                                                                                                                                                                                                                                                                                          
- function fs_Playerjs(vars){   var fs_Playerjsdd="";
-     var osdposito="top-left";    var osdpositdo="absolute";    var openf_osdcd_time=3e3;                           
+      var osdposito="top-left";    var osdpositdo="absolute";    var openf_osdcd_time=3e3;                           
+
+function fs_Playerjs(vars){   var fs_Playerjsdd="";
   if(vars){
+    if(vars.api){
       if(vars.id!=""){
     if(vars.title!=""){  vars.title="Tech: Player";  }   
     if(vars.file!=""){  vars.file="https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4";  }  
     
- var fs_ffPlayerjsdd = new Playerjs(vars);
+ var vars.api = new Playerjs(vars);
 
-  fs_Playerjsdd=fs_ffPlayerjsdd; 
+  fs_Playerjsdd=vars.api; 
  
     if(vars.OSD==true){    startOSD(vars.id);   }
 
-       if(vars.config){    fs_Player_Config(vars.config, vars.id, fs_ffPlayerjsdd);   }
+       if(vars.config){    fs_Player_Config(vars.config, vars.id, vars.api);   }
 
-   }  
+   }  }
   }
 return fs_Playerjsdd;   }
 
