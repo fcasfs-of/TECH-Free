@@ -161,7 +161,7 @@ function Out(){if(video){x.posterplay!=1?vid.pause():''}else{x.posterscale===0?'
 var allpai_d={};
       var osdposito="top-left";    var osdpositdo="absolute";    var openf_osdcd_time=3e3;                           
 
-function fs_Playerjs(varsapi, vars){   var fs_Playerjsdd="";
+function fs_Playerjs(vars){   var fs_Playerjsdd="";
   if(vars){
       if(vars.id!=""){
     if(vars.title!=""){  vars.title="Tech: Player";  }   
