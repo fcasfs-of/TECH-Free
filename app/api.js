@@ -170,7 +170,10 @@ function fs_Playerjs(vars){   var fs_Playerjsdd="";
    allpai_d[vars.id] = new Playerjs(vars);
 
   var fs_Playerjsdd=allpai_d[vars.id]; 
- 
+
+     var inpsddsspdzz = document.getElementById(vars.id);  
+       fs_Playerjsdd.OnEvents=inpsddsspdzz.addEventListener;
+       
     if(vars.OSD==true){    startOSD(vars.id);   }
 
        if(vars.config){    fs_Player_Config(vars.config, vars.id, allpai_d[vars.id]);   }
@@ -183,8 +186,11 @@ function fs_Playerjs(vars){   var fs_Playerjsdd="";
 
 
  function fs_Player_Config(config, idd, fplayeri){
- var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");
+   var inpsdsspdzz = document.getElementById(idd);  
 
+ var inpsspldsetcusotmdfsdfszz = document.createElement("div");
+inpsspldsetcusotmdfsdfszz.style.display="none";
+  
 var settifgfgngdfdsfsfontrollsfd="color: #"+stringno_valtext(config.colortexts,"FFFFFF")+";  ";
 if(stringno_valtext(config.colortexts,"#FFFFFF")==""){       settifgfgngdfdsfsfontrollsfd="";    }
 var settifgfgndsdddfsfontrollsfd="fill: #"+stringno_valtext(config.coloricons,"FFFFFF")+";  ";
@@ -226,8 +232,11 @@ var configfcontextmenu_dnameisplay=stringno_valtext(config.contextmenu_namedispl
 if(configfcontextmenu_dnameisplay==""){     configfcontextmenu_dnameisplay="FCAS TECH:  Player";    }
 
 //var inpsspldsetcusotmdfsdfszz = document.getElementById("pldsetcusotm");
-inpsspldsetcusotmdfsdfszz.innerHTML=inpsspldsetcusotmdfsdfszz.innerHTML+"<sty"+"le>pjsdiv[i=\"9\"]:before{  visibility: "+configdcontextmenu_display+";   content:'"+configfcontextmenu_dnameisplay+"'; }    #"+stringno_valtext(idd,"")+" *, #"+stringno_valtext(idd,"")+" *:before, #"+stringno_valtext(idd,"")+" *:after{   "+settifgfgndsdddfsfontrollsfd+settifgfgngdfdsfsfontrollsfd+settifgfgngsplafyercontrollsfd+settifgfgngsplafyercontdrollsfd+settifgfgngsplafyercdsontrollsfd+settifgfgngsplafyercdsontsdrollsfd+"   }</st"+"yle>";
+inpsspldsetcusotmdfsdfszz.innerHTML="<sty"+"le>pjsdiv[i=\"9\"]{  visibility: hidden;   pointer-events: none;  }   pjsdiv[i=\"9\"]:before{  visibility: "+configdcontextmenu_display+";   content:'"+configfcontextmenu_dnameisplay+"'; }    #"+stringno_valtext(idd,"")+" *, #"+stringno_valtext(idd,"")+" *:before, #"+stringno_valtext(idd,"")+" *:after{   "+settifgfgndsdddfsfontrollsfd+settifgfgngdfdsfsfontrollsfd+settifgfgngsplafyercontrollsfd+settifgfgngsplafyercontdrollsfd+settifgfgngsplafyercdsontrollsfd+settifgfgngsplafyercdsontsdrollsfd+"   }</st"+"yle>";
 
+  inpsdsspdzz.appendChild(inpsspldsetcusotmdfsdfszz);
+
+  
 //var inploaddedicontcusotmdfsddfszz = document.getElementById("loaddedicon");
 //inploaddedicontcusotmdfsddfszz.innerHTML="";
 
