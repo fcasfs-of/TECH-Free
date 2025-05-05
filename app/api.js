@@ -172,7 +172,7 @@ function fs_Playerjs(vars){   var fs_Playerjsdd="";
 
   var fs_Playerjsdd=allpai_d[vars.id]; 
 
-       fs_Playerjsdd.OnEvents=allpai_d[vars.id+".obj"].addEventListener;
+       fs_Playerjsdd.OnEvents = function(even, funv){  allpai_d[vars.id+".obj"].addEventListener(even, funv);  };
        
     if(vars.OSD==true){    startOSD(vars.id);   }
 
