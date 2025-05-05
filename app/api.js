@@ -168,11 +168,11 @@ function fs_Playerjs(vars){   var fs_Playerjsdd="";
     if(vars.file=="" || vars.file==null){  vars.file="https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4";  }  
     
    allpai_d[vars.id] = new Playerjs(vars);
+   allpai_d[vars.id+".obj"]=document.getElementById(vars.id);
 
   var fs_Playerjsdd=allpai_d[vars.id]; 
 
-     var inpsddsspdzz = document.getElementById(vars.id);  
-       fs_Playerjsdd.OnEvents=inpsddsspdzz.addEventListener;
+       fs_Playerjsdd.OnEvents=allpai_d[vars.id+".obj"].addEventListener;
        
     if(vars.OSD==true){    startOSD(vars.id);   }
 
