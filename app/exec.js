@@ -1,6 +1,6 @@
 var getval_tyget=getUrlParameter("fileID");
 
-if (getval_tyget=""){
+if (getval_tyget!=""){
 
 let scriptfd = document.createElement("script");
 
