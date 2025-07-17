@@ -1,5 +1,5 @@
 
-document.title= "Tokusatsu Música em Português" + document.title;
+document.title= "Tokusatsu Música em Português - " + document.title;
 
 var playerhj = fs_Playerjs({ OSD:true, id:"plo", config:{
  fontweight:"bold",
