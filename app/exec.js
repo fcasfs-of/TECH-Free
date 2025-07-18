@@ -4,7 +4,7 @@ if (getval_tyget!="") {
 
 
 var inpmyNavruz = document.getElementById("plo");    
-inpmyNavruz.innerHTML= '<span id="zplayler" style="width:100%; height:100%;  transition: 0.2s;"></span>';  
+inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  transition: 0.2s;"></div>';  
 
 
 var scriptfd = document.createElement("script");
