@@ -1,6 +1,7 @@
 
 function run_file(){  return { 
  file_title:"Tokusatsu Música em Português",
+ file_desc:"DVD 01",
  config:{
  fontweight:"bold",
   coloricons:"FFD700",
