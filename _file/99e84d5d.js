@@ -6,7 +6,7 @@ var playerhj = fs_Playerjs({ OSD:true, id:"zplayler", config:{
 }, nocontrols:0, autoplay:0, loop:0, title:"Tokusatsu Música em Português", file:[
 {title:"Jaspion - Singles Nacionais",file:"https://archive.org/download/jaspion-singles-nacionais/Jaspion - Singles Nacionais.mp4"},
 {title:"Tokusatsu - Singles Nacionais - DVD 01",file:"https://archive.org/download/tokusatsu-singles-nacionais-dvd-01/Tokusatsu - Singles Nacionais - DVD 01.mp4"}
-], poster:""
+], poster:"","embed":location.href, "url":location.href
   });
 
 
