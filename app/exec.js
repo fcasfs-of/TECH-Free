@@ -26,8 +26,8 @@ document.getElementsByTagName("body")[0].appendChild(scriptd);
 if (getval_tygepret=="true") {  
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-    scrfiptfd.setAttribute("src", "data:text/javascript,runEx()");
-inpmyNavruz.appendChild(scrfiptfd);
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("runEx()");
+document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
 }
     
 }
