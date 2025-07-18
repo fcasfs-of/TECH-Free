@@ -1,5 +1,6 @@
 
 function run_file(){  return { 
+player_lang:"",
  file_title:"Tokusatsu Música em Português",
  file_desc:"DVD 01",
  config:{
