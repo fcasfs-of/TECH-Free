@@ -11,13 +11,13 @@ var scriptfd = document.createElement("script");
         scriptfd.setAttribute("type", "text/javascript");
         scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/_file/"+getval_tyget+".js");
 
-        document.body.appendChild(scriptfd);
+        inpmyNavruz.appendChild(scriptfd);
 
 
 var scriptd = document.createElement("div");
 scriptd.style.display="none"; scriptd.innerHTML='<style>#plo, #zplayler, #plo #zplayler{position:absolute;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';
 
-        document.body.appendChild(scriptd);
+        inpmyNavruz.appendChild(scriptd);
 
 
 if(runP){  runP();  }
