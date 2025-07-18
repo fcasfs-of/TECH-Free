@@ -1,13 +1,12 @@
 var getval_tyget=getUrlParameter("fileID");
 
-if (getval_tyget!=""){
+if (getval_tyget!="") {
 
-let scriptfd = document.createElement("script");
-
+var scriptfd = document.createElement("script");
         scriptfd.setAttribute("type", "text/javascript");
         scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/_file/"+getval_tyget+".js");
 
-        document.head.appendChild(scriptfd);
+        document.body.appendChild(scriptfd);
 
 }
   
