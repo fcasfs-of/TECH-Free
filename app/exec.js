@@ -1,3 +1,35 @@
+function runEx(filedru){
+if(typeof filedru=="function"){
+filedru=filedru();
+if(filedru){
+document.title= filedru.file_title+" - " + document.title;
+
+var playerhj = fs_Playerjs({ OSD:true, id:"zplayler", config:filedru.config, nocontrols:0, autoplay:0, loop:0, title:filedru.file_title, file:filedru.list, poster:filedru.cover,"embed":location.href, "url":location.href
+  });
+
+
+var fplayeri = playerhj;
+
+
+playerhj.OnEvents("init",function(){
+
+playerhj.OnEvents("volume",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(playerhj.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
+  
+playerhj.OnEvents("seek",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(playerhj.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
+
+playerhj.OnEvents("userseek",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(playerhj.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
+
+playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, text: 'Speed: '+playerhj.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
+  
+});
+
+   openf_osdcd(document.getElementById("zplayler"),3e3, "", [], 0);   
+    
+}   }
+}
+
+
+
 var getval_tyget=getUrlParameter("fileID");
 
 if (getval_tyget!="") {
@@ -26,7 +58,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptd);
 if (getval_tygepret=="true") {  
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(typeof runEx=='function'){ runEx(); }"));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(typeof run_file=='function'){ runEx(run_file); }"));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
 }
     
