@@ -4,7 +4,7 @@ filedru=filedru();
 if(filedru){
 document.title= filedru.file_title+" - " + document.title;
 
-var playerhj = fs_Playerjs({ OSD:true, id:"zplayler", config:filedru.config, nocontrols:0, autoplay:0, loop:0, title:filedru.file_title, file:filedru.list, poster:filedru.cover,"embed":location.href, "url":location.href
+var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:filedru.list, poster:filedru.cover,"embed":location.href, "url":location.href
   });
 
 
