@@ -4,7 +4,7 @@ player_lang:"",
 player_osd:true,
 player_controls:0,
 player_autoplay:0,
-player_loop:0;
+player_loop:0,
  file_title:"Tokusatsu Música em Português",
  file_desc:"DVD 01",
  config:{
