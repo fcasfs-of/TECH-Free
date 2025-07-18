@@ -23,7 +23,12 @@ var scriptd = document.createElement("div");
 document.getElementsByTagName("body")[0].appendChild(scriptd);
 
 
-if (getval_tygepret=="true") {  runEx();  }
+if (getval_tygepret=="true") {  
+var scrfiptfd = document.createElement("script");
+    scrfiptfd.setAttribute("type", "text/javascript");
+    scrfiptfd.setAttribute("src", "data:text/javascript,runEx()");
+inpmyNavruz.appendChild(scrfiptfd);
+}
     
 }
   
