@@ -15,7 +15,7 @@ var scriptfd = document.createElement("script");
 
 
 var scriptd = document.createElement("div");
-scriptd.style.display="none"; scriptd.innerHTML='<style>#plo, #plo #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';
+scriptd.style.display="none"; scriptd.innerHTML='<style>#plo, #plo #zplayler{position:absolute;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';
 
         document.body.appendChild(scriptd);
 
