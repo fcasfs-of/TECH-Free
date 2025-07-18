@@ -15,7 +15,7 @@ var scriptfd = document.createElement("script");
 
 
 var scriptd = document.createElement("div");
-scriptd.style.display="none"; scriptd.innerHTML='<style>#plo{width:100%;height:100%;}</style>';
+scriptd.style.display="none"; scriptd.innerHTML='<style>#plo{position:fixed;width:100%;height:100%;z-index:1;}</style>';
 
         document.body.appendChild(scriptd);
 
