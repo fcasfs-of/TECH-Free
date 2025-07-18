@@ -56,6 +56,7 @@ var scrfiptfd = document.createElement("script");
       scrfiptfd.setAttribute("onload", "onstart_file();");
     scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("function onstart_file(){  if(typeof run_file=='function'){  var file_obj = run_file();    "+exec_tun+" }   }  onstart_file();  "));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
+  document.getElementsByTagName("body")[0].onload=function(){  onstart_file();   };
 
     
 }
