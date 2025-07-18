@@ -1,6 +1,10 @@
 
 function run_file(){  return { 
 player_lang:"en",
+player_osd:false,
+player_controls:1,
+player_autoplay:0,
+player_loop:0,
  file_title:"Tokusatsu Music in English",
  file_desc:"DVD 01",
  config:{
