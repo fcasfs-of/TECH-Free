@@ -20,5 +20,7 @@ scriptd.style.display="none"; scriptd.innerHTML='<style>#plo, #zplayler, #plo #z
         document.body.appendChild(scriptd);
 
 
+if(runP){  runP();  }
+
 }
   
