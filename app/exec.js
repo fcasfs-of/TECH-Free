@@ -12,7 +12,7 @@ var scriptfd = document.createElement("script");
         scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/_file/"+getval_tyget+".js");
         scriptfd.async = true;
 
-    document.getElementsByTagName("head")[0].appendChild(scriptfd);
+    document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
 
 
