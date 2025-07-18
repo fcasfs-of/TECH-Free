@@ -1,4 +1,4 @@
-functoon runEx(){
+function runEx(){
 
 document.title= "Tokusatsu Música em Português - " + document.title;
 
