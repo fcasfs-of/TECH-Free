@@ -26,7 +26,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptd);
 if (getval_tygepret=="true") {  
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(runEx){ runEx(); }"));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(typeof runEx=='function'){ runEx(); }"));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
 }
     
