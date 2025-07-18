@@ -5,8 +5,8 @@ player_lang:"en",
  file_desc:"DVD 01",
  config:{
  fontweight:"bold",
-  coloricons:"FFD700",
-  colortexts:"fff"
+  coloricons:"1874CD",
+  colortexts:"FFD700
 },
  list:[
 {
