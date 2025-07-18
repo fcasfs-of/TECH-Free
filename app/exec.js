@@ -54,13 +54,14 @@ var scriptd = document.createElement("div");
   scriptd.innerHTML='<style>#myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:absolute;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';
 document.getElementsByTagName("body")[0].appendChild(scriptd);
 
-
-if (getval_tygepret=="true") {  
+var exec_tun="";
+if (getval_tygepret=="true") {      exec_tun="runEx(run_file);";    }
+  
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(typeof run_file=='function'){  var file_obj = run_file();    runEx(run_file); }"));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(typeof run_file=='function'){  var file_obj = run_file();    "+exec_tun+" }"));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
-}
+
     
 }
   
