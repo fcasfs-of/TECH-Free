@@ -10,7 +10,7 @@ var playerhj = fs_Playerjs({ OSD:true, id:"zplayler", config:{
   });
 
 
-var fplayeri=playerhj;
+fplayeri=playerhj;
 
 
 playerhj.OnEvents("init",function(){
