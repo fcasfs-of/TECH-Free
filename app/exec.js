@@ -13,5 +13,12 @@ var scriptfd = document.createElement("script");
 
         document.body.appendChild(scriptfd);
 
+
+var scriptd = document.createElement("div");
+scriptd.style.display="none"; scriptd.innerHTML='<style>#plo{width:100%;height:100%;}</style>';
+
+        document.body.appendChild(scriptd);
+
+
 }
   
