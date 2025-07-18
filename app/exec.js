@@ -1,4 +1,5 @@
 var getval_tyget=getUrlParameter("fileID");
+var getval_tygepret=getUrlParameter("fileView");
 
 if (getval_tyget!="") {
 
@@ -21,6 +22,9 @@ var scriptd = document.createElement("div");
 document.getElementsByTagName("body")[0].appendChild(scriptd);
 
 
-
+if (getval_tygepret=="true") {
+    if(runEx){  runEx();  }
+}
+    
 }
   
