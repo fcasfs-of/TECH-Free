@@ -6,7 +6,7 @@ player_lang:"en",
  config:{
  fontweight:"bold",
   coloricons:"1874CD",
-  colortexts:"FFD700
+  colortexts:"FFD700"
 },
  list:[
 {
