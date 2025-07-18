@@ -3,10 +3,10 @@ document.title= "Tokusatsu Música em Português - " + document.title;
 
 var playerhj = fs_Playerjs({ OSD:true, id:"zplayler", config:{
  fontweight:"bold"
-}, nocontrols:0, autoplay:0, loop:0, title:"", file:[
-{title:"Jaspion%20-%20Singles%20Nacionais",file:"https%3A%2F%2Farchive.org%2Fdownload%2Fjaspion-singles-nacionais%2FJaspion%20-%20Singles%20Nacionais.mp4"},
-{title:"Tokusatsu%20-%20Singles%20Nacionais%20-%20DVD%2001",file:"https%3A%2F%2Farchive.org%2Fdownload%2Ftokusatsu-singles-nacionais-dvd-01%2FTokusatsu%20-%20Singles%20Nacionais%20-%20DVD%2001.mp4"}
-]
+}, nocontrols:0, autoplay:0, loop:0, title:"Tokusatsu Música em Português", file:[
+{title:"Jaspion - Singles Nacionais",file:"https://archive.org/download/jaspion-singles-nacionais/Jaspion - Singles Nacionais.mp4"},
+{title:"Tokusatsu - Singles Nacionais - DVD 01",file:"https://archive.org/download/tokusatsu-singles-nacionais-dvd-01/Tokusatsu - Singles Nacionais - DVD 01.mp4"}
+], poster:""
   });
 
 
