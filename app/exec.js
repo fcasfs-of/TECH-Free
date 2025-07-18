@@ -1,9 +1,10 @@
 var getval_tyget=getUrlParameter("fileID");
-var getval_tygepret=getUrlParameter("fileView");
 
 if (getval_tyget!="") {
 
+var getval_tygepret=getUrlParameter("fileView");
 
+    
 var inpmyNavruz = document.getElementById("myNavrun");    
 inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  transition: 0.2s;"></div>';  
 
@@ -22,9 +23,7 @@ var scriptd = document.createElement("div");
 document.getElementsByTagName("body")[0].appendChild(scriptd);
 
 
-if (getval_tygepret=="true") {
-    if(runEx){  runEx();  }
-}
+if (getval_tygepret=="true") {  runEx();  }
     
 }
   
