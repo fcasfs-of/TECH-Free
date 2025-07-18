@@ -1,3 +1,4 @@
+functoon runEx(){
 
 document.title= "Tokusatsu Música em Português - " + document.title;
 
@@ -24,7 +25,8 @@ playerhj.OnEvents("userseek",function(){      fs_OSD({ duration:openf_osdcd_time
 playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, text: 'Speed: '+playerhj.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
   
 });
-  
 
+  
+}
   
       
