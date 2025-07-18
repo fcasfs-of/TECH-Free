@@ -1,7 +1,7 @@
 
 document.title= "Tokusatsu Música em Português - " + document.title;
 
-var playerhj = fs_Playerjs({ OSD:true, id:"plo", config:{
+var playerhj = fs_Playerjs({ OSD:true, id:"zplayler", config:{
  fontweight:"bold",
   coloricons:"FFD700",
   colortexts:"fff"
