@@ -10,7 +10,6 @@ inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  tran
 var scriptfd = document.createElement("script");
         scriptfd.setAttribute("type", "text/javascript");
         scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/_file/"+getval_tyget+".js");
-        scriptfd.async = true;
 
     document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
