@@ -55,11 +55,12 @@ var scriptd = document.createElement("div");
 document.getElementsByTagName("body")[0].appendChild(scriptd);
 
 var exec_tun="";
-if (getval_tygepret=="true") {      exec_tun="runEx(run_file);";    }
+if (getval_tygepret=="true") {      exec_tun=" runEx(run_file);  ";    }
   
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(typeof run_file=='function'){  var file_obj = run_file();    "+exec_tun+" }"));
+      scrfiptfd.setAttribute("onload", "onstart_file();");
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("function onstart_file(){  if(typeof run_file=='function'){  var file_obj = run_file();    "+exec_tun+" }   }  onstart_file();  "));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
 
     
