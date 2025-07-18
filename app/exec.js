@@ -58,7 +58,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptd);
 if (getval_tygepret=="true") {  
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(typeof run_file=='function'){ runEx(run_file); }"));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("if(typeof run_file=='function'){  var file_obj = run_file();    runEx(run_file); }"));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
 }
     
