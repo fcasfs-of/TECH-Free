@@ -3,7 +3,7 @@ var getval_tyget=getUrlParameter("fileID");
 if (getval_tyget!="") {
 
 
-var inpmyNavruz = document.getElementById("myNavrun");    
+var inpmyNavruz = document.getElementById("plo");    
 inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; position:fixed; top:0;left:0;right:0;bottom:0; height:100%;  transition: 0.2s;"></div>';  
 
 
