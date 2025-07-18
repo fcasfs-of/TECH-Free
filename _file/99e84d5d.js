@@ -1,4 +1,3 @@
-function runP(){
 
 document.title= "Tokusatsu Música em Português - " + document.title;
 
@@ -26,6 +25,6 @@ playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, 
   
 });
   
-}
+
   
       
