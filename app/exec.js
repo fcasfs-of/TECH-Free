@@ -20,7 +20,5 @@ scriptd.style.display="none"; scriptd.innerHTML='<style>#plo, #zplayler, #plo #z
         inpmyNavruz.appendChild(scriptd);
 
 
-if(runP){  runP();  }
-
 }
   
