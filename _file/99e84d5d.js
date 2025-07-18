@@ -6,7 +6,7 @@ var playerhj = fs_Playerjs({ OSD:true, id:"myNavrun", config:{
 
 }, nocontrols:0, autoplay:0, loop:0, title:"", file:[
 {title:"Jaspion%20-%20Singles%20Nacionais",file:"https%3A%2F%2Farchive.org%2Fdownload%2Fjaspion-singles-nacionais%2FJaspion%20-%20Singles%20Nacionais.mp4"},
-{title:"Tokusatsu%20-%20Singles%20Nacionais%20-%20DVD%2001",file="https%3A%2F%2Farchive.org%2Fdownload%2Ftokusatsu-singles-nacionais-dvd-01%2FTokusatsu%20-%20Singles%20Nacionais%20-%20DVD%2001.mp4"}
+{title:"Tokusatsu%20-%20Singles%20Nacionais%20-%20DVD%2001",file:"https%3A%2F%2Farchive.org%2Fdownload%2Ftokusatsu-singles-nacionais-dvd-01%2FTokusatsu%20-%20Singles%20Nacionais%20-%20DVD%2001.mp4"}
 ]
   });
 
