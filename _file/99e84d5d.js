@@ -10,6 +10,9 @@ var playerhj = fs_Playerjs({ OSD:true, id:"zplayler", config:{
   });
 
 
+var fplayeri=playerhj;
+
+
 playerhj.OnEvents("init",function(){
 
 playerhj.OnEvents("volume",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(playerhj.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
@@ -24,3 +27,5 @@ playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, 
   
   
       
+openf_osdcd(document.getElementById("zplayler"),3e3, "", "", "");
+
