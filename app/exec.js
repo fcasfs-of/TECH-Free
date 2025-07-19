@@ -36,7 +36,7 @@ if (getval_tyget!="") {
 
 var getval_tygepret=getUrlParameter("fileView");
 
-var degetval_tselett="0";
+var degetval_tselett="1";
 var getval_tselett=getUrlParameter("fileSelect");
 if (getval_tselett!="") {
 degetval_tselett=getval_tselett;
