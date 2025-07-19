@@ -15,7 +15,7 @@ return arrayIntfferno;  }
 
 
 
-function runEx(filedru, id){
+function runEx(filedru, id, pos){
 if(typeof filedru=="function"){
 filedru=filedru();
 if(filedru){
@@ -28,6 +28,9 @@ var fplayeri = playerhj;
 
 
 playerhj.OnEvents("init",function(){
+
+
+playerhj.api("seek", Number(pos));
 
 
 playerhj.OnEvents("volume",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(playerhj.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
@@ -59,6 +62,13 @@ if (getval_tselett!="") {
 degetval_tselett=getval_tselett;
 }
 
+var degetval_tseposttt="0";
+var getval_tseletdt=getUrlParameter("pos");
+if (getval_tseletdt!="") {
+degetval_tseposttt=getval_tseletdt;
+}
+
+
    
 var inpmyNavruz = document.getElementById("myNavrun");    
 inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  transition: 0.2s;"></div><style>#myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:absolute;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';  
@@ -72,7 +82,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
 
 var exec_tun="";
-if (getval_tygepret=="true") {      exec_tun=" runEx(run_file, degetval_tselett);  ";    }
+if (getval_tygepret=="true") {      exec_tun=" runEx(run_file, degetval_tselett, degetval_tseposttt);  ";    }
   
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
