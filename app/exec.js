@@ -1,10 +1,27 @@
+function listaFiles(arrayInterno){  var arrayIntfferno=[];
+if(arrayInterno){
+for(var j=0; j<arrayInterno.length; j++){
+
+arrayIntfferno[j]={
+id:j,
+title:arrayInterno[j].title,
+file:arrayInterno[j].file,
+poster:arrayInterno[j].poster
+};
+    
+    }
+}  
+return arrayIntfferno;  }
+
+
+
 function runEx(filedru, id){
 if(typeof filedru=="function"){
 filedru=filedru();
 if(filedru){
 document.title= filedru.file_title+" - " + document.title;
 
-var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:filedru.list, poster:filedru.cover,"embed":location.href, "url":location.href, plstart:id
+var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href
   });
 
 
