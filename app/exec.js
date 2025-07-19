@@ -27,7 +27,7 @@ var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filed
 
 var fplayeri = playerhj;
 
-playerhj.api("play",id);
+playerhj.api("play","id:"+id);
 
 
 playerhj.OnEvents("init",function(){
