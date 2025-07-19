@@ -1,9 +1,9 @@
 function listaFiles(arrayInterno){  var arrayIntfferno=[];
 if(arrayInterno){
-for(var j=1; j<arrayInterno.length; j++){
+for(var j=0; j<arrayInterno.length; j++){
 
 arrayIntfferno[j]={
-id:j,
+id:(j+1),
 title:arrayInterno[j].title,
 file:arrayInterno[j].file,
 poster:arrayInterno[j].poster
