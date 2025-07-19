@@ -1,10 +1,10 @@
-function runEx(filedru){
+function runEx(filedru, id){
 if(typeof filedru=="function"){
 filedru=filedru();
 if(filedru){
 document.title= filedru.file_title+" - " + document.title;
 
-var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:filedru.list, poster:filedru.cover,"embed":location.href, "url":location.href
+var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:filedru.list, poster:filedru.cover,"embed":location.href, "url":location.href, plstart:Number(id)
   });
 
 
@@ -36,7 +36,13 @@ if (getval_tyget!="") {
 
 var getval_tygepret=getUrlParameter("fileView");
 
-    
+var degetval_tselett="0";
+var getval_tselett=getUrlParameter("fileSelect");
+if (getval_tselett!="") {
+degetval_tselett=getval_tselett;
+}
+
+   
 var inpmyNavruz = document.getElementById("myNavrun");    
 inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  transition: 0.2s;"></div><style>#myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:absolute;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';  
 
@@ -49,7 +55,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
 
 var exec_tun="";
-if (getval_tygepret=="true") {      exec_tun=" runEx(run_file);  ";    }
+if (getval_tygepret=="true") {      exec_tun=" runEx(run_file, '"+degetval_tselett+"');  ";    }
   
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
