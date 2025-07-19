@@ -3,7 +3,7 @@ if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
 
 arrayIntfferno[j]={
-id:(j+1),
+id:"pf"+(j+1),
 title:arrayInterno[j].title,
 file:arrayInterno[j].file,
 poster:arrayInterno[j].poster
@@ -27,10 +27,11 @@ var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filed
 
 var fplayeri = playerhj;
 
-playerhj.api("play","id:"+id);
-
 
 playerhj.OnEvents("init",function(){
+
+playerhj.api("play","id:pf"+id);
+
 
 playerhj.OnEvents("volume",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(playerhj.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
   
