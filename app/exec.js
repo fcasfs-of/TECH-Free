@@ -6,7 +6,9 @@ arrayIntfferno[j]={
 id:"pf"+(j+1),
 title:arrayInterno[j].title,
 file:arrayInterno[j].file,
-poster:arrayInterno[j].poster
+poster:arrayInterno[j].poster,
+casturl:arrayInterno[j].file,
+castname:arrayInterno[j].title
 };
     
     }
