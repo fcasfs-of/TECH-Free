@@ -416,16 +416,16 @@ display:block;
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
 }
 
 .checkmark {
   position: absolute;
   top: 0;
   left: 0;
-  height: 40px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
   background-color: #eee;
 }
 
@@ -451,7 +451,7 @@ display:block;
 
 
 .llk form.busca .container .checkmark:after {
-  left: 15px;
+  left: 20px;
   top: 15px;
   width: 5px;
   height: 10px;
