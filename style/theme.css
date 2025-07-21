@@ -398,6 +398,7 @@ margin: 0 auto;
 
 .llk form.busca .container {
   float: left;
+display:block;
   width:20%;
   position: relative;
   padding-left: 35px;
