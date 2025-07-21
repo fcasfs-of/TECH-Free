@@ -66,6 +66,7 @@ fplayeri = playerhj;
 
 playerhj.OnEvents("init",function(){
 
+playerhj.OnEvents("finish",function(){       runExG(filedru, id, pos);       });
 playerhj.OnEvents("end",function(){       runExG(filedru, id, pos);       });
 
 });
