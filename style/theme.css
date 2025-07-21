@@ -377,7 +377,7 @@ margin: 0 auto;
 
 .llk form.busca button {
   float: left;
-  width: 30%;
+  width: 30%;   user-select:none;
   padding: 10px;
   background: #2196F3;
   color: white;
