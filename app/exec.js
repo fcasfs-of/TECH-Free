@@ -61,8 +61,6 @@ document.title= filedrxu.file_title+" - " + document.title;
 var xplayerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedrxu.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedrxu.cover,"embed":location.href, "url":location.href  });
 
 
-fplayeri = xplayerhj;
-
 xplayerhj.OnEvents("init",function(){
 
 xplayerhj.OnEvents("finish",function(){       runExG(fplayeri, filedru, id, pos);       });
