@@ -398,7 +398,7 @@ margin: 0 auto;
 
 .llk form.busca .container {
   float: left;
-  display:block;
+  width:20%;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
@@ -415,8 +415,8 @@ margin: 0 auto;
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  height: 50px;
+  width: 50px;
 }
 
 .checkmark {
