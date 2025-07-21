@@ -63,10 +63,11 @@ document.title= filedrxu.file_title+" - " + document.title;
 var xplayerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedrxu.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedrxu.cover,"embed":location.href, "url":location.href  });
 
 
-xplayerhj.OnEvents("init",function(){
 
 xplayerhj.OnEvents("finish",function(){      runExG(xplayerhj, filedru, id, pos);       });
 xplayerhj.OnEvents("end",function(){   runExG(xplayerhj, filedru, id, pos);       });
+
+xplayerhj.OnEvents("init",function(){
 
 });
 
