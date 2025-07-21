@@ -18,8 +18,7 @@ return arrayIntfferno;  }
 
 var fplayeri;  var playerhj;
 
-function runExG(xplaydj, filedru, id, pos){
-xplaydj("destroy"); 
+function runExG(filedru, id, pos){
 
 if(typeof filedru=="function"){
 filedru=filedru();
@@ -68,8 +67,8 @@ playerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, auto
 
 playerhj.OnEvents("init",function(){
 
-playerhj.OnEvents("finish",function(){      runExG(playerhj.api, filedru, id, pos);       });
-playerhj.OnEvents("end",function(){   runExG(playerhj.api, filedru, id, pos);       });
+playerhj.OnEvents("finish",function(){      runExG(filedru, id, pos);       });
+playerhj.OnEvents("end",function(){   runExG(filedru, id, pos);       });
 
 });
 
