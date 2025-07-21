@@ -16,16 +16,15 @@ castname:arrayInterno[j].title
 return arrayIntfferno;  }
 
 
-var fplayeri;   var playerhj;
+var fplayeri; 
 
-
-function runExG(fplayeri, playerhj, filedru, id, pos){
+function runExG(fplayeri, filedru, id, pos){
 if(typeof filedru=="function"){
 filedru=filedru();
 if(filedru){
 document.title= filedru.file_title+" - " + document.title;
 
-playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id  });
+var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id  });
 
 
 fplayeri = playerhj;
@@ -66,8 +65,8 @@ fplayeri = xplayerhj;
 
 xplayerhj.OnEvents("init",function(){
 
-xplayerhj.OnEvents("finish",function(){       runExG(fplayeri, playerhj, filedru, id, pos);       });
-xplayerhj.OnEvents("end",function(){       runExG(fplayeri, playerhj, filedru, id, pos);       });
+xplayerhj.OnEvents("finish",function(){       runExG(fplayeri, filedru, id, pos);       });
+xplayerhj.OnEvents("end",function(){       runExG(fplayeri, filedru, id, pos);       });
 
 });
 
