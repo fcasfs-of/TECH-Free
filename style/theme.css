@@ -360,6 +360,12 @@ position: relative;
 
 
 
+.llk form.busca{
+width:100%;
+margin: 0 auto;
+}
+
+
 .llk form.busca input[type=text] {
   padding: 10px;
   font-size: 17px;
@@ -392,7 +398,7 @@ position: relative;
 
 .llk form.busca .container {
   float: left;
-  width: 20%;
+  
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
