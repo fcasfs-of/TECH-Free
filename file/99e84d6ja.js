@@ -7,7 +7,7 @@ player_controls:0,
 player_autoplay:0,
 player_loop:0,
  file_title:"Juspion - 2x1",
- file_desc:"Vídeo Clipe s",
+ file_desc:"Vídeo Clipes",
  config:{
  fontweight:"bold",
   coloricons:"00FFFF",
