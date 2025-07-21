@@ -359,6 +359,8 @@ position: relative;
 
 
 
+.llk, .llk *{  user-select:none; }
+
 
 .llk form.busca{
 width:70%;
