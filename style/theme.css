@@ -415,16 +415,16 @@ margin: 0 auto;
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 50px;
-  width: 50px;
+  height: 32px;
+  width: 32px;
 }
 
 .checkmark {
   position: absolute;
   top: 0;
   left: 0;
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   background-color: #eee;
 }
 
