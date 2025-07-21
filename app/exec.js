@@ -19,7 +19,7 @@ return arrayIntfferno;  }
 var fplayeri;   var playerhj;
 
 
-function runExG(filedru, id, pos){
+function runExG(fplayeri, playerhj, filedru, id, pos){
 if(typeof filedru=="function"){
 filedru=filedru();
 if(filedru){
@@ -59,15 +59,15 @@ var filedrxu=filedru();
 if(filedrxu){
 document.title= filedrxu.file_title+" - " + document.title;
 
-playerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedrxu.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedrxu.cover,"embed":location.href, "url":location.href  });
+var xplayerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedrxu.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedrxu.cover,"embed":location.href, "url":location.href  });
 
 
-fplayeri = playerhj;
+fplayeri = xplayerhj;
 
-playerhj.OnEvents("init",function(){
+xplayerhj.OnEvents("init",function(){
 
-playerhj.OnEvents("finish",function(){       runExG(filedru, id, pos);       });
-playerhj.OnEvents("end",function(){       runExG(filedru, id, pos);       });
+xplayerhj.OnEvents("finish",function(){       runExG(fplayeri, playerhj, filedru, id, pos);       });
+xplayerhj.OnEvents("end",function(){       runExG(fplayeri, playerhj, filedru, id, pos);       });
 
 });
 
