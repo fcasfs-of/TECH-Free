@@ -126,7 +126,7 @@ Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting s
     plsayer.addEventListener("stop",function(){       if(get_iofd==true){    navigator.mediaSession.playbackState = 'Stopped';  }
     Snackbar.show({ duration:openf_osdcd_time, text: 'Stopped', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'     });      });
     plsayer.addEventListener("play",function(){     if(get_iofd==true){    navigator.mediaSession.playbackState = 'Playing';  }
-      Snackbar.show({ duration:openf_osdcd_time, text: 'Playing', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
+      Snackbar.show({ duration:openf_osdcd_time, text: 'Reproducing', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
      plsayer.addEventListener("next",function(){       Snackbar.show({ duration:openf_osdcd_time, text: ''+fplayeri.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
     plsayer.addEventListener("previous",function(){       Snackbar.show({ duration:openf_osdcd_time, text: ''+fplayeri.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
     plsayer.addEventListener("speed",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Speed: '+fplayeri.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
