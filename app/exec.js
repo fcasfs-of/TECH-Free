@@ -24,7 +24,7 @@ filedru=filedru();
 if(filedru){
 document.title= filedru.file_title+" - " + document.title;
 
-var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id, autonext:1  });
+var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id });
 
 
 fplayeri = playerhj;
@@ -63,8 +63,8 @@ var xplayerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0,
 
 xplayerhj.OnEvents("init",function(){
 
-xplayerhj.OnEvents("finish",function(){       runExG(fplayeri, filedru, id, pos);       });
-xplayerhj.OnEvents("end",function(){       runExG(fplayeri, filedru, id, pos);       });
+xplayerhj.OnEvents("finish",function(){     xplayerhj.api("destroy");  runExG(fplayeri, filedru, id, pos);       });
+xplayerhj.OnEvents("end",function(){    xplayerhj.api("destroy");    runExG(fplayeri, filedru, id, pos);       });
 
 });
 
