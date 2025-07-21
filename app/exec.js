@@ -55,8 +55,8 @@ playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, 
 
 function runEx(filedru, id, pos){
 if(typeof filedru=="function"){
-filedrxu=filedru();
-if(filedru){
+var filedrxu=filedru();
+if(filedrxu){
 document.title= filedrxu.file_title+" - " + document.title;
 
 playerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedrxu.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedrxu.cover,"embed":location.href, "url":location.href  });
