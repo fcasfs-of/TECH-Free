@@ -18,7 +18,9 @@ return arrayIntfferno;  }
 
 var fplayeri; 
 
-function runExG(fplayeri, filedru, id, pos){
+function runExG(xplaydj, filedru, id, pos){
+xplaydj.api("destroy"); 
+
 if(typeof filedru=="function"){
 filedru=filedru();
 if(filedru){
@@ -63,8 +65,8 @@ var xplayerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0,
 
 xplayerhj.OnEvents("init",function(){
 
-xplayerhj.OnEvents("finish",function(){     xplayerhj.api("destroy");  runExG(fplayeri, filedru, id, pos);       });
-xplayerhj.OnEvents("end",function(){    xplayerhj.api("destroy");    runExG(fplayeri, filedru, id, pos);       });
+xplayerhj.OnEvents("finish",function(){      runExG(xplayerhj, filedru, id, pos);       });
+xplayerhj.OnEvents("end",function(){   runExG(xplayerhj, filedru, id, pos);       });
 
 });
 
