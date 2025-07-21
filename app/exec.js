@@ -18,7 +18,7 @@ return arrayIntfferno;  }
 
 var fplayeri;  var playerhj;
 
-function runExG(filedru, id, pos){
+function runEx(filedru, id, pos){
 
 if(typeof filedru=="function"){
 filedru=filedru();
@@ -36,8 +36,8 @@ playerhj.OnEvents("init",function(){
 
 playerhj.api("seek", Number(pos));
 
-playerhj.OnEvents("finish",function(){      playerhj.api("next");       });
-playerhj.OnEvents("end",function(){      playerhj.api("next");       });
+//playerhj.OnEvents("finish",function(){      playerhj.api("next");       });
+//playerhj.OnEvents("end",function(){      playerhj.api("next");       });
 
 
 playerhj.OnEvents("volume",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(playerhj.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
@@ -56,7 +56,7 @@ playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, 
 }
 
 
-function runEx(filedru, id, pos){
+function runExT(filedru, id, pos){
 if(typeof filedru=="function"){
 var filedrxu=filedru();
 if(filedrxu){
