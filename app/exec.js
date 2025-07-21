@@ -16,7 +16,7 @@ castname:arrayInterno[j].title
 return arrayIntfferno;  }
 
 
-var fplayeri; 
+var fplayeri;  var playerhj;
 
 function runExG(xplaydj, filedru, id, pos){
 xplaydj("destroy"); 
@@ -26,7 +26,7 @@ filedru=filedru();
 if(filedru){
 document.title= filedru.file_title+" - " + document.title;
 
-var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id });
+playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id });
 
 
 fplayeri = playerhj;
@@ -64,13 +64,13 @@ var filedrxu=filedru();
 if(filedrxu){
 document.title= filedrxu.file_title+" - " + document.title;
 
-var xplayerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedrxu.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedrxu.cover,"embed":location.href, "url":location.href  });
+playerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedrxu.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedrxu.cover,"embed":location.href, "url":location.href  });
 
 
-xplayerhj.OnEvents("init",function(){
+playerhj.OnEvents("init",function(){
 
-xplayerhj.OnEvents("finish",function(){      runExG(xplayerhj.api, filedru, id, pos);       });
-xplayerhj.OnEvents("end",function(){   runExG(xplayerhj.api, filedru, id, pos);       });
+playerhj.OnEvents("finish",function(){      runExG(playerhj.api, filedru, id, pos);       });
+playerhj.OnEvents("end",function(){   runExG(playerhj.api, filedru, id, pos);       });
 
 });
 
