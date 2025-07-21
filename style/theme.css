@@ -364,7 +364,7 @@ position: relative;
 
 .llk form.busca{
 width:70%;
-margin: 0 auto;
+margin: 0 auto;  text-align:center;  
 }
 
 
@@ -378,7 +378,7 @@ margin: 0 auto;
 }
 
 .llk form.busca button {
-  float: left;
+  float: right;
   width: 30%;   user-select:none;
   padding: 10px;
   background: #2196F3;
@@ -452,8 +452,8 @@ margin: 0 auto;
 
 
 .llk form.busca .container .checkmark:after {
-  left: 10px;
-  top: 10px;
+  left: 15px;
+  top: 15px;
   width: 5px;
   height: 10px;
   border: solid white;
