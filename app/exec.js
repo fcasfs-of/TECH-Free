@@ -54,6 +54,10 @@ playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, 
 
 
 function runEx(filedru, id, pos){
+if(typeof filedru=="function"){
+filedru=filedru();
+if(filedru){
+document.title= filedru.file_title+" - " + document.title;
 
 playerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedru.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedru.cover,"embed":location.href, "url":location.href  });
 
@@ -66,6 +70,7 @@ playerhj.OnEvents("end",function(){       runExG(filedru, id, pos);       });
 
 });
 
+}    }
 }
 
 
