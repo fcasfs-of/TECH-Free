@@ -16,17 +16,19 @@ castname:arrayInterno[j].title
 return arrayIntfferno;  }
 
 
+var fplayeri;   var playerhj;
 
-function runEx(filedru, id, pos){
+
+function runExG(filedru, id, pos){
 if(typeof filedru=="function"){
 filedru=filedru();
 if(filedru){
 document.title= filedru.file_title+" - " + document.title;
 
-var playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id  });
+playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id  });
 
 
-var fplayeri = playerhj;
+fplayeri = playerhj;
 
 
 playerhj.OnEvents("init",function(){
@@ -48,6 +50,22 @@ playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, 
    openf_osdcd(document.getElementById("zplayler"),3e3, "", [], 0);   
     
 }   }
+}
+
+
+function runEx(filedru, id, pos){
+
+playerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedru.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedru.cover,"embed":location.href, "url":location.href  });
+
+
+fplayeri = playerhj;
+
+playerhj.OnEvents("init",function(){
+
+playerhj.OnEvents("end",function(){       runExG(filedru, id, pos);       });
+
+});
+
 }
 
 
