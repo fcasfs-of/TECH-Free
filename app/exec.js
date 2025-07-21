@@ -32,14 +32,13 @@ playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.c
 fplayeri = playerhj;
 
 
-playerhj.OnEvents("finish",function(){      playerhj.api("next");       });
-playerhj.OnEvents("end",function(){      playerhj.api("next");       });
-
-
 playerhj.OnEvents("init",function(){
 
 
 playerhj.api("seek", Number(pos));
+
+playerhj.OnEvents("finish",function(){      playerhj.api("next");       });
+playerhj.OnEvents("end",function(){      playerhj.api("next");       });
 
 
 playerhj.OnEvents("volume",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(playerhj.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
