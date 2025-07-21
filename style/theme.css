@@ -365,7 +365,7 @@ position: relative;
   font-size: 17px;
   border: 1px solid grey;
   float: left;
-  width: 70%;
+  width: 50%;
   background: #f1f1f1;
 }
 
@@ -391,6 +391,8 @@ position: relative;
 }
 
 .llk form.busca .container {
+  float: left;
+  width: 20%;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
