@@ -452,8 +452,8 @@ margin: 0 auto;
 
 
 .llk form.busca .container .checkmark:after {
-  left: 12px;
-  top: 12px;
+  left: 10px;
+  top: 10px;
   width: 5px;
   height: 10px;
   border: solid white;
