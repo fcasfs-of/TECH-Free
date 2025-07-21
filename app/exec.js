@@ -44,6 +44,8 @@ playerhj.OnEvents("seek",function(){      fs_OSD({ duration:openf_osdcd_time, po
 
 playerhj.OnEvents("userseek",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(playerhj.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
 
+playerhj.OnEvents("finish",function(){      playerhj.api("next");       });
+
 playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, text: 'Speed: '+playerhj.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
   
 });
@@ -63,11 +65,10 @@ document.title= filedrxu.file_title+" - " + document.title;
 var xplayerhj = fs_Playerjs({ OSD:false, id:"zplayler", config:{}, nocontrols:0, autoplay:1, loop:0, title:filedrxu.file_title, file:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4", poster:filedrxu.cover,"embed":location.href, "url":location.href  });
 
 
+xplayerhj.OnEvents("init",function(){
 
 xplayerhj.OnEvents("finish",function(){      runExG(xplayerhj, filedru, id, pos);       });
 xplayerhj.OnEvents("end",function(){   runExG(xplayerhj, filedru, id, pos);       });
-
-xplayerhj.OnEvents("init",function(){
 
 });
 
