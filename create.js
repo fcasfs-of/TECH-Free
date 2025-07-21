@@ -6,7 +6,7 @@
   //if(listfrr_is["parameters"].mode=="2"){     var_versplayerpg=2;   var inpss454ftu35rwles_oid=" de Áudio";  var inpss45435rwles_oid="audio/*";   }
 
 
-inpss454fod5rwles.innerHTML='<inp'+'ut type="file" class="lk" id="inpssle" multiple="multiple" name="files" accept="'+inpss45435rwles_oid+'"/><br/><button class="btn" onclick="run_modelop();" id="infdfpssle" style="transition: 0.2s;width:90%"><div style="padding:4px;">Abrir Arquivos (Video, Audio e Image)'+inpss454ftu35rwles_oid+'</div></button>  <br/><br/> <hr/>   <br/> <form class="busca" action="https://player.fcasfs-of.cloud-fs.net/?fileView=true&">  <input type="text" placeholder="ID..." name="fileID"/>  <label class="container"> <input type="checkbox" checked="true" valeu="true" name="fileView"/> <span class="checkmark"></span> </label> <button type="submit" value="Buscar">Buscar</button></form>  <br/>  ';
+inpss454fod5rwles.innerHTML='<inp'+'ut type="file" class="lk" id="inpssle" multiple="multiple" name="files" accept="'+inpss45435rwles_oid+'"/><br/><button class="btn" onclick="run_modelop();" id="infdfpssle" style="transition: 0.2s;width:90%"><div style="padding:4px;">Abrir Arquivos <br/> (Video, Audio e Image)'+inpss454ftu35rwles_oid+'</div></button>  <br/><br/> <hr/>   <br/> <form class="busca" action="https://player.fcasfs-of.cloud-fs.net/?fileView=true&">  <input type="text" placeholder="ID..." name="fileID"/>  <label class="container"> <input type="checkbox" checked="true" valeu="true" name="fileView"/> <span class="checkmark"></span> </label> <button type="submit" value="Buscar">Buscar</button></form>  <br/>  ';
 
 
 //isopenduuf(document.getElementById("zplayler")); 
