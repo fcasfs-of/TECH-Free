@@ -110,6 +110,8 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
 var exec_tun="";
 if (getval_tygepret=="true") {      exec_tun=" runEx(run_file, degetval_tselett, degetval_tseposttt);  ";    }
+if (getval_tygepret=="on") {      exec_tun=" runEx(run_file, degetval_tselett, degetval_tseposttt);  ";    }
+
   
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
