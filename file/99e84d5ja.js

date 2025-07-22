@@ -1,6 +1,6 @@
 
 function run_file(){  return { 
-player_lang:"en",
+player_lang:"en", 
 pg_dark:true,
 player_osd:true,
 player_controls:0,
