@@ -372,12 +372,11 @@ margin: 0 auto;  text-align:center;
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
-  width: 40%;
   background: #f1f1f1;   text-align:center;  
 }
 
 .llk form.busca button {
-  width: 50%;   user-select:none;
+  user-select:none;
   padding: 10px;   display:block;  text-align:center;  
   background: #2196F3;
   color: white;
