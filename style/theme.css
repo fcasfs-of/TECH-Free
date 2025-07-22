@@ -372,15 +372,13 @@ margin: 0 auto;  text-align:center;
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
-  float: left;
   width: 40%;
   background: #f1f1f1;
 }
 
 .llk form.busca button {
-  float: right;
-  width: 30%;   user-select:none;
-  padding: 10px;
+  width: 50%;   user-select:none;
+  padding: 10px;   display:block;
   background: #2196F3;
   color: white;
   font-size: 17px;
@@ -399,7 +397,6 @@ margin: 0 auto;  text-align:center;
 }
 
 .llk form.busca .container {
-  float: left;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
@@ -422,7 +419,6 @@ margin: 0 auto;  text-align:center;
 
 .checkmark {
   position: absolute;
-  top: 0;
   left: 0;
   height: 42px;
   width: 42px;
