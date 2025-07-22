@@ -363,7 +363,7 @@ position: relative;
 
 
 .llk form.busca{
-width:70%;
+width:60%;
 margin: 0 auto;  text-align:center;  
 }
 
@@ -373,12 +373,12 @@ margin: 0 auto;  text-align:center;
   font-size: 17px;
   border: 1px solid grey;
   width: 40%;
-  background: #f1f1f1;
+  background: #f1f1f1;   text-align:center;  
 }
 
 .llk form.busca button {
   width: 50%;   user-select:none;
-  padding: 10px;   display:block;
+  padding: 10px;   display:block;  text-align:center;  
   background: #2196F3;
   color: white;
   font-size: 17px;
@@ -397,7 +397,7 @@ margin: 0 auto;  text-align:center;
 }
 
 .llk form.busca .container {
-  position: relative;
+  position: absolute;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
