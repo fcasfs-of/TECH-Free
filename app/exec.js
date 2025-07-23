@@ -8,6 +8,25 @@ if (getval_tygepret=="on") {      runEx(run_file, degetval_tselett, degetval_tse
 }  
 
 
+    
+function listaFile_mans(arrayInterno, id, link){  var arrayIntfferno=[];
+if(arrayInterno){
+for(var j=0; j<arrayInterno.length; j++){
+
+arrayIntfferno[j]={
+name:arrayInterno[j].title,
+description:"",
+short_name: id+"_"+(j+1),
+url: link+(j+1),  
+ start_url: link+(j+1), 
+ scope: link+(j+1),
+icons:[ { src:arrayInterno[j].poster, sizes: "256x256" } ]
+};
+    
+    }
+}  
+return arrayIntfferno;  }
+
 
 function listaFiles(arrayInterno){  var arrayIntfferno=[];
 if(arrayInterno){
@@ -27,6 +46,7 @@ castname:arrayInterno[j].title
 return arrayIntfferno;  }
 
 
+
 var fplayeri;  var playerhj;
 
 function runEx(filedru, id, pos){
@@ -38,10 +58,45 @@ document.title= filedru.file_title+" - " + document.title;
 
 //"title":filedru.file_title,"folder":[]
 
+
+
+let manifestfile = { 
+ "name": "Gerar Calendario",
+  "description": "Calendario",
+  "short_name": "fcasfsof_"+getval_tyget,
+  "start_url": location.href, 
+  "scope": location.href,
+  "lang": "en",
+  "icons": [
+    {      "src": filedru.cover,      "sizes": "256x256", "type": "image/png"    }
+  ],
+  "related_applications": [
+    {      "platform": "web"    }
+  ],
+  "display": "standalone",
+  "categories": ["fcasfs-of"],
+"shortcuts": listaFile_mans(filedru.list, getval_tyget, location.href+"&fileSelect=")
+  }
+]
+
+};
+
+
 playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id });
 
 
 fplayeri = playerhj;
+
+
+
+let contdent = encodeURIComponent(JSON.stringify(manifestfile));
+let urfdl = "data:application/manifest+json,"+contdent;
+let elemeffnt = document.createElement('link');
+elemeffnt.setAttribute('rel', 'manifest');
+elemeffnt.setAttribute('href', urfdl);
+document.querySelector('head').appendChild(elemeffnt);
+
+
 
 
 playerhj.OnEvents("init",function(){
