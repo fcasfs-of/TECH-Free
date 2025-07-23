@@ -1,10 +1,6 @@
 function onget_d(df){  return df+" Arquivos"; }
 
 
-settingsplayer["colortexts"]="63B8FF";    settingsplayer["coloricons"]="00EEEE";
-settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EEEE";
-
-
   var mdpl_handleFileSelectsa=[];    var mdpl_handleFilehistoicr=[];
 
   var osdposito="top-left";    var osdpositdo="absolute";
@@ -61,7 +57,12 @@ call(mdpl_handlefFileSelectsa, evt.files.length, mkk, jj);
 
 
 function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
-if(settingsplayer){  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
+if(settingsplayer){  
+  
+settingsplayer["colortexts"]="63B8FF";    settingsplayer["coloricons"]="00EEEE";
+settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EEEE";
+
+  if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
                                                
 if(cc<1){    }
 
