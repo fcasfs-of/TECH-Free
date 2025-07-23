@@ -9,7 +9,7 @@ body{   background:#333; color:#fff;   }
 .llk form.busca .range input[type="range"]::-moz-range-thumb:hover {  box-shadow: 0 0 0 10px rgba(255,85,0, .8)}
 .llk form.busca .range input[type="range"]:active::-moz-range-thumb {  box-shadow: 0 0 0 13px rgba(255,85,0, .8)}
 .llk form.busca .range input[type="range"]:focus::-moz-range-thumb {  box-shadow: 0 0 0 13px rgba(255,85,0, .8)    }
-.llk form.busca .range {  display: flex;  align-items: center;  gap: 1rem;  width: 80&;  margin: 0 auto;  height: 4rem;  width: 80%;  background: #fff;  padding: 0px 10px;}
+.llk form.busca .range {     border-radius: 8px;   display: flex;  align-items: center;  gap: 1rem;   margin: 0 auto;  height: 4rem;  width: 80%;  background: #fff;  padding: 0px 10px;}
 .llk form.busca .range .value {  font-size: 26px;      width: 50px;  text-align: center;}
 
 
@@ -378,14 +378,14 @@ position: relative;
 .llk form.busca{  width:90%;  margin: 0 auto;  }
 
 .llk form.busca input[type=text] {
-  padding: 10px;
+  padding: 10px;       border-radius: 6px;       text-align: center;
   font-size: 17px;
   border: 1px solid grey;
   background: #f1f1f1;   width:70%;
 }
 
 .llk form.busca button {
-  user-select:none;
+  user-select:none;       border-radius: 10px;       text-align: center;
   padding: 10px;    width:70%;
   background: #2196F3;
   color: white;
@@ -418,7 +418,7 @@ position: relative;
   width: 42px;
 }
 
-.checkmark {  position: absolute;  left: 0;  height: 42px;  width: 42px;  background-color: #eee;}
+.checkmark {   border-radius: 12px;  position: absolute;  left: 0;  height: 42px;  width: 42px;  background-color: #eee;}
 
 .llk form.busca .container:hover input ~ .checkmark {  background-color: #ccc;}
 .llk form.busca .container input:checked ~ .checkmark {  background-color: #2196F3;}
