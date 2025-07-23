@@ -14,13 +14,13 @@ if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
 
 arrayIntfferno[j]={
-name:arrayInterno[j].title,
-description:"",
-short_name: id+"_"+(j+1),
-url: link+""+(j+1),  
- start_url: link+""+(j+1), 
- scope: link+""+(j+1),
-icons:[ { src:arrayInterno[j].poster, sizes: "256x256" } ]
+"name":arrayInterno[j].title,
+"description":"",
+"short_name": id+"_"+(j+1),
+"url": link+""+(j+1),  
+ "start_url": link+""+(j+1), 
+ "scope": link+""+(j+1),
+"icons":[ { "src":arrayInterno[j].poster, "sizes": "256x256" } ]
 };
     
     }
@@ -56,7 +56,7 @@ filedru=filedru();
 if(filedru){
 document.title= filedru.file_title+" - " + document.title;
 
-//"title":filedru.file_title,"folder":[]
+//"title":"","folder":[]
 
 
 
