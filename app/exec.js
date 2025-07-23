@@ -17,9 +17,9 @@ arrayIntfferno[j]={
 name:arrayInterno[j].title,
 description:"",
 short_name: id+"_"+(j+1),
-url: link+(j+1),  
- start_url: link+(j+1), 
- scope: link+(j+1),
+url: link+""+(j+1),  
+ start_url: link+""+(j+1), 
+ scope: link+""+(j+1),
 icons:[ { src:arrayInterno[j].poster, sizes: "256x256" } ]
 };
     
@@ -61,8 +61,8 @@ document.title= filedru.file_title+" - " + document.title;
 
 
 let manifestfile = { 
- "name": "Gerar Calendario",
-  "description": "Calendario",
+ "name": filedru.file_title,
+  "description": filedru.file_desc,
   "short_name": "fcasfsof_"+getval_tyget,
   "start_url": location.href, 
   "scope": location.href,
@@ -81,14 +81,6 @@ let manifestfile = {
 
 };
 
-
-playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id });
-
-
-fplayeri = playerhj;
-
-
-
 let contdent = encodeURIComponent(JSON.stringify(manifestfile));
 let urfdl = "data:application/manifest+json,"+contdent;
 let elemeffnt = document.createElement('link');
@@ -97,6 +89,11 @@ elemeffnt.setAttribute('href', urfdl);
 document.querySelector('head').appendChild(elemeffnt);
 
 
+
+playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id });
+
+
+fplayeri = playerhj;
 
 
 playerhj.OnEvents("init",function(){
