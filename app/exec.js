@@ -84,7 +84,7 @@ let urfdl = "data:application/manifest+json,"+contdent;
 let elemeffnt = document.createElement('link');
 elemeffnt.setAttribute('rel', 'manifest');
 elemeffnt.setAttribute('href', urfdl);
-document.querySelector('head').appendChild(elemeffnt);
+document.head.appendChild(elemeffnt);
 
 
 
