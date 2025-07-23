@@ -76,8 +76,6 @@ let manifestfile = {
   "display": "standalone",
   "categories": ["fcasfs-of"],
 "shortcuts": listaFile_mans(filedru.list, getval_tyget, location.href+"&fileSelect=")
-  }
-]
 
 };
 
