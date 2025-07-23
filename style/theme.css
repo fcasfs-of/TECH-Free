@@ -397,6 +397,8 @@ position: relative;
 .llk form.busca button:hover {  background: #0b7dda;}
 .llk form.busca::after {  content: "";  clear: both;  display: table;}
 
+.llk form.busca button[type=submit] {    text-transform: uppercase;    }
+
 .llk form.busca .container {
   position: relative;
   padding-left: 35px;
