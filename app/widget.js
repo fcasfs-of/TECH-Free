@@ -2,6 +2,7 @@ function onget_d(df){  return df+" Arquivos"; }
 
 
 settingsplayer["colortexts"]="63B8FF";    settingsplayer["coloricons"]="00EEEE";
+settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EEEE";
 
 
   var mdpl_handleFileSelectsa=[];    var mdpl_handleFilehistoicr=[];
