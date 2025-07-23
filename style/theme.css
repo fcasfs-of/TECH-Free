@@ -375,11 +375,7 @@ position: relative;
 .llk, .llk *{  user-select:none; }
 
 
-.llk form.busca{
-width:60%;
-margin: 0 auto;  text-align:center;  
-}
-
+.llk form.busca{  width:90%;  margin: 0 auto;  }
 
 .llk form.busca input[type=text] {
   padding: 10px;
@@ -398,15 +394,8 @@ margin: 0 auto;  text-align:center;
   border-left: none;
   cursor: pointer;
 }
-.llk form.busca button:hover {
-  background: #0b7dda;
-}
-
-.llk form.busca::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+.llk form.busca button:hover {  background: #0b7dda;}
+.llk form.busca::after {  content: "";  clear: both;  display: table;}
 
 .llk form.busca .container {
   position: absolute;
@@ -429,34 +418,12 @@ margin: 0 auto;  text-align:center;
   width: 42px;
 }
 
-.checkmark {
-  position: absolute;
-  left: 0;
-  height: 42px;
-  width: 42px;
-  background-color: #eee;
-}
+.checkmark {  position: absolute;  left: 0;  height: 42px;  width: 42px;  background-color: #eee;}
 
-
-.llk form.busca .container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-.llk form.busca .container input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-
-.llk form.busca .container input:checked ~ .checkmark:after {
-  display: block;
-}
-
+.llk form.busca .container:hover input ~ .checkmark {  background-color: #ccc;}
+.llk form.busca .container input:checked ~ .checkmark {  background-color: #2196F3;}
+.checkmark:after {  content: "";  position: absolute;  display: none;}
+.llk form.busca .container input:checked ~ .checkmark:after {  display: block;}
 
 .llk form.busca .container .checkmark:after {
   left: 16px;
