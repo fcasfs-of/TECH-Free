@@ -79,12 +79,12 @@ let manifestfile = {
 
 };
 
+
+var manifestLink = document.getElementById('manifest-link');
 let contdent = encodeURIComponent(JSON.stringify(manifestfile));
 let urfdl = "data:application/manifest+json,"+contdent;
-let elemeffnt = document.createElement('link');
-elemeffnt.setAttribute('rel', 'manifest');
-elemeffnt.setAttribute('href', urfdl);
-document.getElementsByTagName("head")[0].appendChild(elemeffnt);
+ manifestLink.setAttribute('href', urfdl);
+
 
 
 
