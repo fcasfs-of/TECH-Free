@@ -13,6 +13,7 @@ inpss454fod5rwles.innerHTML='<inp'+'ut type="file" class="lk" id="inpssle" multi
 var getval_tidyget=getUrlParameter("id");
 if (getval_tidyget!="") {   inpsobdles.value=getval_tidyget;  }
 var getval_dftidyget=getUrlParameter("pos");
+inpsobdldfes.value="1";
 if (getval_dftidyget!="") {   inpsobdldfes.value=getval_dftidyget;  }
 
 
