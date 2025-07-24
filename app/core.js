@@ -5,7 +5,7 @@ var app_ver="2.0.0.1";
 function progressScript(idf,ll) {
     const progress = (idf.value / idf.max) * 100;
   ll.textContent = idf.value;
-  idf.style.background = `linear-gradient(to right, DodgerBlue ${progress}%, #ccc ${progress}%)`;
+  idf.style.background = `linear-gradient(to right, #4682B4 ${progress}%, #ccc ${progress}%)`;
  }
 
 function progressScriptfile(oper,valks){
@@ -15,7 +15,7 @@ sliderEl.addEventListener("input", (event) => {
   const tempSliderValue = event.target.value; 
   sliderValue.textContent = tempSliderValue;
   const progress = (tempSliderValue / sliderEl.max) * 100;
-  sliderEl.style.background = `linear-gradient(to right, DodgerBlue ${progress}%, #ccc ${progress}%)`;
+  sliderEl.style.background = `linear-gradient(to right, #4682B4 ${progress}%, #ccc ${progress}%)`;
 });
  progressScript(sliderEl,sliderValue);
 }
