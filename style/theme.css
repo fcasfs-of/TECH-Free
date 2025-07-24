@@ -424,7 +424,7 @@ position: relative;
 
 .llk form.busca .container:hover input ~ .checkmark {  background-color: #ccc;}
 .llk form.busca .container input:checked ~ .checkmark {   background-color: #2196F3;}
-.llk form.busca .container:hover input:checked ~ .checkmark {  background-color: #1E90FF;}
+.llk form.busca .container:hover input:checked ~ .checkmark {  background-color: #4682B4;}
 .checkmark:after {  content: "";  position: absolute;  display: none;}
 .llk form.busca .container input:checked ~ .checkmark:after {  display: block;}
 
