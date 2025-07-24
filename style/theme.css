@@ -423,7 +423,8 @@ position: relative;
 .checkmark {   border-radius: 12px;  position: absolute;  left: 0;  height: 42px;  width: 42px;  background-color: #eee;}
 
 .llk form.busca .container:hover input ~ .checkmark {  background-color: #ccc;}
-.llk form.busca .container input:checked ~ .checkmark {  background-color: #2196F3;}
+.llk form.busca .container input:checked ~ .checkmark {  opacity:1;  background-color: #2196F3;}
+.llk form.busca .container:hover input:checked ~ .checkmark {  opacity:0.8;  background-color: #2196F3;}
 .checkmark:after {  content: "";  position: absolute;  display: none;}
 .llk form.busca .container input:checked ~ .checkmark:after {  display: block;}
 
