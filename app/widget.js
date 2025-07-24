@@ -25,34 +25,34 @@ call(mdpl_handlefFileSelectsa, evt.files.length, mkk, jj);
 
 
 
- function openf_osdcd(plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
+ function openf_osdcd(plobf, plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
 
   if(obb){  obb.innerHTML="";   }
 
-     plsayer.addEventListener("init",function(){    
-    vars = fplayeri.api("vars");
-    });  
     if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
-                                        
-                                        
-   plsayer.addEventListener("start",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
-    plsayer.addEventListener("new",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
-    plsayer.addEventListener("exitfullscreen",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Saindo da Tela Cheia', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
-    plsayer.addEventListener("fullscreen",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Tela Cheia', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
-    plsayer.addEventListener("end",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Finalizando', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
-    plsayer.addEventListener("finish",function(){       Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Terminado', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
-    plsayer.addEventListener("volume",function(){     Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(fplayeri.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
-    plsayer.addEventListener("seek",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(fplayeri.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
-    plsayer.addEventListener("userseek",function(){      Snackbar.show({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(adpi.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
-    plsayer.addEventListener("unmute",function(){      Snackbar.show({ duration:openf_osdcd_time, text: 'Som Ativo', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
-    plsayer.addEventListener("mute",function(){     Snackbar.show({ duration:openf_osdcd_time, text: 'Mutado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
-    plsayer.addEventListener("pause",function(){      Snackbar.show({ duration:openf_osdcd_time, text: 'Pausado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
-    plsayer.addEventListener("stop",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Parado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'     });      });
-    plsayer.addEventListener("play",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Reproduzindo', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
-     plsayer.addEventListener("next",function(){       Snackbar.show({ duration:openf_osdcd_time, text: ''+fplayeri.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
-    plsayer.addEventListener("previous",function(){       Snackbar.show({ duration:openf_osdcd_time, text: ''+fplayeri.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
-    plsayer.addEventListener("speed",function(){       Snackbar.show({ duration:openf_osdcd_time, text: 'Velocidade: '+fplayeri.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
- }
+     plobf.OnEvents("init",function(){    
+    //vars = fplayeri.api("vars");
+                                    
+   plobf.OnEvents("start",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plobf.OnEvents("new",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plobf.OnEvents("exitfullscreen",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Saindo da Tela Cheia', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
+    plobf.OnEvents("fullscreen",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Tela Cheia', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+    plobf.OnEvents("end",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Finalizando', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+    plobf.OnEvents("finish",function(){       fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Terminado', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+    plobf.OnEvents("volume",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Volume: '+Math.floor(plobf.api("volume")*100)+"%", pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
+    plobf.OnEvents("seek",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(plobf.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
+    plobf.OnEvents("userseek",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(plobf.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
+    plobf.OnEvents("unmute",function(){      fs_OSD({ duration:openf_osdcd_time, text: 'Som Ativo', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+    plobf.OnEvents("mute",function(){     fs_OSD({ duration:openf_osdcd_time, text: 'Mutado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plobf.OnEvents("pause",function(){      fs_OSD({ duration:openf_osdcd_time, text: 'Pausado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plobf.OnEvents("stop",function(){       fs_OSD({ duration:openf_osdcd_time, text: 'Parado', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'     });      });
+    plobf.OnEvents("play",function(){       fs_OSD({ duration:openf_osdcd_time, text: 'Reproduzindo', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
+     plobf.OnEvents("next",function(){       fs_OSD({ duration:openf_osdcd_time, text: ''+plobf.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
+    plobf.OnEvents("previous",function(){       fs_OSD({ duration:openf_osdcd_time, text: ''+plobf.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
+    plobf.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, text: 'Velocidade: '+plobf.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
+    });  
+
+}
 
 
 
@@ -73,21 +73,21 @@ else if(cc==1){       var img_ond="";
 if(call[0].type && call[0].type==="application/pdf"){
  // document.getElementById(evt).innerHTML="<ifra"+'me src="'+call[0].file+'" width="100%" height="100%" style="border:none;"></i'+"frame>";
 } else {   
-  fplayeri = new Playerjs({vars:api_tok, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href,  }); 
-is_playerd_allid(settingsplayer, call, fplayeri);  
- is_playerd_allid(getUrlVars(location.href), call, fplayeri);        startOSD("zplayler"); 
+  fplayeri = fs_Playerjs({ config:settingsplayer, OSD:true, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
+//is_playerd_allid(settingsplayer, call, fplayeri);  
+ //is_playerd_allid(getUrlVars(location.href), call, fplayeri);       
                
-openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);
+openf_osdcd(fplayeri, document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);
 }
                
 }
 
 else if(cc>=2){   
-     fplayeri = new Playerjs({vars:api_tok, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href,  });   
-is_playerd_allid(settingsplayer, call, fplayeri);  
- is_playerd_allid(getUrlVars(location.href), call, fplayeri);     startOSD("zplayler"); 
+     fplayeri = fs_Playerjs({ config:settingsplayer, OSD:true, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href });
+//is_playerd_allid(settingsplayer, call, fplayeri);  
+// is_playerd_allid(getUrlVars(location.href), call, fplayeri);     
   
- openf_osdcd(document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);   
+ openf_osdcd(fplayeri, document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);   
  }
 }
 
