@@ -1,14 +1,68 @@
 
-function onstart_file(run_file, getval_tygepret, degetval_tselett, degetval_tseposttt){  
-    if(typeof run_file=='function'){  var file_obj = run_file();   
+ var scrliptfd2 = document.createElement("link");
+    scrliptfd2.setAttribute("rel", "stylesheet");
+    scrliptfd2.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/theme/tooltip.css");
+document.getElementsByTagName("head")[0].appendChild(scrliptfd2);
+  var scrliptfdu = document.createElement("link");
+    scrliptfdu.setAttribute("rel", "stylesheet");
+    scrliptfdu.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/style_2.css");
+document.getElementsByTagName("head")[0].appendChild(scrliptfdu);
+
+var scrliptfd1 = document.createElement("link");
+    scrliptfd1.setAttribute("rel", "stylesheet");
+    scrliptfd1.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/theme/modal.css");
+document.getElementsByTagName("head")[0].appendChild(scrliptfd1);
+ var scriptfd1 = document.createElement("script");
+    scriptfd1.setAttribute("type", "text/javascript");
+    scriptfd1.setAttribute("src", "https://fcasfs-of.github.io/info-profile/scripts/modal.js");
+document.getElementsByTagName("head")[0].appendChild(scriptfd1);
+
+
+function onstart_file(igh, lisud, run_file, getval_tygepret, degetval_tselett, degetval_tseposttt){  
+if(igh){   if(igh!=""){   if(typeof run_file=='function'){  var file_obj = run_file();   
+
+  var linkfrfomd="https://player.fcasfs-of.cloud-fs.net/"+file_obj.player_lang+"?fileID="+igh+"&fileView=true"; 
+
 if (getval_tygepret=="true") {      runEx(run_file, degetval_tselett, degetval_tseposttt);     }
 if (getval_tygepret=="on") {      runEx(run_file, degetval_tselett, degetval_tseposttt);      }
 
-    }  
+if (lisud=="on") {     var apoduz = document.getElementById("myNavrun");     apoduz.innerHTML= ''+listaFiles(run_file.list, linkfrfomd);      }
+if (lisud=="true") {          var apoduz = document.getElementById("myNavrun");      apoduz.innerHTML= ''+listaFiles(run_file.list, linkfrfomd);      }
+                                    
+    }
+       }      }
 }  
 
 
-    
+
+function openlinkf(title,url,mn){    cmodal('<span class=\'adsrow\'> '+title+'</span>',url,'Close',mn,'yes');  } 
+
+
+function listaFiles(arrayInterno, link){   var arrayIntfferno="";  
+
+if(link!=""){
+if(arrayInterno){
+
+if(arrayInterno.length > 1){  arrayIntfferno=arrayIntfferno+"<br/><hr/>";  }
+
+for(var j=0; j<arrayInterno.length; j++){
+		if(arrayInterno.length > 1){ 
+
+var thumfer="";   
+if(arrayInterno[j].poster!=""){
+thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
+}
+
+arrayIntfferno=arrayIntfferno+'<li style="user-select:none;"  onclick="openlinkf(\''+arrayInterno[j].title+'\',\''+link+'&fileSelect='+(j+1)+'\',\'360\');"> '+thumfer+" >  "+arrayInterno[j].title+"  </li>";
+			
+         }        } 
+    }
+}  
+
+return arrayIntfferno;  }
+
+
+
 function listaFile_mans(arrayInterno, id, link){  var arrayIntfferno=[];
 if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
@@ -145,7 +199,9 @@ var getval_tyget=getUrlParameter("fileID");
 if (getval_tyget!="") {
 
 var getval_tygepret=getUrlParameter("fileView");
+var getval_tygepgret=getUrlParameter("list");
 
+    
 var degetval_tselett="1";
 var getval_tselett=getUrlParameter("fileSelect");
 if (getval_tselett!="") {
@@ -161,7 +217,7 @@ degetval_tseposttt=getval_tseletdt;
 
    
 var inpmyNavruz = document.getElementById("myNavrun");    
-inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  background:#000; color:#fff; transition: 0.2s;"></div><style>#myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';  
+inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  background:#000; color:#fff; transition: 0.2s;"></div><style>#myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style> <div id="custimmdf"></div> ';  
 
 
 var scriptfd = document.createElement("script");
@@ -175,9 +231,9 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("onstart_file(run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);"));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("onstart_file(getval_tyget, getval_tygepgret,run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);"));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
-  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);   };
+  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(getval_tyget, getval_tygepgret,run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);   };
 
     
 }
