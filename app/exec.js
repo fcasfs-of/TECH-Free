@@ -26,8 +26,8 @@ if(igh){   if(igh!=""){   if(typeof run_file=='function'){  var file_obj = run_f
 if (getval_tygepret=="true") {      runEx(run_file, degetval_tselett, degetval_tseposttt);     }
 if (getval_tygepret=="on") {      runEx(run_file, degetval_tselett, degetval_tseposttt);      }
 
-if (lisud=="on") {     var apoduz = document.getElementById("zplayler");     apoduz.innerHTML= ''+listaFiles(run_file.list, linkfrfomd);      }
-if (lisud=="true") {          var apoduz = document.getElementById("zplayler");      apoduz.innerHTML= ''+listaFiles(run_file.list, linkfrfomd);      }
+if (lisud=="on") {     var apoduz = document.getElementById("zplayler");     apoduz.innerHTML= ''+listaFiles(file_obj.list, linkfrfomd);      }
+if (lisud=="true") {          var apoduz = document.getElementById("zplayler");      apoduz.innerHTML= ''+listaFiles(file_obj.list, linkfrfomd);      }
                                     
     }
        }      }
