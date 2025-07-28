@@ -57,8 +57,8 @@ var apoduz = document.getElementById("zplayler");
 if (getval_tygepret=="true") {      runEx(run_file, degetval_tselett, degetval_tseposttt);     }
 if (getval_tygepret=="on") {      runEx(run_file, degetval_tselett, degetval_tseposttt);      }
 
-if (lisud=="on") {       apoduz.innerHTML= '<ul style="overflow:auto;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul>";      }
-if (lisud=="true") {      apoduz.innerHTML= '<ul style="overflow:auto;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul>";      }
+if (lisud=="on") {       apoduz.innerHTML= '<style>.zplayler{ overflow:auto;   }</style>  <ul style="overflow:auto;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul>";      }
+if (lisud=="true") {      apoduz.innerHTML= '<style>.zplayler{ overflow:auto;   }</style>  <ul style="overflow:auto;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul>";      }
                                     
     }
        }      }
