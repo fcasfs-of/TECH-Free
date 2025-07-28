@@ -1,5 +1,5 @@
 
-var app_ver="2.0.0.1";
+var app_ver="2.0.1.2";
 
 
 function progress_valo(mumh) {  var mumhf=0;    
