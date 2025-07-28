@@ -57,11 +57,11 @@ var apoduz = document.getElementById("zplayler");
 if (getval_tygepret=="true") {      runEx(run_file, degetval_tselett, degetval_tseposttt);     }
 if (getval_tygepret=="on") {      runEx(run_file, degetval_tselett, degetval_tseposttt);      }
 
-if (lisud.list=="on") {       apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   color:#fff; }</style>  <br/> <ul style="overflow:auto;color:#fff;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul><br/><br/>";      }
-if (lisud.list=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:auto;  color:#fff; }</style>  <br/>  <ul style="overflow:auto; color:#fff; width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul><br/><br/>";      }
+if (lisud.list=="on") {       apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   color:#fff; }</style>  <br/> <ul style="overflow:auto;color:#fff;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul><br/><br/><br/>";      }
+if (lisud.list=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:auto;  color:#fff; }</style>  <br/>  <ul style="overflow:auto; color:#fff; width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul><br/><br/><br/>";      }
 
-if (lisud.info=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <br/><br/>  <div style="width:90%; height:90%;  margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="display:block; text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/>'+run_file().file_desc+'</div><br/><br/>';      }
-if (lisud.info=="on") {        apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <br/><br/>  <div style="width:90%; height:90%;  margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="display:block; text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/>'+run_file().file_desc+'</div><br/><br/>';      }
+if (lisud.info=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <br/><br/>  <div style="width:90%; height:90%;  margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="display:block; text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/>'+run_file().file_desc+'<br/></div><br/><br/><br/>';      }
+if (lisud.info=="on") {        apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <br/><br/>  <div style="width:90%; height:90%;  margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="display:block; text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/>'+run_file().file_desc+'<br/></div><br/><br/><br/>';      }
   
     }
        }      }
