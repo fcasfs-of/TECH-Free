@@ -161,7 +161,7 @@ degetval_tseposttt=getval_tseletdt;
 
    
 var inpmyNavruz = document.getElementById("myNavrun");    
-inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  transition: 0.2s;"></div><style>#myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';  
+inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  background:#000; color:#fff; transition: 0.2s;"></div><style>#myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style>';  
 
 
 var scriptfd = document.createElement("script");
