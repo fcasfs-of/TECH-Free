@@ -220,7 +220,7 @@ degetval_tseposttt=getval_tseletdt;
 
    
 var inpmyNavruz = document.getElementById("myNavrun");    
-inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  background:#000; color:#fff; transition: 0.2s;"></div><style>#zplayler ul {  width: 95%;    height: 95%; }  #zplayler ul li {     width: 100%;    cursor: pointer;  }   #myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style> <div id="custimmdf"></div> ';  
+inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  background:#000; color:#fff; transition: 0.2s;"></div><style>#zplayler ul {  width: 95%;    height: 95%; }  #zplayler ul li {     width: 100%;    cursor: pointer;  }    #zplayler ul li img {      display: inline-block;    }       #myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style> <div id="custimmdf"></div> ';  
 
 
 var scriptfd = document.createElement("script");
