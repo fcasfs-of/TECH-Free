@@ -51,14 +51,14 @@ return arrayIntfferno;  }
 function onstart_file(igh, lisud, run_file, getval_tygepret, degetval_tselett, degetval_tseposttt){  
 if(igh){   if(igh!=""){   if(typeof run_file=='function'){  var file_obj = run_file();   
 
-  var linkfrfomd="https://player.fcasfs-of.cloud-fs.net/"+file_obj.player_lang+"?fileID="+igh+"&fileView=true"; 
+  var linkfrfomd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+igh+"&fileView=true"; 
 var apoduz = document.getElementById("zplayler");   
 							  
 if (getval_tygepret=="true") {      runEx(run_file, degetval_tselett, degetval_tseposttt);     }
 if (getval_tygepret=="on") {      runEx(run_file, degetval_tselett, degetval_tseposttt);      }
 
-if (lisud=="on") {       apoduz.innerHTML= ''+listaFiles(file_obj.list, linkfrfomd);      }
-if (lisud=="true") {      apoduz.innerHTML= ''+listaFiles(file_obj.list, linkfrfomd);      }
+if (lisud=="on") {       apoduz.innerHTML= ''+listaFiles(run_file().list, linkfrfomd);      }
+if (lisud=="true") {      apoduz.innerHTML= ''+listaFiles(run_file().list, linkfrfomd);      }
                                     
     }
        }      }
