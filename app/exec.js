@@ -57,9 +57,12 @@ var apoduz = document.getElementById("zplayler");
 if (getval_tygepret=="true") {      runEx(run_file, degetval_tselett, degetval_tseposttt);     }
 if (getval_tygepret=="on") {      runEx(run_file, degetval_tselett, degetval_tseposttt);      }
 
-if (lisud=="on") {       apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <ul style="overflow:auto;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul>";      }
-if (lisud=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <ul style="overflow:auto;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul>";      }
-                                    
+if (lisud.list=="on") {       apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   color:#fff; }</style>  <ul style="overflow:auto;color:#fff;  width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul><br/><br/>";      }
+if (lisud.list=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:auto;  color:#fff; }</style>  <ul style="overflow:auto; color:#fff; width: 95%;height: 95%;">'+listafFiles(run_file().list, linkfrfomd)+"</ul><br/><br/>";      }
+
+if (lisud.info=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <div style="margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/>'+run_file().file_desc+'</div><br/><br/>';      }
+if (lisud.info=="on") {        apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <div style="margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/>'+run_file().file_desc+'</div><br/><br/>';      }
+  
     }
        }      }
 }  
@@ -203,6 +206,7 @@ if (getval_tyget!="") {
 
 var getval_tygepret=getUrlParameter("fileView");
 var getval_tygepgret=getUrlParameter("list");
+var getval_tygepgrdft=getUrlParameter("info");
 
     
 var degetval_tselett="1";
@@ -234,9 +238,9 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("onstart_file(getval_tyget, getval_tygepgret,run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);"));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("onstart_file(getval_tyget, { info: getval_tygepgrdft, list:getval_tygepgret },run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);"));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
-  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(getval_tyget, getval_tygepgret,run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);   };
+  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(getval_tyget, { info:getval_tygepgrdft, list:getval_tygepgret },run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);   };
 
     
 }
