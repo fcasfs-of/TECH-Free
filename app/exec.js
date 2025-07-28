@@ -22,15 +22,15 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd1);
 function openlinkf(title,url,mn){    cmodal('<span class=\'adsrow\'> '+title+'</span>',url,'Close',mn,'yes');  } 
 
 
-function listaFiles(arrayInterno, link){   var arrayIntfferno="";  
+function listafFiles(arrayInterno, link){   var arrayIntfferno="";  
 
 if(link!=""){
 if(arrayInterno){
 
-if(arrayInterno.length > 1){  arrayIntfferno=arrayIntfferno+"<br/><hr/>";  }
+if(arrayInterno.length > 1){  arrayIntfferno=arrayIntfferno+"";  }
 
 for(var j=0; j<arrayInterno.length; j++){
-		if(arrayInterno.length > 1){ 
+if(arrayInterno.length > 1){ 
 
 var thumfer="";   
 if(arrayInterno[j].poster!=""){
@@ -57,8 +57,8 @@ var apoduz = document.getElementById("zplayler");
 if (getval_tygepret=="true") {      runEx(run_file, degetval_tselett, degetval_tseposttt);     }
 if (getval_tygepret=="on") {      runEx(run_file, degetval_tselett, degetval_tseposttt);      }
 
-if (lisud=="on") {       apoduz.innerHTML= ''+listaFiles(run_file().list, linkfrfomd);      }
-if (lisud=="true") {      apoduz.innerHTML= ''+listaFiles(run_file().list, linkfrfomd);      }
+if (lisud=="on") {       apoduz.innerHTML= ''+listafFiles(run_file().list, linkfrfomd);      }
+if (lisud=="true") {      apoduz.innerHTML= ''+listafFiles(run_file().list, linkfrfomd);      }
                                     
     }
        }      }
