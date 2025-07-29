@@ -62,7 +62,7 @@ if(settingsplayer){
 settingsplayer["colortexts"]="63B8FF";    settingsplayer["coloricons"]="00EEEE";
 settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EEEE";
 
- if(getUrlParameter("theme_osd")){  if(getUrlParameter("theme_osd")!=""){   settingsplayer.osd.theme=getUrlParameter("theme_osd");    }  }
+ settingsplayer["osd"].theme=getUrlParameter("theme_osd");   
 
   
   if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
