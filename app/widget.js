@@ -64,11 +64,9 @@ settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EE
   
   if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
                                                
-  if(getUrlParameter("theme_osd")=="light"){
  if(settingsplayer.config){   
    if(settingsplayer.config["osd"]){  settingsplayer.config["osd"].theme="light";   }    
- }
-}   
+ }  
                                                
                                                
  if(cc<1){    }
