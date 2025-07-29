@@ -98,6 +98,9 @@ function getUrlVars(fd) {
 
 
 var settingsplayer={  
+ osd:{
+  theme:getUrlParameter("theme_osd")
+ },
  color_icons:"#63B8FF", color_texts:"#00EEEE", config:{
 fontstyle:"none",
 textdecoration:"none",
