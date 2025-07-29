@@ -61,15 +61,15 @@ if(settingsplayer){
   
 settingsplayer["colortexts"]="63B8FF";    settingsplayer["coloricons"]="00EEEE";
 settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EEEE";
-
- if(settingsplayer.config){   
-   if(settingsplayer.config["osd"]){  settingsplayer.config["osd"].theme=getUrlParameter("theme_osd");   }  
- }
-
   
   if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
                                                
-if(cc<1){    }
+
+ if(settingsplayer.config){   
+   if(settingsplayer.config["osd"]){  settingsplayer.config["osd"]={ theme=getUrlParameter("theme_osd") };   }  
+ }
+                                               
+ if(cc<1){    }
 
 else if(cc==1){       var img_ond="";
   if(call[0].type && call[0].type.split('/')){
