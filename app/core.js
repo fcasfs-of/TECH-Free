@@ -98,16 +98,15 @@ function getUrlVars(fd) {
 
 
 var settingsplayer={  
- osd:{
-  theme:getUrlParameter("theme_osd")
- },
  color_icons:"#63B8FF", color_texts:"#00EEEE", config:{
+ osd:{
+ theme:getUrlParameter("theme_osd")
+},
 fontstyle:"none",
 textdecoration:"none",
 texttransform:"none",
 textbold:true,
 }, controls:true,
- 
 id:"fs11",
 active:"yes",
 typeplayer:"1",
