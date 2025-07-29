@@ -62,7 +62,9 @@ if(settingsplayer){
 settingsplayer["colortexts"]="63B8FF";    settingsplayer["coloricons"]="00EEEE";
 settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EEEE";
 
- settingsplayer.config["osd"]={ theme=getUrlParameter("theme_osd") };   
+ if(settingsplayer.config){   
+   if(settingsplayer.config["osd"]){  settingsplayer.config["osd"].theme=getUrlParameter("theme_osd");   }  
+ }
 
   
   if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
@@ -80,7 +82,7 @@ if(call[0].type && call[0].type==="application/pdf"){
 //is_playerd_allid(settingsplayer, call, fplayeri);  
  //is_playerd_allid(getUrlVars(location.href), call, fplayeri);       
                
-openf_osdcd(fplayeri, document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);
+openf_osdcd(fplayeri, document.getElementById("zplayler"), 3e3, document.getElementById("zplaylert"), api_tok, cc);
 }
                
 }
@@ -90,7 +92,7 @@ else if(cc>=2){
 //is_playerd_allid(settingsplayer, call, fplayeri);  
 // is_playerd_allid(getUrlVars(location.href), call, fplayeri);     
   
- openf_osdcd(fplayeri, document.getElementById("zplayler"),3e3, document.getElementById("zplaylert"), api_tok, cc);   
+ openf_osdcd(fplayeri, document.getElementById("zplayler"), 3e3, document.getElementById("zplaylert"), api_tok, cc);   
  }
 }
 
