@@ -100,7 +100,7 @@ function getUrlVars(fd) {
 var settingsplayer={  
  color_icons:"#63B8FF", color_texts:"#00EEEE", config:{
  osd:{
- theme:"dark"
+ theme:"light"
 },
 fontstyle:"none",
 textdecoration:"none",
