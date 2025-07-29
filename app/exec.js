@@ -127,8 +127,6 @@ let urfdl = "data:application/manifest+json,"+contdent;
 
 
 
-if(filedru.config){   filedru.config.osd={ theme:"dark" };   }
-
 playerhj = fs_Playerjs({ OSD:filedru.player_osd, id:"zplayler", config:filedru.config, nocontrols:filedru.player_controls, autoplay:filedru.player_autoplay, loop:filedru.player_loop, title:filedru.file_title, file:listaFiles(filedru.list), poster:filedru.cover,"embed":location.href, "url":location.href, plstart:"pf"+id });
 
 
