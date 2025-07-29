@@ -8,7 +8,10 @@ player_autoplay:0,
 player_loop:0,
  file_title:"Tokusatsu - Hit Song Collection",
  file_desc:"Full Songs Musics",
- config:{
+config:{
+ osd:{
+  theme:"light"
+ },
  fontweight:"bold"
 },
  list:[
