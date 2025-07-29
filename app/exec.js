@@ -173,7 +173,7 @@ playerhj.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, 
   
 });
 
-   openf_osdcd(playerhj, 3e3, "", [], 0);   
+   openf_osdcd(playerhj, "", 3e3, "", [], 0);   
     
 }   }
 }
