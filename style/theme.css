@@ -417,7 +417,7 @@ position: relative;
   opacity: 0;
   cursor: pointer;
   height: 42px;
-  width: 42px;
+  width: 42px;  display:none;
 }
 
 .checkmark {   border-radius: 12px;  position: absolute;  left: 0;  height: 42px;  width: 42px;  background-color: #eee;}
