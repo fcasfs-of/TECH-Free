@@ -66,7 +66,8 @@ settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EE
                                                
 
  if(settingsplayer.config){   
-   if(settingsplayer.config["osd"]){  settingsplayer.config["osd"]["theme"]=getUrlParameter("theme_osd");   }  else {   settingsplayer.config["osd"]={ ["theme"]:getUrlParameter("theme_osd")  };   }  
+   if(settingsplayer.config["osd"]){  settingsplayer.config["osd"].theme=getUrlParameter("theme_osd");   }  
+   else {   settingsplayer.config["osd"]={ theme:getUrlParameter("theme_osd") };   }  
  }
                                                
  if(cc<1){    }
