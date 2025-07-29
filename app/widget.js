@@ -66,6 +66,7 @@ settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EE
                                        
 if(settingsplayer.config){  settingsplayer.config.osd={ theme:"light" };  }
 
+var osddisplay = document.getElementById("osd_display");
 
  if(cc<1){    }
 
@@ -76,7 +77,7 @@ else if(cc==1){       var img_ond="";
 if(call[0].type && call[0].type==="application/pdf"){
  // document.getElementById(evt).innerHTML="<ifra"+'me src="'+call[0].file+'" width="100%" height="100%" style="border:none;"></i'+"frame>";
 } else {   
-  fplayeri = fs_Playerjs({ config:settingsplayer, OSD:true, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
+  fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
 //is_playerd_allid(settingsplayer, call, fplayeri);  
  //is_playerd_allid(getUrlVars(location.href), call, fplayeri);       
                
@@ -86,7 +87,7 @@ openf_osdcd(fplayeri, document.getElementById("zplayler"), 3e3, document.getElem
 }
 
 else if(cc>=2){   
-     fplayeri = fs_Playerjs({ config:settingsplayer, OSD:true, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href });
+     fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href });
 //is_playerd_allid(settingsplayer, call, fplayeri);  
 // is_playerd_allid(getUrlVars(location.href), call, fplayeri);     
   
