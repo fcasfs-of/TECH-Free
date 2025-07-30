@@ -7,10 +7,10 @@ Our player offers an immersive and intuitive media experience designed to meet a
 <hr/>
 
 # TECH-Free
-player - teste
-
+Media Player - teste
 
 
 ## Demo Live
-https://player.fcasfs-of.cloud-fs.net/en
+![English](https://player.fcasfs-of.cloud-fs.net/en)
+![Português](https://player.fcasfs-of.cloud-fs.net)
 
