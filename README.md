@@ -11,6 +11,6 @@ Media Player - teste
 
 
 ## Demo Live
-[![](https://fcasfs-of.cloud-fs.net/Icon/en.png) English](https://player.fcasfs-of.cloud-fs.net/en)
+[![](https://fcasfs-of.cloud-fs.net/Icon/en.png) English](https://player.fcasfs-of.cloud-fs.net/en) <br/>
 [![](https://fcasfs-of.cloud-fs.net/Icon/br.png) Português](https://player.fcasfs-of.cloud-fs.net)
 
