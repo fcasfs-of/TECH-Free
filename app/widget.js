@@ -16,7 +16,7 @@ function mdpld_handleFileSelect(evt, call, mkk, jj){
  mdpl_handlefFileSelectsa=[];
 
 for(var x=0;x<evt.files.length;x++){
-mdpl_handlefFileSelectsa[x]={ "file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x), id:"sv"+(x)};
+mdpl_handlefFileSelectsa[x]={ "casturl":create_mdpl_file(evt).create_url(x), "castname":create_mdpl_file(evt).get_name(x), "file":create_mdpl_file(evt).create_url(x),"title":create_mdpl_file(evt).get_name(x), id:"sv"+(x)};
 }
 
 call(mdpl_handlefFileSelectsa, evt.files.length, mkk, jj);
@@ -77,7 +77,7 @@ else if(cc==1){       var img_ond="";
 if(call[0].type && call[0].type==="application/pdf"){
  // document.getElementById(evt).innerHTML="<ifra"+'me src="'+call[0].file+'" width="100%" height="100%" style="border:none;"></i'+"frame>";
 } else {   
-  fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
+  fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, casturl:call[0].file, castname:call[0].title, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
 is_playerd_allid(settingsplayer, call, fplayeri);  
  //is_playerd_allid(getUrlVars(location.href), call, fplayeri);       
                
