@@ -363,6 +363,7 @@ position: relative;
 
 
 
+.llk {	 position: absolute;  top: 50%;  -ms-transform: translateY(-50%);  transform: translateY(-50%);   }
 
 
 .llk .lk[type=file] {    transition: all 0.1s linear;   width: 350px;  max-width: 100%;  color: #444;  padding: 5px;  background: #fff;  border-radius: 10px;  border: 1px solid #555;   margin-bottom: 8px;  }
