@@ -1,6 +1,6 @@
 
 
- var inpss454fod5rwles = document.getElementById('formingi');   var inpss45435rwles_oid="video/*,audio/*,image/*";    var inpss454ftu35rwles_oid="";   var var_versplayerpg=1; 
+ var inpss454fod5rwles = document.getElementById('formingi');   var inpss45435rwles_oid="video/*,audio/*,image/*,application/pdf";    var inpss454ftu35rwles_oid="";   var var_versplayerpg=1; 
 
   //if(listfrr_is["parameters"].mode=="1"){        var_versplayerpg=1;   var inpss454ftu35rwles_oid=" de Vídeo";  var inpss45435rwles_oid="video/*";   }
   //if(listfrr_is["parameters"].mode=="2"){     var_versplayerpg=2;   var inpss454ftu35rwles_oid=" de Áudio";  var inpss45435rwles_oid="audio/*";   }
