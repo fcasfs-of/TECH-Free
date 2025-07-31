@@ -655,15 +655,16 @@ body.darkmode::-webkit-scrollbar-thumb{
 
 
 
-.pdfviewer img{  display:block;  }
+.pdfviewer img{  display:inline-block;  }
+.pdfviewer * {  color:#000;   }
 .pdfviewer {  color:#000;  width: 100%; height: 100%;   margin: 0;   padding: 0;   display: flex;   flex-direction: column;   } 
-.pdfviewer-container {   margin: 0;   padding: 0;   display: flex;   overflow: hidden;   flex: 1; } 
+.pdfviewer-container {  color:#000;   margin: 0;   padding: 0;   display: flex;   overflow: hidden;   flex: 1; } 
 .thumbnails {   width: 150px !important;   border: 1px solid #aaa;   border-right: 3px solid #999;   background: #ccc;  } 
 .thumbnails .pdfpage.selected {   border: 2px solid #777;   border-radius: 2px; } 
 .maindoc {   flex: 1; } 
 .pdfviewer .hide {   display: none; } .pdfviewer input[type="file"] {   display: none; } 
-.numbering {   width: 100%;   text-align: center;   font-size: 0.75em;   margin-top: 0.25em;   color: #555; } 
-.thumbnails .pdfpage {   margin-bottom: 2em !important; } 
+.numbering {  color:#000;   width: 100%;   text-align: center;   font-size: 0.75em;   margin-top: 0.25em;   color: #555; } 
+.thumbnails .pdfpage {  color:#000;   margin-bottom: 2em !important; } 
 .thumbnails .pdfpage.hidden {   opacity: 0.3; } 
 .maindoc .pdfpage.hidden {   display: none; }
 
