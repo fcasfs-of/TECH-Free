@@ -655,8 +655,8 @@ body.darkmode::-webkit-scrollbar-thumb{
 
 
 
-
-.pdfviewer {  width: 100%; height: 100%;   margin: 0;   padding: 0;   display: flex;   flex-direction: column;   } 
+.pdfviewer img{  display:block;  }
+.pdfviewer {  color:#000;  width: 100%; height: 100%;   margin: 0;   padding: 0;   display: flex;   flex-direction: column;   } 
 .pdfviewer-container {   margin: 0;   padding: 0;   display: flex;   overflow: hidden;   flex: 1; } 
 .thumbnails {   width: 150px !important;   border: 1px solid #aaa;   border-right: 3px solid #999;   background: #ccc;  } 
 .thumbnails .pdfpage.selected {   border: 2px solid #777;   border-radius: 2px; } 
