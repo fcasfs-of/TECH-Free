@@ -75,13 +75,9 @@ else if(cc==1){       var img_ond="";
     if(call[0].type.split('/')[0] === 'image') {  img_ond=call[0].file;  }
   }
 if(call[0].type && call[0].type==="application/pdf"){
-  document.getElementById(evt).innerHTML="<div id='pagepdf' class='pdfjs-viewer'></div>";
-  
-let pdfViewer = new PDFjsViewer($(".pdfjs-viewer"), {});
-pdfViewer.loadDocument(call[0].file).then(function () {   
-  //pdfViewer.setZoom("fit"); 
-});
-  
+  document.getElementById(evt).innerHTML='<div class="pdfviewer">     <div class="pdfjs-toolbar">       <button class="pushed" onclick="togglethumbs(this);"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACaSURBVEiJ7dXBCcJAEIXhTyM24N0aNN14swsLSDEpwxYi1mEDQqIHByULGjWeZH8Yll3evDenHTIfUuKADpcPq0MTHncmSUCDBepogE2c9cBw09CesHomalElb/uod6jCo5ea3lvf06aeacDPyQE5IAf8Y0CHYoRf4fELg1kiOGKLcxQs49wNmM+j9/hKVLrthDELZz0wSKbPFRK8Mns1g9H2AAAAAElFTkSuQmCC" /></button>       <div class="v-sep"></div>       <button onclick="pdfViewer.prev();"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAMaAAADGgBbVzpLAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEOSURBVEiJ7ZOhTsRAEIb/f2daqggJQaFAoAnvUMlTkOB4DDw4BLwHOc4gSHBgcRhQJCcRPfojuDYtuabb4xydZMTO7HxfdpKFJMQkgB2jP3rwi9gZSYiFm9GnRpfRFZCcrVXgwc8r+CLnDs/XIjDYsdHLXwIZfQZsHPxJAGT7Rp8tgcvocvoLgK2VBACyQH/qgjdyAsAGCyzYTQT85yXBLwcJDMlJLLxOJKfLWFyso46U6VFJPQDIMCwKCnmh4r5ZbAlIbhrtGeDeQHgVH1+aH0p6qwre7mfbYHEHKK1LYg5gtwM4hXTdOAvAZ+tG7z+g33buPdhV33xYcRXRMQpGwSj4HwLqvaMjlXztG/8GX8gGihHJteoAAAAASUVORK5CYII=" /></button>       <div class="v-sep"></div>       <button onclick="pdfViewer.next();"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADESURBVEiJ7dQtbgJBHEDxX7s1HAQsAlfDCWqwuCKaILkAXKCysg6JajjVmoakqWiWgtlJCGH2O6h9yV/NzHuZ3WQoZo4Mp8hk+Z4ojyWBIZKC9STf0zjQmj7QB/rAHQKBBY7ib07dOeLtMjBE2mEgxej6FmN8dyA/YBL7VM/4aSH/xTQmD7zgr4E8w6xMHpir99P/8VpVHljWCKzqygObCvJ1U3ngvUD+0VYOD/i8Id/q8CVIsLuQf+GpK3lggH0+g6qHzpt/lI482BFgAAAAAElFTkSuQmCC" /></button>       <input id="pageno" class="pageno" type="number" class="form-control form-control-sm d-inline w-auto" value="1" min="1" max="1000" onchange="pdfViewer.scrollToPage(parseInt(this.value))">       <span id="pagecount" class="pageno"></span>       <div class="divider"></div>       <button onclick="pdfViewer.setZoom(\'in\')"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAmAAAAJgBosiCmAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAClSURBVEiJ7ZbRDcIwDESfI0ZBVSdgg87BbKyTGcgqMR9NRQUBnUoiQOpJ92PFd5EtO8HdUQhMQCyc5DxRPAAJ8MIEhJYGw0p84aDkBjTUzkm5qsFm7AbfNzgAmFkAjm8MT7WYmb3SzcDV3TPME7oeolZMRZvYQXxh7N4D6Fwic3e1yZeH2Jm5vDXcmywuu7Fyw7HlstuM3eB/DLIYe8ZPPPqffFtuqUK6caXb4ZEAAAAASUVORK5CYII=" /></button>       <div class="v-sep"></div>       <button onclick="pdfViewer.setZoom(\'out\')"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAACxAAAAsQHGLUmNAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAC1JREFUSIljYBgFo2AUjAKywCkGBob/ZOIT6IYxYbHgPwWOo0TvKBgFo2DkAgAn8hGFBoJkbQAAAABJRU5ErkJggg==" /></button>       <div class="dropdown">         <div class="dropdown-value" onclick="this.parentNode.classList.toggle(\'show\');">           <span class="zoomval">100%</span>           <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAPZJREFUSInl1r1KA0EUhuFnNwFttLO2EARTWAYbCxWx8iYsbMXGe/COLK0MdkISERQUQZvY2SiKa5EJrmAxG2ds/ODAcGbO9w7D/BW+1EIHyyhNpw/cYIj3ekcHfVSJYhA8wSyuEprXIW3YzGA+idUSS9Er3FyLJYqMgKl3SzbASYhsgPMQ2QCN9T8Azxj9kH/BWwrAGbq4q+WesIbTFIAdHGIjQEbYwh62I+rti7tXjsP4IrRjanbbMTMIOsJMaB/EFjUBNDKe6E+2aZXRvypxnxFwC3N4kP41uzD+SIB1PCY0v8QK31+zeeMDtPCLJalwjR5e4RPoo5khHBqYywAAAABJRU5ErkJggg==" />         </div>         <div class="dropdown-content" onclick="this.parentNode.classList.toggle(\'show\');">           <a href="#" onclick=\'pdfViewer.setZoom("width"); return false;\'>Adjust width</a>           <a href="#" onclick=\'pdfViewer.setZoom("height"); return false;\'>Adjust height</a>           <a href="#" onclick=\'pdfViewer.setZoom("fit"); return false;\'>Fit page</a>           <a href="#" onclick=\'pdfViewer.setZoom(0.5); return false;\'>50%</a>           <a href="#" onclick=\'pdfViewer.setZoom(0.75); return false;\'>75%</a>           <a href="#" onclick=\'pdfViewer.setZoom(1); return false;\'>100%</a>           <a href="#" onclick=\'pdfViewer.setZoom(1.25); return false;\'>125%</a>           <a href="#" onclick=\'pdfViewer.setZoom(1.5); return false;\'>150%</a>           <a href="#" onclick=\'pdfViewer.setZoom(2); return false;\'>200%</a>           <a href="#" onclick=\'pdfViewer.setZoom(3); return false;\'>300%</a>           <a href="#" onclick=\'pdfViewer.setZoom(4); return false;\'>400%</a>         </div>       </div>       <button id="hideselected" onclick="hideselected();"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAxwAAAMcBYjN5IQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGaSURBVEiJtZa/TgJBEMZ/i4bKHiuoKAyJyQXseAETHoDSnpbWqAkPYn0JtS9gJ8agIb4BamGFFZwZC+bC3N4d/w43mdzd7rffzM7szJwTEfKGc64CXABNoKVPgGeVEfAkIl+5JCKSEqAMDIAFIBtkodhyFpfzT+CcC4B74NxMfxqrI6ChcgYcKeYVuBKRl9wTAD1gbqwLgVqWZYqvA0ODnwO9BMaAA0P+DXTziDMU9T0lQUKB+nxsyKs7kLeBmReXcRyTGDQwi7tYbsln3kkGcXwr5raEBcjbOh/HZKHcdIzW3IBuQ24CH+laB+BWPz6KkhvMm67flEhm59rhnGsDD8AJ8ANcishjBnSizxbAVLXdFbXcYK8VNy0ZrdEBLI/HcfxSYuWaxoHIwbh9rYI9ya2CEayuaQTU9/G55/8aq2vfgWSiDYuQ694Qm2gZpaJfgLyLXyoyip3sSV5lWSjTxU4BtlwL0N/R8pg8Xa4N0G84Qxv4nICGBp9qONu0zF/gnWX6T1gmUVPl1Gzd3DKNZf/X9L3TFP5t+QPPWQ+91KZokQAAAABJRU5ErkJggg==" /></button>       <div class="divider"></div>       <input id="opendoc" type="file" accept="application/pdf">       <div class="dropdown dropdown-right">         <div onclick="this.parentNode.classList.toggle(\'show\');">           <button><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAiwAAAIsBRmWzPwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFWSURBVEiJrdYxSxxRFMXx3xpFiZB0giCkEAwIVhJsRGxEEAuDpZ1fwMJPExCs0lgJWgURwVgp2FgoCoLFYqFFBEUxydjswDjcWXdmfHCrOef8H+/dmTuSJNFJYRqHrZov4TOB3y3jXBvhMZJW/cVSp4C9jPEZ3wuEJxldxxA4yxmfMBsIF/G/LARWcqYED5gKxMtlIanxRwC5w7e6kNTUhZ8B5BZjdSBZUzc2A8g1RqpC8qZe/AogV/hSBRLd+kfsB5ALDJaFFLXWJxwFkLUCfRFkvl3/fsW/nKnZRh9BDrsEq9FofG51Vf75dqRvu4Kd9OMgOJ5TDNQ6IvRhJwi/xFDJ8NeXjB5sBeFNDFcJz77JH7ARhN9gtGp4+rFrYD0I/4PxOuEpYDUIv8dk3fAUcJ4TP2LmPcJTwG5G/IyFAmHlgdPpTK42Mt8SZADVhn4JwLQKvy0vaf7++bD70SUAAAAASUVORK5CYII=" /></button>         </div>         <div class="dropdown-content" onclick="this.parentNode.classList.toggle(\'show\');">           <a href="#" onclick=\'pdfViewer.scrollToPage(1); return false;\'><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACQSURBVDiN7dExCsJQEATQZxQhwTsoaCmeIrey9U422tjZBWzEzj4nEESL/CJ8IzFJ68DAMjuzu7AMxKhWL7DDtCXzwBZ3SGqNV4fFXbz9kWEfmPUJH1SnvnDC7NdwiiNKFIFl0NLYnMQCNlghxy0wxxLr2DxpGHDGPNIK1Zs/0HRBJ/wHMG7pP3HBdeiir3gDfmoWiuftIG0AAAAASUVORK5CYII=" />  First page</a>           <a href="#" onclick=\'pdfViewer.scrollToPage(pdfViewer.pdf.numPages); return false;\'><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAJcAAACXAETPAk3AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAJBJREFUOI3t0zEKAjEQheFPEUGELSyUBUEsvIDntfAGFt7DRrsFQbAUCy+gRXbRxsTpfTBFwpufl2FCXmNUBU9WW+xzhn4BUJUSlABF/QEMvtzP0fs4z6SdOP8K3uCGIxpcsYskm7bNz7YuWEYApNgnKfYi2txpiFHO0A1qjUkQfscBau+3RqvuEqzEv+0DzQveXx+FLeC8fwAAAABJRU5ErkJggg==" />  Last page</a>           <div class="h-sep"></div>           <a href="#" onclick=\'pdfViewer.rotate(-90, true); pdfThumbnails.rotate(-90, true).then(() => pdfThumbnails.setZoom("fit"));\'><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADlSURBVDiNpdKhS8NhEMbxzzYVpgguGWwWUYMGBcG04p8iCP4dA8FmtAu2lYEgYjOKiEk0KUOLhjFF528z7ASRucH7e9Jx73vfu+M5cqqAbVzgJnJT2MISptHGJc7xNgjSwh4q2I+CHrp4ibiHV9Qw+Rfwjjru0cEhNjEe7xOo4ggZbjH/G/AZHR6xNmLlKp7j7+xPMgvAFU7RwPIQyGqs3YASFmKKLsoYw0l0GqQnfGAXZ4URI/+nMpo4LiUCvrCB9WIiAO4wlwdQRJYHsIiH1OIZfSsPUgE7+ravpLrQwbU4plz6Bhn1NMWcMHvhAAAAAElFTkSuQmCC" />  Rotate countrary clockwise</a>           <a href="#" onclick=\'pdfViewer.rotate(90, true); pdfThumbnails.rotate(90, true).then(() => pdfThumbnails.setZoom("fit"));\'><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADhSURBVDiNpdKvS4NRFMbxj+5FZAaNFoNJhIGCGLRo9U+x+k+I2Fe0WodhrCwvChoM/mgqDIP4AxF0c4Z7ZhB8w32fcuHc+3x5zjmXipr4pz6Dbayhjjdcoov3eNPAxl9jHft4xgjfeIpzFOZDzOEgwL9axBWGOMEWpuKuwCaO8IVbnOJjbJ7HPfoRvUzreIhEn+NiB69YKTEuoy3N4TwAwyKi7mAPFyWAQup9GgOcSS07xos0wCxdo5VrnsQCbqoABqhVAdxhKRcATWmFs7mAVWmnuznmmvT7+ujhMTdFtn4AoEIx6tAGMC8AAAAASUVORK5CYII=" />  Rotate clockwise</a>           <div class="h-sep"></div>           <a href="#" onclick=\'document.querySelector(".pdfjs-viewer").classList.remove("horizontal-scroll"); pdfViewer.refreshAll();\'><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAlAAAAJQBeb8N7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACLSURBVDiNY/j//z8DNszAwKDLwMBwEop1carDY8ASBgaG/1C8BJc6Jgbc4CoONgpghNqGKcHIyMrAwBAC5a75////b5IMIBbg8wJlBjAyMooxMjJOhGIxnCbgiYWJDIhYmEhOLBAFWPDIteJgo4CBjwWcXiA2IeGLhUoGRCxUkhML2jjYRLuAqOwMABaz1+1vJZrEAAAAAElFTkSuQmCC" /> Vertical scroll</a>           <a href="#" onclick=\'setHorizontal()\'><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAhQAAAIUB4uz/wQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABYSURBVDiN7dKxCYBAFAPQp2BzU9wObnRzOKHLOEJsThFbCy0MpMlPAoE/JPEE46P0X3CiYsGcxEFMaJ3T7Tb3TIUVwYZyMbWuB+2il+4N1vcnDP8nfqBgBz0JQwGRNs5xAAAAAElFTkSuQmCC" />  Horizontal scroll</a>         </div>       </div>     </div>     <div class="pdfviewer-container">       <div class="thumbnails pdfjs-viewer">       </div>       <div class="maindoc pdfjs-viewer">         <div class="pdfpage placeholder">           <p class="my-auto mx-auto"></p>         </div>       </div>     </div>   </div>';
+laoded_app_pdf(all[0].file);
+
 } else {   
   fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, casturl:call[0].file, castname:call[0].title, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
 is_playerd_allid(settingsplayer, call, fplayeri);  
@@ -333,6 +329,136 @@ isopenduuf(insss667ddd);
     fileInput.onchange(fileInput);
   });
 
+
+
+
+
+
+
+function laoded_app_pdf(PDFFILE){
+
+function dataURItoBinArray(data) {
+  var binary = atob(data);
+  var array = [];
+  for (var i = 0; i < binary.length; i++) {
+    array.push(binary.charCodeAt(i));
+  }
+  return new Uint8Array(array);
+}
+
+document.querySelector("#opendoc").addEventListener("change", function (e) {
+  let file = e.target;
+  let reader = new FileReader();
+  reader.onload = async function () {
+    await pdfViewer.loadDocument({
+      data: dataURItoBinArray(reader.result.replace(/^data:.*;base64,/, ""))
+    });
+    await pdfThumbnails
+      .loadDocument({
+        data: dataURItoBinArray(reader.result.replace(/^data:.*;base64,/, ""))
+      })
+      .then(() => pdfThumbnails.setZoom("fit"));
+  };
+  if (file.files.length > 0) {
+    reader.readAsDataURL(file.files[0]);
+    document.querySelector("#filedownload").download = document.querySelector(
+      "#opendoc"
+    ).files[0].name;
+  }
+});
+
+
+function setHorizontal() {
+  document.querySelector(".maindoc").classList.add("horizontal-scroll");
+  pdfViewer.refreshAll();
+}
+/** Toggles the visibility of the thumbnails */
+function togglethumbs(el) {
+  if (el.classList.contains("pushed")) {
+    el.classList.remove("pushed");
+    document.querySelector(".thumbnails").classList.add("hide");
+  } else {
+    el.classList.add("pushed");
+    document.querySelector(".thumbnails").classList.remove("hide");
+  }
+}
+function hideselected() {
+  let $selected = pdfThumbnails.$container.find(".selected");
+  let i = $selected.data("page");
+  $selected.toggleClass("hidden");
+  pdfViewer.$container
+    .find('.pdfpage[data-page="' + i + '"]')
+    .toggleClass("hidden");
+  pdfViewer.scrollToPage(i);
+}
+let pdfViewer = new PDFjsViewer($(".maindoc"), {
+  zoomValues: [0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4],
+
+  onZoomChange: function (zoom) {
+    zoom = parseInt(zoom * 10000) / 100;
+    $(".zoomval").text(zoom + "%");
+  },
+
+  onActivePageChanged: function (page) {
+    let pageno = $(page).data("page");
+    let pagetotal = this.getPageCount();
+
+    if (!$(page).hasClass("hidden")) {
+      pdfThumbnails.setActivePage(pageno);
+      $("#pageno").val(pageno);
+      $("#pageno").attr("max", pagetotal);
+      $("#pagecount").text("de " + pagetotal);
+    }
+  },
+
+  onDocumentReady: function () {
+    pdfViewer.setZoom("fit");
+    pdfViewer.pdf.getData().then(function (data) {
+      document.querySelector("#filedownload").href = URL.createObjectURL(
+        new Blob([data], { type: "application/pdf" })
+      );
+      document.querySelector("#filedownload").target = "_blank";
+    });
+  }
+});
+
+pdfViewer.loadDocument(PDFFILE).then(function () {
+  //document.querySelector("#filedownload").download = PDFFILE;
+});
+
+let pdfThumbnails = new PDFjsViewer($(".thumbnails"), {
+  zoomFillArea: 0.7,
+  onNewPage: function (page, i) {
+    $('<div class="numbering">').text(i).appendTo(page);
+    page.on("click", function () {
+      pdfThumbnails.setActivePage(page.data("page"));
+      if (!pdfViewer.isPageVisible(page.data("page"))) {
+        pdfViewer.scrollToPage(page.data("page"));
+      }
+    });
+  },
+  onDocumentReady: function () {
+    this.setZoom("fit");
+  }
+});
+
+pdfThumbnails.setActivePage = function (pageno) {
+  this.$container.find(".pdfpage").removeClass("selected");
+
+  let $npage = this.$container
+    .find('.pdfpage[data-page="' + pageno + '"]')
+    .addClass("selected");
+  $("#hideselected").removeClass("pushed");
+  if ($npage.hasClass("hidden")) $("#hideselected").addClass("pushed");
+
+  if (!this.isPageVisible(pageno)) {
+    this.scrollToPage(pageno);
+  }
+}.bind(pdfThumbnails);
+
+pdfThumbnails.loadDocument(PDFFILE);
+
+}
 
 
 
