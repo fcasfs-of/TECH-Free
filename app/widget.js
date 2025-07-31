@@ -77,7 +77,7 @@ else if(cc==1){       var img_ond="";
 if(call[0].type && call[0].type==="application/pdf"){
   document.getElementById(evt).innerHTML="<div id='pagepdf' class='pdfjs-viewer'></div>";
   
-let pdfViewer = new PDFjsViewer($("#pagepdf"), {});
+let pdfViewer = new PDFjsViewer($(".pdfjs-viewer"), {});
 pdfViewer.loadDocument(call[0].file).then(function () {    pdfViewer.setZoom("fit");  });
   
 } else {   
