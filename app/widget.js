@@ -59,12 +59,12 @@ call(mdpl_handlefFileSelectsa, evt.files.length, mkk, jj);
 function mdpl_handleselect(evt, call, cc, bmg){   var mdpl_handleselectcontoels=0;
 if(settingsplayer){  
   
-settingsplayer["colortexts"]="63B8FF";    settingsplayer["coloricons"]="00EEEE";
-settingsplayer["color_texts"]="#63B8FF";    settingsplayer["color_icons"]="#00EEEE";
+settingsplayer["colortexts"]="fff";    settingsplayer["coloricons"]="00EEEE";
+settingsplayer["color_texts"]="#fff";    settingsplayer["color_icons"]="#00EEEE";
   
   if(settingsplayer.controls==false){   mdpl_handleselectcontoels=1;  }  }
                                        
-if(settingsplayer.config){  settingsplayer.config.osd={ theme:"light" };  }
+//if(settingsplayer.config){  settingsplayer.config.osd={ theme:"light" };  }
 
 var osddisplay = document.getElementById("osd_display");
 
@@ -75,7 +75,11 @@ else if(cc==1){       var img_ond="";
     if(call[0].type.split('/')[0] === 'image') {  img_ond=call[0].file;  }
   }
 if(call[0].type && call[0].type==="application/pdf"){
- // document.getElementById(evt).innerHTML="<ifra"+'me src="'+call[0].file+'" width="100%" height="100%" style="border:none;"></i'+"frame>";
+  document.getElementById(evt).innerHTML="<div id='pagepdf' class='pdfjs-viewer'></div>";
+  
+let pdfViewer = new PDFjsViewer($("#pagepdf.pdfjs-viewer"), {});
+pdfViewer.loadDocument(call[0].file).then(function () {    pdfViewer.setZoom("fit");  });
+  
 } else {   
   fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, casturl:call[0].file, castname:call[0].title, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
 is_playerd_allid(settingsplayer, call, fplayeri);  
