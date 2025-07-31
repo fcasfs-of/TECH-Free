@@ -17,9 +17,10 @@ Tech: Player is licensed, not sold, to you. <br/> Subject to the terms and condi
 
 ### 2. Use of the Software
  You may use Tech: Player to:
-  * Play video files
-  * Play audio files
-  * View image files
+  * Reproduce Video files
+  * Reproduce Audio files
+  * View Image files
+  * View PDF file
 
 ### 2. Restrictions
  You may not:
