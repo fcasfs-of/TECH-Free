@@ -656,7 +656,7 @@ body.darkmode::-webkit-scrollbar-thumb{
 
 
 .pdfviewer img{  display:inline-block;  }
-.pdfviewer * {  color:#000;   }
+#zplayler .pdfviewer, #zplayler .pdfviewer * {  color:#000;   }
 .pdfviewer {  color:#000;  width: 100%; height: 100%;   margin: 0;   padding: 0;   display: flex;   flex-direction: column;   } 
 .pdfviewer-container {  color:#000;   margin: 0;   padding: 0;   display: flex;   overflow: hidden;   flex: 1; } 
 .thumbnails {   width: 150px !important;   border: 1px solid #aaa;   border-right: 3px solid #999;   background: #ccc;  } 
