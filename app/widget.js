@@ -78,7 +78,9 @@ if(call[0].type && call[0].type==="application/pdf"){
   document.getElementById(evt).innerHTML="<div id='pagepdf' class='pdfjs-viewer'></div>";
   
 let pdfViewer = new PDFjsViewer($(".pdfjs-viewer"), {});
-pdfViewer.loadDocument(call[0].file).then(function () {    pdfViewer.setZoom("fit");  });
+pdfViewer.loadDocument(call[0].file).then(function () {   
+  //pdfViewer.setZoom("fit"); 
+});
   
 } else {   
   fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, casturl:call[0].file, castname:call[0].title, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
