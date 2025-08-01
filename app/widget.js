@@ -46,7 +46,7 @@ function clearResult(fileListUl) {  updateFileName('');  fileListUl.innerHTML = 
 
 async function fs_loadZip(f, ngh) {
   updateFileName(f.title);
-  const zip = await JSZip.loadAsync(f);
+  const zip = await JSZip.loadAsync(f.file);
   zip.forEach((relativePath, zipEntry) => {
     const div = document.createElement('li');
      div.style='border: 1px solid #ddd;  margin-top: -1px;   background-color: #f6f6f6;  padding: 12px;';
