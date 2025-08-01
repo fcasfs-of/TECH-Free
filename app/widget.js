@@ -2,15 +2,15 @@ function onget_d(df){  return df+" Arquivos"; }
 
 function on_lanf(ifd){  
   var on_lanf_list= {
-    [1]:"Adjust width",
-    [2]:"Adjust height",
-    [3]:"Fit page",
-    [4]:"First page",
-    [5]:"Last page",
-    [6]:"Rotate countrary clockwise",
-    [7]:"Rotate clockwise",
-    [8]:"Vertical scroll",
-    [9]:"Horizontal scroll"
+[1]:"Ajustar largura",
+[2]:"Ajustar altura",
+[3]:"Ajustar página",
+[4]:"Primeira página",
+[5]:"Última página",
+[6]:"Girar país no sentido horário",
+[7]:"Girar no sentido horário",
+[8]:"Rolagem vertical",
+[9]:"Rolagem horizontal"
   }; 
 return on_lanf_list[ifd];   }
 
@@ -162,6 +162,38 @@ pdfThumbnails.setActivePage = function (pageno) {
   }
 }.bind(pdfThumbnails);
 
+
+document.querySelector("#btn_thums").onclick= function() {  togglethumbs(this);  };
+document.querySelector("#btn_pvolt").onclick= function() {  pdfViewer.prev();  };
+document.querySelector("#btn_pvproc").onclick= function() {   pdfViewer.next();    };
+document.querySelector("#pageno").onchange= function() {  pdfViewer.scrollToPage(parseInt(this.value)); };
+document.querySelector("#btnszoomin").onclick= function() {  pdfViewer.setZoom('in');  };
+document.querySelector("#btnszoomout").onclick= function() { pdfViewer.setZoom('out');  };
+document.querySelector("#btns_cprf").onclick= function() {  this.parentNode.classList.toggle('show'); };
+document.querySelector("#btn_dorpsdf").onclick= function() {  this.parentNode.classList.toggle('show'); };
+document.querySelector("#btn_dorpsdf0").onclick= function() {  pdfViewer.setZoom("width"); return false;  };
+document.querySelector("#btn_dorpsdf1").onclick= function() {  pdfViewer.setZoom("height"); return false;  };
+document.querySelector("#btn_dorpsdf3").onclick= function() {  pdfViewer.setZoom("fit"); return false;   };
+document.querySelector("#btn_dorpsdf4").onclick= function() {  pdfViewer.setZoom(0.5); return false;  };
+document.querySelector("#btn_dorpsdf5").onclick= function() {  pdfViewer.setZoom(0.75); return false;  };
+document.querySelector("#btn_dorpsdf6").onclick= function() {  pdfViewer.setZoom(1); return false;  };
+document.querySelector("#btn_dorpsdf7").onclick= function() {  pdfViewer.setZoom(1.25); return false;  };
+document.querySelector("#btn_dorpsdf8").onclick= function() {  pdfViewer.setZoom(1.5); return false;  };
+document.querySelector("#btn_dorpsdf9").onclick= function() {   pdfViewer.setZoom(2); return false; };
+document.querySelector("#btn_dorpsdf10").onclick= function() {  pdfViewer.setZoom(3); return false;  };
+document.querySelector("#btn_dorpsdf11").onclick= function() {  pdfViewer.setZoom(4); return false;  };
+document.querySelector("#hideselected").onclick= function() { hideselected();  };
+document.querySelector("#btnd_oo9d").onclick= function() { this.parentNode.classList.toggle('show');  };
+document.querySelector("#btnd_contecilrey").onclick= function() {  this.parentNode.classList.toggle('show'); };
+  
+document.querySelector("#btn_got1s").onclick= function() {  pdfViewer.scrollToPage(1); return false; };
+document.querySelector("#btn_got2s").onclick= function() { pdfViewer.scrollToPage(pdfViewer.pdf.numPages); return false;  };
+document.querySelector("#btn_got3s").onclick= function() {  pdfViewer.rotate(-90, true); pdfThumbnails.rotate(-90, true).then(() => pdfThumbnails.setZoom("fit")); };
+document.querySelector("#btn_got4s").onclick= function() { pdfViewer.rotate(90, true); pdfThumbnails.rotate(90, true).then(() => pdfThumbnails.setZoom("fit"));  };
+document.querySelector("#btn_got5s").onclick= function() {  document.querySelector(".pdfjs-viewer").classList.remove("horizontal-scroll"); pdfViewer.refreshAll(); };
+document.querySelector("#btn_got6s").onclick= function() { setHorizontal()  };
+
+  
 pdfThumbnails.loadDocument(PDFFILE);
 
 }
