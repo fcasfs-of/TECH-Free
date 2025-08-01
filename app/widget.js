@@ -275,9 +275,13 @@ else if(cc==1){       var img_ond="";
   if(call[0].type && call[0].type.split('/')){
     if(call[0].type.split('/')[0] === 'image') {  img_ond=call[0].file;  }
   }
-if(call[0].type && call[0].type==="application/zip"){
-   document.getElementById(evt).innerHTML='<div id="result"> <br/> <div id="file-name"></div> <br/> <div>    <ul id="file-list" style="list-style-type: none;  padding: 0;  margin: 0;">    </ul>  </div>  <div id="inner-file-name"></div>  <br/>  <div id="file-content"></div>  <br/></div>';
 
+if(call[0].type && call[0].type==="application/x-zip-compressed"){
+   document.getElementById(evt).innerHTML='<div id="result"> <br/> <div id="file-name"></div> <br/> <div>    <ul id="file-list" style="list-style-type: none;  padding: 0;  margin: 0;">    </ul>  </div>  <div id="inner-file-name"></div>  <br/>  <div id="file-content"></div>  <br/></div>';
+  const fileListUl = document.getElementById('file-list');    clearResult(fileListUl);
+  fs_loadZip(call[0].file, false);
+}   else if(call[0].type && call[0].type==="application/zip"){
+   document.getElementById(evt).innerHTML='<div id="result"> <br/> <div id="file-name"></div> <br/> <div>    <ul id="file-list" style="list-style-type: none;  padding: 0;  margin: 0;">    </ul>  </div>  <div id="inner-file-name"></div>  <br/>  <div id="file-content"></div>  <br/></div>';
   const fileListUl = document.getElementById('file-list');    clearResult(fileListUl);
   fs_loadZip(call[0].file, false);
 }            
