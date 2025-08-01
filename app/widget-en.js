@@ -1,6 +1,22 @@
 function onget_d(df){  return df+" Files"; }
 
 
+function on_lanf(ifd){  
+  var on_lanf_list= {
+    [1]:"Adjust width",
+    [2]:"Adjust height",
+    [3]:"Fit page",
+    [4]:"First page",
+    [5]:"Last page",
+    [6]:"Rotate countrary clockwise",
+    [7]:"Rotate clockwise",
+    [8]:"Vertical scroll",
+    [9]:"Horizontal scroll"
+  }; 
+return on_lanf_list[ifd];   }
+
+
+
 var get_iofd= false;
 var get_ifofd= true;
 const defaultSkipTime = 10; 
