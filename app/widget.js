@@ -50,12 +50,12 @@ async function fs_loadZip(f, ngh) {
   zip.forEach((relativePath, zipEntry) => {
     const div = document.createElement('li');
      div.style='border: 1px solid #ddd;  margin-top: -1px;   background-color: #f6f6f6;  padding: 12px;';
-    div.innerHTML = zipEntry.title;
+    div.innerHTML = zipEntry.name;
     div.title = relativePath;
     if(ngh==true){
     div.onclick = async () => {
       const stringContent = await zipEntry.async('text');
-      document.getElementById('inner-file-name').innerHTML = zipEntry.title;
+      document.getElementById('inner-file-name').innerHTML = zipEntry.name;
       document.getElementById('file-content').innerHTML = stringContent.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
     }
     }
