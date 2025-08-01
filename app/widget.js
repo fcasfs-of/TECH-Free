@@ -405,7 +405,7 @@ function run_modelop() {    var inpss45435rwles = document.getElementById('inpss
 function closeNav(cd) {
 var inpss45dfsdfszz = document.getElementById("myNav");   var insss667ddd = document.getElementById("zplayler");   var insss667zassddd = document.getElementById("zass");   var inpss45dfsdfszz = document.getElementById("myNav");
 var inpss45435rwles = document.getElementById('inpssle');   inpss45435rwles.value="";
-mdpl_handleselect("zplayler", [{"file":"#","title":" "}], 1, var_versplayerpg, inpss45435rwles);  
+mdpl_handleselect("zplayler", [{"file":"#","title":" "}], 1, var_versplayerpg, document.getElementById("inpssle"));  
 
 //openNsdsd();//penNsdsess="false";	
 
@@ -458,7 +458,7 @@ function preventDefaults(e) {  e.preventDefault();  e.stopPropagation();  }
 
 function handleFiles(files) {
 //mdpl_handleFileSelect(inpssf45435rwles, function(tb, cc){  opendtNav(cc); 
- // mdpl_handleselect("zplayler", tb, cc, var_versplayerpg);   
+ // mdpl_handleselect("zplayler", tb, cc, var_versplayerpg, document.getElementById("inpssle"));   
  //openNav();    
 //});
 }
@@ -488,7 +488,7 @@ function isopenduuf(insss667ddd){   opendtNav();
                             
 inpssf45435rwles.onchange=function(){   opendtNav();    //insss667ddd.innerHTML="";  pl_dispNav("zplayler").innerHTML="";  
  mdpl_handleFileSelect(inpssf45435rwles, function(tb, cc){  opendtNav(cc);       //pl_dispNav("zplayler").innerHTML="";
-  mdpl_handleselect("zplayler", tb, cc, var_versplayerpg, inpssf45435rwles);      //inpss45435rwles.multiple = "true";
+  mdpl_handleselect("zplayler", tb, cc, var_versplayerpg, document.getElementById("inpssle"));      //inpss45435rwles.multiple = "true";
  openNav();      //pl_dispNav("plvideo").addEventListener('ended', function(){   closeNav("false");    });
 });};
  
