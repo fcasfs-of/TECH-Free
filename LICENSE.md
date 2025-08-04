@@ -4,7 +4,7 @@
 > https://fcasfs-of.cloud-fs.net/
 
 
-## License Information for Tech: Player 
+## License Information (English) for Tech: Player 
 * App Name: "Tech: Player" 
 * Version: "2.0.0.2"
 
@@ -49,4 +49,50 @@ In no event shall the Developer be liable for any damages arising from the use o
       * Website: https://player.fcasfs-of.cloud-fs.net/en
 
 
+<hr/>
+
+
+## Informações sobre Licença (Português) para Tech: Player 
+* Nome do aplicativo: "Tech: Player"
+* Versão: "2.0.0.2"
+
+## Contrato de Licença
+Ao baixar e usar o Tech: Player, você concorda em cumprir os termos e condições descritos neste contrato de licença. <br/> Leia este documento com atenção antes de usar o aplicativo.
+
+---
+### 1. Concessão de Licença
+O Tech: Player é licenciado, não vendido, a você. <br/> Sujeito aos termos e condições deste Contrato, o Desenvolvedor concede a você uma licença não exclusiva, intransferível e limitada para usar o Software para fins pessoais e não comerciais.
+
+### 2. Uso do Software
+Você pode usar o Tech: Player para:
+* Reproduzir arquivos de vídeo
+* Reproduzir arquivos de áudio
+* Visualizar arquivos de imagem
+* Visualizar arquivo PDF
+
+### 2. Restrições
+Você não pode:
+- Modificar, adaptar ou criar trabalhos derivados do Software.
+- Distribuir, vender ou alugar o Software a terceiros.
+- Fazer engenharia reversa, descompilar ou desmontar o Software.
+- Usar o Software para qualquer propósito ilícito.
+
+### 4. Propriedade
+Todos os direitos, títulos e interesses em e para a Tech: Player, incluindo todos os direitos de propriedade intelectual, são de propriedade do Desenvolvedor. <br/> Esta licença não lhe concede nenhum direito de propriedade sobre o Software.
+
+### 5. Rescisão
+Esta licença é válida até ser rescindida. Você pode rescindi-la a qualquer momento desinstalando o Software. <br/> A licença também será rescindida automaticamente se você não cumprir qualquer termo deste Contrato.
+
+### 6. Isenção de Garantia
+Tecnologia: O Player é fornecido "no estado em que se encontra" e sem garantia de qualquer tipo. <br/> O Desenvolvedor não garante que o Software atenderá às suas necessidades ou que a operação do Software será ininterrupta ou livre de erros.
+
+### 7. Limitação de Responsabilidade
+Em nenhuma hipótese o Desenvolvedor será responsável por quaisquer danos decorrentes do uso ou da incapacidade de uso do Software, mesmo que o Desenvolvedor tenha sido avisado da possibilidade de tais danos.
+
+---
+
+## Informações de Contato
+- Para dúvidas ou suporte, entre em contato com:
+      * Email: fcasfs.of@cloud-fs.net
+      * Website: https://player.fcasfs-of.cloud-fs.net
 
