@@ -1,5 +1,5 @@
 
-## 2.0.0.1 (01/08/2025) Portable Version
+## 2.0.0.2 (01/08/2025) Portable Version
 
   - Bug fixes
   - Performance Improvements
