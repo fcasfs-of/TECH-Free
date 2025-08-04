@@ -22,7 +22,7 @@ Tech: Player is licensed, not sold, to you. <br/> Subject to the terms and condi
   * View Image files
   * View PDF file
 
-### 3. Restrictions
+#### 3. Restrictions
  You may not:
    -  Modify, adapt, or create derivative works of the Software.
    -  Distribute, sell, or lease the Software to third parties.
