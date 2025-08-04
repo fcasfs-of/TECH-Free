@@ -8,11 +8,11 @@
   * App Name: "Tech: Player" 
   * Version: "2.0.0.2"
 
-  ## License Agreement 
+   ## License Agreement 
    By downloading and using Tech: Player, you agree to comply with the terms and conditions outlined in this license agreement. <br/> Please read this document carefully before using the application.
 
-  ---
-  ### 1. Grant of License
+   ---
+   ### 1. Grant of License
    Tech: Player is licensed, not sold, to you. <br/> Subject to the terms and conditions of this Agreement, the Developer grants you a non-exclusive, non-transferable, limited license to use the Software for personal and non-commercial purposes.
 
 ### 2. Use of the Software
