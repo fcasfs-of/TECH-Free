@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suporte - TECH Player</title>
+
+    <script src="https://player.fcasfs-of.cloud-fs.net/app/core.js"></script>  <script src="https://player.fcasfs-of.cloud-fs.net/app/api.js"></script>
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Navegação rápida */
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffc107;
+    }
+
+    /* Seção de conteúdo principal */
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Seção de introdução */
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .intro h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #0d6efd;
+    }
+
+    .intro p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* Funcionalidades destacadas */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+      color: #0d6efd;
+      font-size: 1.3em;
+    }
+
+    .feature-card p {
+      font-size: 1em;
+      color: #666;
+    }
+
+    /* Seção de vídeos de demonstração */
+    .demo-section {
+      margin-top: 60px;
+    }
+
+    .demo-section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+
+    .videos {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @media(max-width: 768px) {
+      .videos {
+        width: 100%;
+      }
+    }
+
+    /* Estilo dos vídeos */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* proporção 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe, 
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+
+    /* FAQ / Dúvidas frequentes */
+    .faq {
+      margin-top: 60px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #0d6efd;
+    }
+
+    .faq-item {
+      background-color: #fff;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      position: relative;
+      padding-right: 20px;
+      transition: color 0.3s;
+    }
+
+    .faq-item h3:hover {
+      color: #0d6efd;
+    }
+
+    .faq-item p {
+      display: none;
+      font-size: 1em;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    /* Botões de ação */
+    .btn {
+      display: inline-block;
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Suporte - TECH Player</h1>
+  <p>Seu guia completo para aproveitar ao máximo o nosso player multimídia.</p>
+  <nav>
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#demonstracoes">Demonstração</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Introdução -->
+  <section class="intro" id="funcionalidades">
+    <h2>Por que escolher o TECH Player?</h2>
+    <p>Nosso player oferece uma experiência de mídia imersiva e intuitiva, projetada para atender a todas as suas necessidades de entretenimento digital. Com um design moderno e funcional, reproduza, pause e controle suas faixas, vídeos, PDFs, áudios e imagens com facilidade e estilo.</p>
+  </section>
+
+  <!-- Funcionalidades principais -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>Reprodução Multimídia</h3>
+      <p>Suporte para PDFs, vídeos, áudios e imagens, tudo em um só lugar, com alta qualidade de reprodução.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Controle Intuitivo</h3>
+      <p>Interface moderna que permite reproduzir, pausar, avançar, retroceder e ajustar o volume com facilidade.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Experiência Imersiva</h3>
+      <p>Design responsivo e clean que proporciona uma navegação fluida em qualquer dispositivo.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Personalização</h3>
+      <p>Opções de ajuste de cores, tamanhos e preferências para uma experiência sob medida.</p>
+    </div>
+  </section>
+
+  <!-- Demonstrações em vídeo -->
+  <section class="demo-section" id="demonstracoes">
+    <h2>Veja o TECH Player em ação</h2>
+    <div class="videos">
+
+      <div class="video-container" id="demonstracoes_video01">
+     
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Dúvidas frequentes -->
+  <section class="faq" id="faq">
+    <h2>Dúvidas Frequentes</h2>
+
+    <div class="faq-item">
+      <h3>Como posso reproduzir meus arquivos?</h3>
+      <p>Você pode abrir seus arquivos clicando na opção "Abrir Arquivo" no menu principal ou arrastando-os para o player. Suporte para PDFs, vídeos, áudios e imagens está disponível.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Posso controlar a reprodução?</h3>
+      <p>Sim! Nosso player oferece botões intuitivos para reproduzir, pausar, avançar, retroceder e ajustar o volume facilmente.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>O player funciona em dispositivos móveis?</h3>
+      <p>Com certeza! Nosso design responsivo garante uma experiência fluida em smartphones e tablets.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Preciso de instalação?</h3>
+      <p>Não! Nosso player funciona diretamente no navegador, sem necessidade de instalação de software adicional.</p>
+    </div>
+
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" style="margin-top:60px; text-align:center;">
+    <h2>Precisa de Ajuda?</h2>
+    <p>Entre em contato com nossa equipe de suporte para qualquer dúvida ou assistência.</p>
+    <a href="mailto:fcasfs.of@cloud-fs.net" class="btn">Fale Conosco</a>
+  </section>
+</main>
+
+<!-- Rodapé -->
+<footer>
+  <p>&copy; 2025 TECH Player. Todos os direitos reservados.</p>
+  <p>Email: fcasfs.of@cloud-fs.net</p>
+</footer>
+
+<script>
+  var fplayeri = fs_Playerjs({ OSD:true, config:{            
+}, id:"demonstracoes_video01",  customtext:{age:"1"}, nocontrols:0, autoplay:0, loop:0, title:"Intro", file:"intro1.mp4", poster:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg", player:1,"url":location.href  });    
+ 
+ fplayeri.OnEvents("init",function(){    
+      fplayeri.OnEvents("volume",function(){    fs_OSD({ duration:3e3, position:"absolute", text: 'Volume: '+Math.floor(fplayeri.api("volume")*100)+"%", pos: "top-left", showAction: false,  actionText: "", width: 'auto'    });     });
+      fplayeri.OnEvents("speed",function(){    fs_OSD({ duration:3e3, position:"absolute", text: 'Velocidade: '+fplayeri.api("speed"), pos: "top-left", showAction: false,  actionText: "", width: 'auto'    });     });     
+ });
+       
+ fplayeri.OnEvents("exitfullscreen",function(){     fs_OSD({ duration:3e3, position:"absolute", text: 'Saindo da Tela Cheia', pos: "top-left", showAction: false,  actionText: "", width: 'auto'    });     });
+fplayeri.OnEvents("fullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Tela Cheia', pos: "top-left", showAction: false,  actionText: "", width: 'auto'    });      });
+   fplayeri.OnEvents("unmute",function(){      fs_OSD({ duration:3e3, text: 'Som Ativo', position:"absolute", pos: "top-left", showAction: false,  actionText: "", width: 'auto'    });      });
+  fplayeri.OnEvents("mute",function(){     fs_OSD({ duration:3e3, text: 'Mutado', position:"absolute", pos: "top-left", showAction: false,  actionText: "", width: 'auto'    });      });
+
+  
+  document.querySelectorAll('.faq-item h3').forEach(function(faqHeader) {
+    faqHeader.addEventListener('click', function() {
+      const answer = this.nextElementSibling;
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+      } else {
+        answer.style.display = 'block';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
