@@ -7,7 +7,7 @@
 <hr/>
 
 # TECH: Player: Português
-  (PDF, Video, Audio and Image)<br/><br/>
+  (PDF, Video, Audio e Image)<br/><br/>
   Nosso player oferece uma experiência de mídia imersiva e intuitiva, projetada para atender a todas as suas necessidades de entretenimento digital. <br/>Com um design moderno e funcional, ele permite que você reproduza, pause e controle suas faixas e vídeos favoritos com facilidade.
 
 
