@@ -1,12 +1,12 @@
 > [!NOTE]
 > FCAS_FS License <br/>
-> Version 2.0.1.2, 01/08/2025 <br/>
+> Version 2.0.1.0, 01/08/2025 <br/>
 > https://fcasfs-of.cloud-fs.net/
 
 
 ## License Information for Tech: Player 
 * App Name: "Tech: Player" 
-* Version: "2.0.0.1"
+* Version: "2.0.0.2"
 
 ## License Agreement 
 By downloading and using Tech: Player, you agree to comply with the terms and conditions outlined in this license agreement. <br/> Please read this document carefully before using the application.
