@@ -7,7 +7,7 @@
 
     <link rel="icon" type="image/x-icon" href="https://player.fcasfs-of.cloud-fs.net/favicon.ico"/>
 
-    <script src="https://player.fcasfs-of.cloud-fs.net/app/core.js"></script>  <script src="https://player.fcasfs-of.cloud-fs.net/app/api.js"></script>
+    <script src="https://player.fcasfs-of.cloud-fs.net/app/core.js"></script>  
 
   <style>
     /* Reset básico */
@@ -234,6 +234,7 @@
   <h1>Suporte - TECH Player</h1>
   <p>Seu guia completo para aproveitar ao máximo o nosso player multimídia.</p>
   <nav>
+    <a href="#version">Versão</a> <br/>
     <a href="#funcionalidades">Funcionalidades</a>
     <a href="#demonstracoes">Demonstração</a>
     <a href="#faq">Dúvidas</a>
@@ -246,6 +247,10 @@
   <section class="intro" id="funcionalidades">
     <h2>Por que escolher o TECH Player?</h2>
     <p>Nosso player oferece uma experiência de mídia imersiva e intuitiva, projetada para atender a todas as suas necessidades de entretenimento digital. Com um design moderno e funcional, reproduza, pause e controle suas faixas, vídeos, PDFs, áudios e imagens com facilidade e estilo.</p>
+  </section>
+  <section class="intro" id="version">
+    <h2>Versão?</h2>
+    <p id="versionplayer"></p>
   </section>
 
   <!-- Funcionalidades principais -->
@@ -321,7 +326,9 @@
 </footer>
 
 <script>
-  
+  var iversionplayerzz = document.getElementById("versionplayer");  if(app_ver){  if(app_ver!=""){   iversionplayerzz.innerHTML="  "+app_ver+" ";   }   }  
+
+    
   document.querySelectorAll('.faq-item h3').forEach(function(faqHeader) {
     faqHeader.addEventListener('click', function() {
       const answer = this.nextElementSibling;
