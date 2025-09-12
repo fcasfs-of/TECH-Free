@@ -17,7 +17,7 @@ return on_lanf_list[ifd];   }
 
   var mdpl_handleFileSelectsa=[];    var mdpl_handleFilehistoicr=[];
 
-  var osdposito="top-left";    var osdpositdo="absolute";
+  var osdposito="top-center";    var osdpositdo="absolute";
 
 var vars={};     var  localhs=[];
 
