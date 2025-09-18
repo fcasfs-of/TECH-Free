@@ -208,18 +208,20 @@ inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  back
 
 var scriptfd = document.createElement("script");
     scriptfd.setAttribute("type", "text/javascript");
+    scriptfd.setAttribute("id", "fileplayer_fd");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+getval_tyget+".js");
 document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
+function remover_id_playerfile(){  var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
 
 
   
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("onstart_file(getval_tyget, { info: getval_tygepgrdft, list:getval_tygepgret },run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);"));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("onstart_file(getval_tyget, { info: getval_tygepgrdft, list:getval_tygepgret },run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);   remover_id_playerfile();   "));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
-  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(getval_tyget, { info:getval_tygepgrdft, list:getval_tygepgret },run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);   };
+  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(getval_tyget, { info:getval_tygepgrdft, list:getval_tygepgret },run_file,getval_tygepret, degetval_tselett, degetval_tseposttt);  remover_id_playerfile();    };
 
     
 }
