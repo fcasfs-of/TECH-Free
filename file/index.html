@@ -178,14 +178,15 @@ var arquivos_al="";    var idarquivo="";
 
 function onstart_file(run_file,gg){    
 if(typeof run_file=='function' && gg && gg!=""){  
-var arquivos_listr=[];
   
+var arquivos_listr=[];
+  if(run_file().list){
 for(var j=0; j<run_file().list.length; j++){
   arquivos_listr[j]={
-    dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulo:run_file().file_title+": "+run_file().list[j].title, descricao:"", 
+dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulo:run_file().file_title+": "+run_file().list[j].title, descricao:"", 
 link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+gg+"&fileView=true&fileSelect="+(j+1)
   };
-}
+}  }
   
 arquivos.push({
 dark: run_file().pg_dark, miniatura: run_file().cover, titulo:run_file().file_title, descricao:run_file().file_desc, 
@@ -225,6 +226,9 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
     div.onclick = () => {    
       var darkthevv="";          if(arquivo.dark==true){ darkthevv=" dark"; }
       listpreview_fleer.innerHTML = `   <div class="modal-overlay" id="modalOverlay" style="display:flex;">    <div class="modal ${darkthevv}" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">      <div class="modal-header">        <h2 id="modalTitle">${arquivo.titulo}</h2>        <button class="close-btn" onclick="deleteite();" id="closeModal">x</button>      </div>      <div class="modal-content">        <p id="modalDesc" class="description">${arquivo.descricao}</p>        <div class="iframe-container">          <iframe scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="${arquivo.link}" style="overflow: hidden;   "></iframe>        </div>      </div>    </div>  </div>`;
+    
+ if(arquivo.playlist){    if(arquivo.playlist > 1){    listpreview_fleer.innerHTML=criarItem(arquivo));   }    }
+      
     };
     return div;
   }
