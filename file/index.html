@@ -71,9 +71,36 @@
 <div class="lista-arquivos" id="listaArquivos"></div>
 <br/><br/>
 
-
+  
+<script src="https://player.fcasfs-of.cloud-fs.net/app/all_files.js"></script>
 <script>
-  const arquivos = [];
+  
+   const arquivos = [];
+
+  if(mdpl_fielsd){
+    mdpl_fielsd.forEach(idarquivo => {
+      
+var scriptfd = document.createElement("script");
+    scriptfd.setAttribute("type", "text/javascript");
+    scriptfd.setAttribute("id", "fileplayer_fd");
+    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
+document.getElementsByTagName("body")[0].appendChild(scriptfd);
+
+ if(typeof run_file=='function'){     
+   
+if(arquivos){
+arquivos[arquivos.length]={
+  titulo: run_file().file_title,
+  miniatura: run_file().cover,
+  link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+idarquivo+"&fileView=true"
+};
+}
+
+  }
+var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
+
+    });
+  }
   
 
   const listaContainer = document.getElementById('listaArquivos');
@@ -96,10 +123,12 @@
 
   function renderizarLista(lista) {
     listaContainer.innerHTML = '';
+    if(lista){
     lista.forEach(arquivo => {
       const item = criarItem(arquivo);
       listaContainer.appendChild(item);
     });
+    }
   }
 
   renderizarLista(arquivos);
