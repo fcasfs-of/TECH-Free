@@ -116,7 +116,7 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   function renderizarLista(lista) {
     listaContainer.innerHTML = '';
     if(lista){
-     lista.forEach(arquivo => {      listaContainer.appendChild(criarItem(arquivo));    });   
+     lista.forEach(arquivo => {  listaContainer.appendChild(criarItem(arquivo));   });   
     }
   }
 
@@ -130,9 +130,15 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   });
 
 
-renderizarLista(arquivos);    
 
 
+var scrfiptfd = document.createElement("script");
+    scrfiptfd.setAttribute("type", "text/javascript");
+      scrfiptfd.setAttribute("onload", "onstart_file();");
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent(" renderizarLista(arquivos);      "));
+document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
+
+  
   
 </script>
   
