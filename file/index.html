@@ -62,6 +62,95 @@
         padding: 0 10px;
       }
     }
+
+     .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: none; /* Oculto por padrão */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal {
+      background-color: #fff;
+      max-width: 800px;
+      width: 90%;
+      max-height: 90%;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .close-btn:hover {
+      color: #ff0000;
+    }
+
+    .modal-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .description {
+      margin-bottom: 15px;
+      font-size: 1em;
+      color: #555;
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; 
+      height: 0;
+      overflow: hidden;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 600px) {
+      .modal {
+        max-width: 95%;
+        padding: 10px;
+      }
+      .modal-header h2 {
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -73,6 +162,9 @@
 </div>
 
 <div class="lista-arquivos" id="listaArquivos"></div>
+
+<div id="preview_fle"></div>
+
 <br/><br/>
 
   
@@ -83,7 +175,7 @@ var arquivos_al="";    var idarquivo="";
 function onstart_file(run_file,gg){    
 if(typeof run_file=='function' && gg && gg!=""){  
 arquivos.push({
-miniatura: run_file().cover, titulo:run_file().file_title,
+miniatura: run_file().cover, titulo:run_file().file_title, descricao:run_file().file_desc, 
 link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+gg+"&fileView=true"
 });
 }   }
@@ -106,12 +198,19 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   
 
   const listaContainer = document.getElementById('listaArquivos');
+  
+  const listpreview_fleer = document.getElementById('preview_fle');
 
+
+  function deleteite() {  listpreview_fleer.innerHTML="";   }   
+  
   function criarItem(arquivo) {
     const div = document.createElement('div');
     div.className = 'arquivo';
     div.innerHTML = `     <img src="${arquivo.miniatura}" class="miniatura" />      <div class="titulo">${arquivo.titulo}</div>    `;
-    div.onclick = () => {      window.open(arquivo.link, '_blank');    };
+    div.onclick = () => {      
+      listpreview_fleer.innerHTML = `   <div class="modal-overlay" id="modalOverlay" style="display:flex;">    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">      <div class="modal-header">        <h2 id="modalTitle">${arquivo.titulo}</h2>        <button class="close-btn" onclick="deleteite();" id="closeModal">x</button>      </div>      <div class="modal-content">        <p id="modalDesc" class="description">${arquivo.descricao}</p>        <div class="iframe-container">          <iframe src="${arquivo.link}" allowfullscreen></iframe>        </div>      </div>    </div>  </div>`;
+    };
     return div;
   }
 
