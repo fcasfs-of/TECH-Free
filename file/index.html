@@ -78,11 +78,12 @@
   
 <script>
 const arquivos = [];
-var arquivos_al="";  
+var arquivos_al="";    var idarquivo="";
   
   if(mdpl_fielsd){
-    mdpl_fielsd.forEach(idarquivo => {
-     
+    for (i = 0; i < mdpl_fielsd.length; i++) {
+idarquivo=mdpl_fielsd[1];
+      
 var scriptfd = document.createElement("script");
     scriptfd.setAttribute("id", "fileplayer_fd");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
@@ -95,7 +96,7 @@ if(typeof run_file=='function' && arquivos){
   
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
      
-    });
+    }
   }    
   
 
