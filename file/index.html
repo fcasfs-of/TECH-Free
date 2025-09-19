@@ -78,7 +78,8 @@
   
 <script>
 const arquivos = [];
-
+var arquivos_al="";
+  
   if(mdpl_fielsd){
     mdpl_fielsd.forEach(idarquivo => {
      
@@ -87,12 +88,11 @@ var scriptfd = document.createElement("script");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
 document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
-var scrfiptfd = document.createElement("script");
-    scriptfd.setAttribute("id", "fileplayer_fdf");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("  if(typeof run_file=='function' && arquivos){  arquivos.push({  titulo: run_file().file_title,  miniatura: run_file().cover,  link: \"https://player.fcasfs-of.cloud-fs.net/\"+run_file().player_lang+\"?fileID=\""+idarquivo+"\"&fileView=true\"  });   }   "));
-document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
+if(typeof run_file=='function' && arquivos){  
+  arquivos_al=arquivos_al+"  arquivos["+arquivos.length"]={  titulo: run_file().file_title,  miniatura: run_file().cover,  link: \"https://player.fcasfs-of.cloud-fs.net/\"+run_file().player_lang+\"?fileID=\""+idarquivo+"\"&fileView=true\"  };   ";
+} 
+
   
-var infilefddaz = document.getElementById("fileplayer_fdf");     if(infilefddaz){   infilefddaz.remove();   } 
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
      
     });
@@ -126,8 +126,16 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   });
 
 
+var scrfiptfd = document.createElement("script");
+    scrfiptfd.setAttribute("type", "text/javascript");
+    scrfiptfd.setAttribute("onload", "onstart_file();");
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("function onstart_file() {  "+arquivos_al+"    renderizarLista(arquivos);    }"));
+document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
+document.getElementsByTagName("body")[0].onload=function(){ onstart_file();  };
 
-renderizarLista(arquivos);  
+
+
+
   
   
 </script>
