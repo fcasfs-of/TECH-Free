@@ -81,6 +81,13 @@
 function loaded_metainf(){
   if(mdpl_fielsd){
     mdpl_fielsd.forEach(idarquivo => {
+     
+var scriptfd = document.createElement("script");
+    scriptfd.setAttribute("type", "text/javascript");
+    scriptfd.setAttribute("id", "fileplayer_fd");
+    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
+document.getElementsByTagName("body")[0].appendChild(scriptfd);
+
 
 if(typeof run_file=='function' && arquivos){
 arquivos[arquivos.length+1]={
@@ -90,18 +97,9 @@ arquivos[arquivos.length+1]={
 };
 
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
-}
-    }
-
-      
-var scriptfd = document.createElement("script");
-    scriptfd.setAttribute("type", "text/javascript");
-    scriptfd.setAttribute("id", "fileplayer_fd");
-    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
-document.getElementsByTagName("body")[0].appendChild(scriptfd);
-
+}      
     });
-  }
+  }    }
   
 
   const listaContainer = document.getElementById('listaArquivos');
