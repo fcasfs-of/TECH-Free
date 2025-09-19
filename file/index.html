@@ -79,22 +79,26 @@
 <script>
 const arquivos = [];
 var arquivos_al="";    var idarquivo="";
-  
+
+function onstart_file(run_file,gg){    
+if(typeof run_file=='function' && gg && gg!=""){  
+arquivos.push({
+miniatura: run_file().cover, titulo:run_file().file_title,
+link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+gg+"&fileView=true"
+});
+}   }
+
+
   if(mdpl_fielsd){
-    for (i = 0; i < mdpl_fielsd.length; i++) {
-idarquivo=mdpl_fielsd[1];
-      
+    for (var i = 0; i < mdpl_fielsd.length; i++) {
+idarquivo=mdpl_fielsd[i];
+ 
 var scriptfd = document.createElement("script");
     scriptfd.setAttribute("id", "fileplayer_fd");
+    scriptfd.setAttribute("onload", "onstart_file(run_file,\""+idarquivo+"\");renderizarLista(arquivos);    ");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
-document.getElementsByTagName("body")[0].appendChild(scriptfd);
+document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
-if(typeof run_file=='function' && arquivos){  
-  arquivos_al=arquivos_al+"  arquivos.push({  titulo: run_file().file_title,  miniatura: run_file().cover,  link: \"https://player.fcasfs-of.cloud-fs.net/\"+run_file().player_lang+\"?fileID=\""+idarquivo+"\"&fileView=true\"  });   ";
-alert(arquivos_al);
-} 
-
-  
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
      
     }
@@ -128,22 +132,8 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   });
 
 
-var scrfiptfd = document.createElement("script");
-    scrfiptfd.setAttribute("type", "text/javascript");
-     scrfiptfd.setAttribute("id", "filepddlayer_fd");
-    scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("function onstart_file() {  "+arquivos_al+"    renderizarLista(arquivos);    }"));
-document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
-var infiledddfaz = document.getElementById("filepddlayer_fd");     if(infiledddfaz){   infiledddfaz.remove();   }   
-
-
-
-
-
-  
   
 </script>
-  
 
 </body>
 </html>
