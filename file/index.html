@@ -83,18 +83,16 @@ const arquivos = [];
     mdpl_fielsd.forEach(idarquivo => {
      
 var scriptfd = document.createElement("script");
-    scriptfd.setAttribute("type", "text/javascript");
     scriptfd.setAttribute("id", "fileplayer_fd");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
 document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
 var scrfiptfd = document.createElement("script");
-    scrfiptfd.setAttribute("type", "text/javascript");
-    scrfiptfd.setAttribute("onload", "var infilefddaz = document.getElementById(\"fileplayer_fdf\");     if(infilefddaz){   infilefddaz.remove();   }  ");
     scriptfd.setAttribute("id", "fileplayer_fdf");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("  if(typeof run_file=='function' && arquivos){arquivos.push({  titulo: run_file().file_title,  miniatura: run_file().cover,  link: \"https://player.fcasfs-of.cloud-fs.net/\"+run_file().player_lang+\"?fileID=\""+idarquivo+"\"&fileView=true\"  });   }   "));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("  if(typeof run_file=='function' && arquivos){  arquivos.push({  titulo: run_file().file_title,  miniatura: run_file().cover,  link: \"https://player.fcasfs-of.cloud-fs.net/\"+run_file().player_lang+\"?fileID=\""+idarquivo+"\"&fileView=true\"  });   }   "));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
   
+var infilefddaz = document.getElementById("fileplayer_fdf");     if(infilefddaz){   infilefddaz.remove();   } 
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
      
     });
