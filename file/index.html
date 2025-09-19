@@ -116,9 +116,8 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   function renderizarLista(lista) {
     listaContainer.innerHTML = '';
     if(lista){
-      for (var i = 0; i < lista.length; i++) {
-      listaContainer.appendChild(criarItem(lista[i]));
-    }      }
+     lista.forEach(arquivo => {      listaContainer.appendChild(criarItem(arquivo));    });   
+    }
   }
 
 
