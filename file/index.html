@@ -229,10 +229,10 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
       
  if(arquivo.playlist){    if(arquivo.playlist > 1){   listpreview_fleer.innerHTML ='<div class="lista-arquivos" id="listaAffrquivos"></div>';  
     const llistaAffrquivosfleer = document.getElementById('listaAffrquivos');
-   arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });     }    }
+   arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });        }
       else {
   listpreview_fleer.innerHTML = `   <div class="modal-overlay" id="modalOverlay" style="display:flex;">    <div class="modal ${darkthevv}" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">      <div class="modal-header">        <h2 id="modalTitle">${arquivo.titulo}</h2>        <button class="close-btn" onclick="deleteite();" id="closeModal">x</button>      </div>      <div class="modal-content">        <p id="modalDesc" class="description">${arquivo.descricao}</p>        <div class="iframe-container">          <iframe scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="${arquivo.link}" style="overflow: hidden;   "></iframe>        </div>      </div>    </div>  </div>`;
-      }
+      }   }
       
     };
     return div;
