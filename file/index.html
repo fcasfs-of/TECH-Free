@@ -87,7 +87,6 @@ var scriptfd = document.createElement("script");
 document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
  if(typeof run_file=='function'){     
-   
 if(arquivos){
 arquivos[arquivos.length]={
   titulo: run_file().file_title,
@@ -95,7 +94,6 @@ arquivos[arquivos.length]={
   link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+idarquivo+"&fileView=true"
 };
 }
-
   }
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
 
@@ -131,7 +129,7 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
     }
   }
 
-  renderizarLista(arquivos);
+
 
   const inputBusca = document.getElementById('searchInput');
   inputBusca.addEventListener('input', () => {
@@ -141,6 +139,11 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
     );
     renderizarLista(filtrados);
   });
+
+  
+ document.getElementsByTagName("body")[0].onload=function(){  renderizarLista(arquivos);  }
+  
+  
 </script>
 
 </body>
