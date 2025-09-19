@@ -90,11 +90,11 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
 
 if(typeof run_file=='function' && arquivos){
-arquivos[arquivos.length+1]={
+arquivos.push({
   titulo: run_file().file_title,
   miniatura: run_file().cover,
   link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+idarquivo+"&fileView=true"
-};
+});
 }
   
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
