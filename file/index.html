@@ -90,7 +90,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
 
 if(typeof run_file=='function' && arquivos){
-arquivos[arquivos.length+1]={
+arquivos[arquivos.length]={
   titulo: run_file().file_title,
   miniatura: run_file().cover,
   link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+idarquivo+"&fileView=true"
@@ -107,16 +107,8 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   function criarItem(arquivo) {
     const div = document.createElement('div');
     div.className = 'arquivo';
-
-    div.innerHTML = `
-      <img src="${arquivo.miniatura}" class="miniatura" />
-      <div class="titulo">${arquivo.titulo}</div>
-    `;
-
-    div.onclick = () => {
-      window.open(arquivo.link, '_blank');
-    };
-
+    div.innerHTML = `     <img src="${arquivo.miniatura}" class="miniatura" />      <div class="titulo">${arquivo.titulo}</div>    `;
+    div.onclick = () => {      window.open(arquivo.link, '_blank');    };
     return div;
   }
 
@@ -127,8 +119,7 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
       const item = criarItem(arquivo);
       listaContainer.appendChild(item);
     });
-    }
-  }
+    }      }
 
 
 
@@ -148,7 +139,7 @@ var scrfiptfd = document.createElement("script");
      scrfiptfd.setAttribute("onload", "loaded_metainf();renderizarLista(arquivos);");
     scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("  loaded_metainf();   renderizarLista(arquivos);    "));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
-document.getElementsByTagName("body")[0].onload=function(){   loaded_metainf();  renderizarLista(arquivos);    };
+ loaded_metainf();  renderizarLista(arquivos);    
 
   
   
