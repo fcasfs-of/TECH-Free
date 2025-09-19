@@ -4,6 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lista de Arquivos</title>
     <link rel="icon" type="image/x-icon" href="https://player.fcasfs-of.cloud-fs.net/favicon.ico"/>
+  
+  <script src="https://player.fcasfs-of.cloud-fs.net/app/all_files.js"></script>
 
   <style>
     body {
@@ -75,9 +77,7 @@
 
   
 <script>
- function loaded_metaisatrf(){
-   
-   const arquivos = [];
+const arquivos = [];
 
 function loaded_metainf(){
   if(mdpl_fielsd){
@@ -116,11 +116,10 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   function renderizarLista(lista) {
     listaContainer.innerHTML = '';
     if(lista){
-    lista.forEach(arquivo => {
-      const item = criarItem(arquivo);
-      listaContainer.appendChild(item);
-    });
+      for (var i = 0; i < lista.length; i++) {
+      listaContainer.appendChild(criarItem(lista[i]));
     }      }
+  }
 
 
 
@@ -128,7 +127,7 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   inputBusca.addEventListener('input', () => {
     const termo = inputBusca.value.toLowerCase();
     const filtrados = arquivos.filter(arquivo => 
-      arquivo.titulo.toLowerCase().includes(termo);
+      arquivo.titulo.toLowerCase().includes(termo)
     );
     renderizarLista(filtrados);
   });
@@ -140,10 +139,9 @@ renderizarLista(arquivos);
 
   
   
-  }  
+  
 </script>
   
-  <script src="https://player.fcasfs-of.cloud-fs.net/app/all_files.js" onload="loaded_metaisatrf();"></script>
 
 </body>
 </html>
