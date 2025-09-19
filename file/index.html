@@ -227,7 +227,7 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
       var darkthevv="";          if(arquivo.dark==true){ darkthevv=" dark"; }
     listpreview_fleer.innerHTML="";
       
- if(arquivo.playlist){    if(arquivo.playlist > 1){   listpreview_fleer.innerHTML ='<div class="lista-arquivos" id="listaAffrquivos"></div>';  
+ if(arquivo.playlist){    if(arquivo.playlist > 1){   listpreview_fleer.innerHTML ='  <div class="modal-overlay" id="modalOverlay" style="display:flex;">    <div class="modal ${darkthevv}" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">      <div class="modal-header">        <h2 id="modalTitle">${arquivo.titulo}</h2>        <button class="close-btn" onclick="deleteite();" id="closeModal">x</button>      </div>      <div class="modal-content">        <p id="modalDesc" class="description">${arquivo.descricao}</p>        <div class="iframe-container">          <div class="lista-arquivos" id="listaAffrquivos"></div>      </div>      </div>    </div>  </div>';  
     const llistaAffrquivosfleer = document.getElementById('listaAffrquivos');
    arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });        }
       else {
