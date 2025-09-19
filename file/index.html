@@ -74,8 +74,13 @@
   
 <script src="https://player.fcasfs-of.cloud-fs.net/app/all_files.js"></script>
 <script>
+  
+   const arquivos = [];
 
-  function laodemetadata(){
+  if(mdpl_fielsd){
+    mdpl_fielsd.forEach(idarquivo => {
+
+ function laodemetadata(){
  if(typeof run_file=='function' && arquivos){
 arquivos[arquivos.length]={
   titulo: run_file().file_title,
@@ -86,11 +91,6 @@ arquivos[arquivos.length]={
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
 }
 
-  
-   const arquivos = [];
-
-  if(mdpl_fielsd){
-    mdpl_fielsd.forEach(idarquivo => {
       
 var scriptfd = document.createElement("script");
     scriptfd.setAttribute("type", "text/javascript");
