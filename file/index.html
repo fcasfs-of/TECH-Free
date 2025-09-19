@@ -79,7 +79,6 @@
 <script>
 const arquivos = [];
 
-function loaded_metainf(){
   if(mdpl_fielsd){
     mdpl_fielsd.forEach(idarquivo => {
      
@@ -91,7 +90,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
 
 if(typeof run_file=='function' && arquivos){
-arquivos[arquivos.length]={
+arquivos[arquivos.length+1]={
   titulo: run_file().file_title,
   miniatura: run_file().cover,
   link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+idarquivo+"&fileView=true"
@@ -101,7 +100,7 @@ arquivos[arquivos.length]={
 var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
      
     });
-  }    }
+  }    
   
 
   const listaContainer = document.getElementById('listaArquivos');
@@ -131,12 +130,9 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   });
 
 
-
-loaded_metainf();
 renderizarLista(arquivos);    
 
-  
-  
+
   
 </script>
   
