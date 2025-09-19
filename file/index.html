@@ -5,8 +5,6 @@
   <title>Lista de Arquivos</title>
     <link rel="icon" type="image/x-icon" href="https://player.fcasfs-of.cloud-fs.net/favicon.ico"/>
 
-  <script src="https://player.fcasfs-of.cloud-fs.net/app/all_files.js" onload="loaded_metainf()"></script>
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -77,7 +75,8 @@
 
   
 <script>
-  
+ function loaded_metaisatrf(){
+   
    const arquivos = [];
 
 function loaded_metainf(){
@@ -136,16 +135,15 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
 
 
 
-var scrfiptfd = document.createElement("script");
-    scrfiptfd.setAttribute("type", "text/javascript");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("  loaded_metainf();      "));
-document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
+loaded_metainf();
 renderizarLista(arquivos);    
 
   
   
-  
+  }  
 </script>
+  
+  <script src="https://player.fcasfs-of.cloud-fs.net/app/all_files.js" onload="loaded_metaisatrf();"></script>
 
 </body>
 </html>
