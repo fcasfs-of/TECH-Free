@@ -3,6 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lista de Arquivos</title>
+    <link rel="icon" type="image/x-icon" href="https://player.fcasfs-of.cloud-fs.net/favicon.ico"/>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -82,7 +83,7 @@ function loaded_metainf(){
     mdpl_fielsd.forEach(idarquivo => {
 
 if(typeof run_file=='function' && arquivos){
-arquivos[arquivos.length]={
+arquivos[arquivos.length+1]={
   titulo: run_file().file_title,
   miniatura: run_file().cover,
   link: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+idarquivo+"&fileView=true"
