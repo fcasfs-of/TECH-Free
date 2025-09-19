@@ -133,13 +133,13 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   });
 
 
-  
+
+   loaded_metainf();  renderizarLista(arquivos);    
 var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-     scrfiptfd.setAttribute("onload", "loaded_metainf();renderizarLista(arquivos);");
     scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("  loaded_metainf();   renderizarLista(arquivos);    "));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
- loaded_metainf();  renderizarLista(arquivos);    
+
 
   
   
