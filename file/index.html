@@ -8,7 +8,7 @@
   <script>
     var scriptfd = document.createElement("script");
     scriptfd.setAttribute("id", "fileplffggayer_fd");
-    scriptfd.setAttribute("onload", "loaded_itenf();");
+    scriptfd.setAttribute("onload", "loaded_itenf(mdpl_fielsd);");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/all_files.js");
 document.getElementsByTagName("head")[0].appendChild(scriptfd);
   </script>
@@ -182,7 +182,6 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
   
 <script>
-function loaded_itenf(){  
 const arquivos = [];
 var arquivos_al="";    var idarquivo="";
 
@@ -207,6 +206,7 @@ playlist:arquivos_listr, listtotl:arquivos_lisgtr
 }   }
 
 
+function loaded_itenf(mdpl_fielsd){  
   if(mdpl_fielsd){
     for (var i = 0; i < mdpl_fielsd.length; i++) {
 idarquivo=mdpl_fielsd[i];
@@ -222,7 +222,9 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
     }
 
   }    
+     var infiddlefdaz = document.getElementById("fileplffggayer_fd");     if(infiddlefdaz){   infiddlefdaz.remove();   }   
 
+}
 
   const listaContainer = document.getElementById('listaArquivos');
   
@@ -270,9 +272,7 @@ listpreview_fleer.innerHTML = `   <div class="modal-overlay" id="modalOverlay" s
   });
 
   
-     var infiddlefdaz = document.getElementById("fileplffggayer_fd");     if(infiddlefdaz){   infiddlefdaz.remove();   }   
 
-}
   
   
 </script>
