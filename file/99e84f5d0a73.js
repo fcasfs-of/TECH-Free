@@ -36,7 +36,7 @@ title:"Part 04",
 file:"https://archive.org/download/vcd-02-tokusatsu-metalheroes_202405/vid-002-metalheroes%20%282%29_3.ia.mp4"
 },
 {
-poster:”https://archive.org/download/vcd-02-tokusatsu-metalheroes_202405/vcd-02-tokusatsu-metalheroes_202405.thumbs/vid-002-metalheroes%20%282%29_4_000654.jpg",
+poster:"https://archive.org/download/vcd-02-tokusatsu-metalheroes_202405/vcd-02-tokusatsu-metalheroes_202405.thumbs/vid-002-metalheroes%20%282%29_4_000654.jpg",
 title:"Part 05",
 file:"https://archive.org/download/vcd-02-tokusatsu-metalheroes_202405/vid-002-metalheroes%20%282%29_4.ia.mp4"
 }
