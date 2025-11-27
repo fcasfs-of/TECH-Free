@@ -234,7 +234,7 @@ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   i
   const listpreview_fleer = document.getElementById('preview_fle');
 
 
-  function deleteite() {  listpreview_fleer.innerHTML="";   }   
+  function deleteite() {  listpreview_fleer.innerHTML="";  document.body.style.overflow="auto";  }   
   
   function criarItem(arquivo) {
     const div = document.createElement('div');
@@ -247,7 +247,7 @@ var contednfgile= `  <iframe scrolling="no" allow="accelerometer *; ambient-ligh
   if(arquivo.playlist && arquivo.listtotl > 1){ 
     styelcopsdsd=' style=" overflow: auto;  "';
     contednfgile='<div class="lista-arquivos" id="listaAffrquivos"></div>';  }
-      
+      document.body.style.overflow="hidden";
 listpreview_fleer.innerHTML = `   <div class="modal-overlay" id="modalOverlay" style="display:flex;">    <div class="modal ${darkthevv}" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">      <div class="modal-header">        <h2 id="modalTitle">${arquivo.titulo}</h2>        <button class="close-btn" onclick="deleteite();" id="closeModal">x</button>      </div>      <div class="modal-content">        <p id="modalDesc" class="description">${arquivo.descricao}</p>        <div class="iframe-container" ${styelcopsdsd}>         ${contednfgile}    </div>      </div>    </div>  </div>`;
  
       if(arquivo.playlist && arquivo.listtotl > 1){  
