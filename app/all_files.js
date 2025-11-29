@@ -1,4 +1,6 @@
-const mdpl_fielsd= [
+const mdpl_fielsd = [];
+
+var listakf = [
   "99f84mh00",
   "99e84d4tk",
   "99e84d5d",
