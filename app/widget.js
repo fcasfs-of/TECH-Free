@@ -312,11 +312,11 @@ is_playerd_allid(settingsplayer, call, fplayeri);
 
           
               
-function pegarlindf(){    var fplayeri;
+function pegarlindf(){    
  const urlInput = document.getElementById('urlInput');
-            const loadBtn = document.getElementById('loadBtn');
-            const errorMessage = document.getElementById('errorMessage');
-            const errorText = document.getElementById('errorText');
+      const loadBtn = document.getElementById('loadBtn');
+      const errorMessage = document.getElementById('errorMessage');
+      const errorText = document.getElementById('errorText');
            
            function isValidURL(string) {
                 try {
