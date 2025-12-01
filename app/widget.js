@@ -329,11 +329,8 @@ is_playerd_allid(settingsplayer, call, fplayeri);
             function loadURL() {
 var inpmyNavrunzz = document.getElementById("myNavrun");   var dopendtNav="Arquivo";    var fplayeri;              
               const url = urlInput.value.trim();
-              
-  document.body.style.overflow="hidden";                    
-inpmyNavrunzz.innerHTML= '<div id="myNav" class="overlay">  <button style="cursor:pointer;" id="zass" class="closebtn csdslosebtn" onclick="closeNav(\'true\');" data-tooltip="Fechar '+dopendtNav+'" data-flow="left">X</button>  <div class="overlay-content" style="transition: 0.2s;">  <span id="zplaylert"></span>  <div id="zplayler" style="width:100%;  height:100%;  transition: 0.2s;"></div>  </div>  </div>';  
-
-                
+opendtNav();
+               
                 if (!url) {
                     showError("Por favor, insira uma URL.");
                     return;
