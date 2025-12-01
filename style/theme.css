@@ -1,3 +1,70 @@
+        .input-section {            padding: 30px;            border-bottom: 1px solid #eee;        }
+        .url-input-container {            display: flex;            gap: 10px;            margin-bottom: 15px;        }
+        
+        .url-input {            flex: 1;            padding: 15px 20px;            font-size: 1.1rem;            border: 2px solid #ddd;            border-radius: 10px;            transition: all 0.3s;        }
+        .url-input:focus {            border-color: #2575fc;            outline: none;            box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);        }
+        
+        .load-btn {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .load-btn:hover {            transform: translateY(-2px);            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);        }
+        .load-btn:active {            transform: translateY(0);        }
+        .load-btn:disabled {            background: #aaa;            cursor: not-allowed;            transform: none;            box-shadow: none;        }
+      
+       .loading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #f9f9f9;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #2575fc;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+        .error-message {
+            color: #e74c3c;
+            background-color: #ffeaea;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .url-input-container {                flex-direction: column;            }
+            
+            .load-btn {                padding: 15px;                justify-content: center;            }
+        }
+
+
+
 body{   background:#333; color:#fff;  user-select:none;    }
 
 .llk .busca .range input[type="range"] {  -webkit-appearance: none;  appearance: none;   width: 100%;  cursor: pointer; outline: none;  border-radius: 15px;    height: 6px;  background: #ccc;}
