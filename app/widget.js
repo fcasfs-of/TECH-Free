@@ -327,7 +327,7 @@ is_playerd_allid(settingsplayer, call, fplayeri);
             }
             
             function loadURL() {
-var inpmyNavrunzz = document.getElementById("myNavrun");   var dopendtNav="Arquivo";
+var inpmyNavrunzz = document.getElementById("myNavrun");   var dopendtNav="Arquivo";    var fplayeri;
               
               const url = urlInput.value.trim();
                 
