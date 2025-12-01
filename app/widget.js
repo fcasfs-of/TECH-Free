@@ -342,6 +342,8 @@ is_playerd_allid(settingsplayer, call, fplayeri);
                 errorMessage.style.display = 'none';
                 loadBtn.disabled = true;
                 loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
+     document.body.style.overflow="hidden";                    
+inpmyNavrunzz.innerHTML= '<div id="myNav" class="overlay">  <button style="cursor:pointer;" id="zass" class="closebtn csdslosebtn" onclick="closeNav(\'true\');" data-tooltip="Fechar '+dopendtNav+'" data-flow="left">X</button>  <div class="overlay-content" style="transition: 0.2s;">  <span id="zplaylert"></span>  <div id="zplayler" style="width:100%;  height:100%;  transition: 0.2s;"></div>  </div>  </div>';  
 
     fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:"" }, id:"zplayler", nocontrols:0, autoplay:0, loop:0, casturl:url, castname:"", title:"", file:url, poster:"", player:1,"url":location.href });
 is_playerd_allid(settingsplayer, call, fplayeri);  
