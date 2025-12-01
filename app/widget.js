@@ -311,7 +311,7 @@ is_playerd_allid(settingsplayer, call, fplayeri);
 
 
           
-function lffgoadURL(url, errorMessage, loadBtn) {
+function lffgoadURL(fplayeri, url, errorMessage, loadBtn) {
 opendtNav(1);
                
                 if (!url) {
@@ -335,7 +335,7 @@ openf_osdcd(fplayeri, document.getElementById("zplayler"), 3e3, document.getElem
               
            }
               
-function pegarlindf(){
+function pegarlindf(){    var fplayeri;
  const urlInput = document.getElementById('urlInput');
             const loadBtn = document.getElementById('loadBtn');
             const errorMessage = document.getElementById('errorMessage');
@@ -357,7 +357,7 @@ function pegarlindf(){
             }
 
   
-            lffgoadURL(urlInput.value.trim(), errorMessage, loadBtn);
+            lffgoadURL(fplayeri, urlInput.value.trim(), errorMessage, loadBtn);
                         
             urlInput.focus();
             urlInput.select();
