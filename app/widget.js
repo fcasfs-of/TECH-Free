@@ -327,9 +327,7 @@ function pegarlindf(){    var fplayeri;
                 }
             }
             
-function lffgoadURL(fplayeri, url, errorMessage, loadBtn) {
-opendtNav(1);
-               
+function lffgoadURL(fplayeri, url, errorMessage, loadBtn) {            
                 if (!url) {
                     showError("Por favor, insira uma URL.");
                     return;
@@ -343,9 +341,9 @@ opendtNav(1);
                 errorMessage.style.display = 'none';
                 loadBtn.disabled = true;
                 loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
-              
-mdpl_handleselect("zplayler", [{"file":url,"title":""}], 1, var_versplayerpg, [{"file":url,"title":""}]);  
-              
+  
+opendtNav(1);   mdpl_handleselect("zplayler", [{"file":url,"title":""}], 1, var_versplayerpg, [{"file":url,"title":""}]);  
+    
            }
           
             function showError(message) {
