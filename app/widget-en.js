@@ -1,6 +1,15 @@
 function onget_d(df){  return df+" Files"; }
 
 
+function on_lan_linff(ifd){  
+  var on_lanf_list= {
+[1]:"Please enter a URL.",
+[2]:"Please enter a valid URL (starting with http:// or https://).",
+[3]:"Loading..."
+  }; 
+return on_lanf_list[ifd];   }  
+
+
 function on_lanf(ifd){  
   var on_lanf_list= {
     [1]:"Adjust width",
