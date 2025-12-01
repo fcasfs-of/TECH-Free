@@ -311,7 +311,14 @@ is_playerd_allid(settingsplayer, call, fplayeri);
 
 
           
-              
+function on_lan_linff(ifd){  
+  var on_lanf_list= {
+[1]:"Por favor, insira uma URL.",
+[2]:"Por favor, insira uma URL válida (começando com http:// ou https://).",
+[3]:"Carregando..."
+  }; 
+return on_lanf_list[ifd];   }  
+
 function pegarlindf(){    
  const urlInput = document.getElementById('urlInput');
       const loadBtn = document.getElementById('loadBtn');
@@ -329,18 +336,18 @@ function pegarlindf(){
             
 function lffgoadURL(url) {            
                 if (!url) {
-                    showError("Por favor, insira uma URL.");
+                    showError(on_lan_linff(1));
                     return;
                 }
                 
                 if (!isValidURL(url)) {
-                    showError("Por favor, insira uma URL válida (começando com http:// ou https://).");
+                    showError(on_lan_linff(2));
                     return;
                 }
               
                 errorMessage.style.display = 'none';
                 loadBtn.disabled = true;
-                loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
+                loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> '+on_lan_linff(3);
   
 opendtNav(1);   mdpl_handleselect("zplayler", [{"file":url,"title":""}], 1, var_versplayerpg, [{"file":url,"title":""}]);      openNav();
     
