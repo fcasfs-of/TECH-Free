@@ -344,10 +344,7 @@ opendtNav(1);
                 loadBtn.disabled = true;
                 loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
               
-    fplayeri = fs_Playerjs({ config:{}, OSD:true, customtext:{ age:"" }, id:"zplayler", nocontrols:0, autoplay:0, loop:0, casturl:url, castname:"", title:"", file:url, poster:"", player:1,"url":location.href });
-is_playerd_allid({}, [], fplayeri);  
-               
-openf_osdcd(fplayeri, document.getElementById("zplayler"), 3e3, document.getElementById("zplaylert"), [], 1);
+mdpl_handleselect("zplayler", [{"file":url,"title":""}], 1, var_versplayerpg, [{"file":url,"title":""}]);  
               
            }
           
