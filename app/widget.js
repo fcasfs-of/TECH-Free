@@ -310,19 +310,8 @@ is_playerd_allid(settingsplayer, call, fplayeri);
 
 
 
-            
-            function isValidURL(string) {
-                try {
-                    const url = new URL(string);
-                    return url.protocol === "http:" || url.protocol === "https:";
-                } catch (_) {
-                    return false;
-                }
-            }
-            
-            function loadURL() {
-var inpmyNavrunzz = document.getElementById("myNavrun");   var dopendtNav="Arquivo";    var fplayeri;              
-              const url = urlInput.value.trim();
+          
+function lffgoadURL(url, errorMessage, loadBtn) {
 opendtNav(1);
                
                 if (!url) {
@@ -351,14 +340,24 @@ function pegarlindf(){
             const loadBtn = document.getElementById('loadBtn');
             const errorMessage = document.getElementById('errorMessage');
             const errorText = document.getElementById('errorText');
-            
            
+           function isValidURL(string) {
+                try {
+                    const url = new URL(string);
+                    return url.protocol === "http:" || url.protocol === "https:";
+                } catch (_) {
+                    return false;
+                }
+            }
+            
+          
             function showError(message) {
                 errorText.textContent = message;
                 errorMessage.style.display = 'block';
             }
-            
-            loadURL();
+
+  
+            lffgoadURL(urlInput.value.trim(), errorMessage, loadBtn);
                         
             urlInput.focus();
             urlInput.select();
