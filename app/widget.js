@@ -309,6 +309,60 @@ is_playerd_allid(settingsplayer, call, fplayeri);
 }
 
 
+
+ function pegarlindf(){
+ const urlInput = document.getElementById('urlInput');
+            const loadBtn = document.getElementById('loadBtn');
+            const errorMessage = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            
+            
+            function isValidURL(string) {
+                try {
+                    const url = new URL(string);
+                    return url.protocol === "http:" || url.protocol === "https:";
+                } catch (_) {
+                    return false;
+                }
+            }
+            
+            function loadURL() {
+                const url = urlInput.value.trim();
+                
+                if (!url) {
+                    showError("Por favor, insira uma URL.");
+                    return;
+                }
+                
+                if (!isValidURL(url)) {
+                    showError("Por favor, insira uma URL válida (começando com http:// ou https://).");
+                    return;
+                }
+                
+                errorMessage.style.display = 'none';
+                loadBtn.disabled = true;
+                loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
+
+    fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:"" }, id:"zplayler", nocontrols:0, autoplay:0, loop:0, casturl:url, castname:"", title:"", file:url, poster:"", player:1,"url":location.href });
+is_playerd_allid(settingsplayer, call, fplayeri);  
+               
+openf_osdcd(fplayeri, document.getElementById("zplayler"), 3e3, document.getElementById("zplaylert"), {}, 1);
+              
+           }
+           
+            function showError(message) {
+                errorText.textContent = message;
+                errorMessage.style.display = 'block';
+            }
+            
+            loadURL();
+                        
+            urlInput.focus();
+            urlInput.select();
+
+}
+
+
 function mdpl_hzandleselect(cc,cl){
 if(cc<1){cl();}
 else if(cc==1){ cl(); }
