@@ -1,3 +1,5 @@
+ document.body.style.overflow="auto"; 
+
 function onget_d(df){  return df+" Arquivos"; }
 
 function on_lanf(ifd){  
