@@ -327,7 +327,7 @@ function pegarlindf(){
                 }
             }
             
-function lffgoadURL(fplayeri, url, errorMessage, loadBtn) {            
+function lffgoadURL(url) {            
                 if (!url) {
                     showError("Por favor, insira uma URL.");
                     return;
@@ -342,7 +342,7 @@ function lffgoadURL(fplayeri, url, errorMessage, loadBtn) {
                 loadBtn.disabled = true;
                 loadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Carregando...';
   
-opendtNav(1);   mdpl_handleselect("zplayler", [{"file":url,"title":""}], 1, var_versplayerpg, [{"file":url,"title":""}]);  
+opendtNav(1);   mdpl_handleselect("zplayler", [{"file":url,"title":""}], 1, var_versplayerpg, [{"file":url,"title":""}]);      openNav();
     
            }
           
@@ -352,7 +352,7 @@ opendtNav(1);   mdpl_handleselect("zplayler", [{"file":url,"title":""}], 1, var_
             }
 
   
-            lffgoadURL(fplayeri, urlInput.value.trim(), errorMessage, loadBtn);
+            lffgoadURL(urlInput.value.trim());
                         
             urlInput.focus();
             urlInput.select();
