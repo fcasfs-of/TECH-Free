@@ -43,7 +43,7 @@ if (lisud.list=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:aut
 if (lisud.info=="true") {      apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <br/><br/>  <div style="width:90%; height:90%;  margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="display:block; pointer-events:none;  text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/>'+run_file().file_desc+'<br/><br/><br/></div><br/><br/>';      }
 if (lisud.info=="on") {        apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <br/><br/>  <div style="width:90%; height:90%;  margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="display:block; pointer-events:none;  text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/>'+run_file().file_desc+'<br/><br/><br/></div><br/><br/>';      }
   
-if(run_file().fl_priv==true){
+if(run_file().fl_priv==true && degetval_p=="0"){
 apoduz.innerHTML= '<style>#zplayler{ overflow:auto;   }</style>  <br/><br/>  <div style="width:90%; height:90%;  margin:0 auto;text-align:center;color:#fff;">'+run_file().file_title+'<br/><br/><img style="display:block; pointer-events:none;  text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/><br/><br/><hr/><br/><img style="display:block;  pointer-events:none;  text-align:center;margin:0 auto;" src="https://player.fcasfs-of.cloud-fs.net/icons/fl_lock.png"/><br/>'+on_lan_linff(4)+'<br/><br/><br/><br/></div><br/><br/>';   
 }
 
@@ -184,9 +184,13 @@ playerhj.OnEvents("end",function(){   runExG(filedru, id, pos);       });
 
 
 
+var degetval_p="0";
+
 var getval_tyget=getUrlParameter("fileID");
 
 if (getval_tyget!="") {
+
+if (getUrlParameter("fp")=="On"){  degetval_p="1";  }
 
 var getval_tygepret=getUrlParameter("fileView");
 var getval_tygepgret=getUrlParameter("list");
