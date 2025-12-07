@@ -2,6 +2,7 @@
 function run_file(){  return { 
 player_lang:"en", 
 pg_dark:true,
+fl_priv: true,
 player_osd:true,
 player_controls:0,
 player_autoplay:0,
