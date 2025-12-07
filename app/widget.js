@@ -317,7 +317,8 @@ function on_lan_linff(ifd){
   var on_lanf_list= {
 [1]:"Por favor, insira uma URL.",
 [2]:"Por favor, insira uma URL válida (começando com http:// ou https://).",
-[3]:"Carregando..."
+[3]:"Carregando...",
+[4]:"Não é possível acessar o Arquivo porque ele é Privado."
   }; 
 return on_lanf_list[ifd];   }  
 
