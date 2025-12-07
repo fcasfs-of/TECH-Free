@@ -5,7 +5,8 @@ function on_lan_linff(ifd){
   var on_lanf_list= {
 [1]:"Please enter a URL.",
 [2]:"Please enter a valid URL (starting with http:// or https://).",
-[3]:"Loading..."
+[3]:"Loading...",
+[4]:"It is not possible to access the File because it is Private."
   }; 
 return on_lanf_list[ifd];   }  
 
