@@ -450,7 +450,7 @@ inpsspldsetcusotmdfsdfszz.innerHTML="<sty"+"le>#zplayler *, #zplayler *:before, 
 function closedtNNav(cd) {  var inpmyNavrunzz = document.getElementById("myNavrun");     inpmyNavrunzz.innerHTML="";    }
 
 
-function openNav() {    //penNsdsess="true";	
+function openNav() {   document.body.style.overflow="hidden";  //penNsdsess="true";	
 var inpss45dfsdfszz = document.getElementById("myNav");
 var insss667ddd = document.getElementById("zplayler");
 var insss667zassddd = document.getElementById("zass");
@@ -464,6 +464,8 @@ function run_modelop() {    var inpss45435rwles = document.getElementById('inpss
 
 
 function closeNav(cd) {
+document.body.style.overflow="auto"; 
+
 var inpss45dfsdfszz = document.getElementById("myNav");   var insss667ddd = document.getElementById("zplayler");   var insss667zassddd = document.getElementById("zass");   var inpss45dfsdfszz = document.getElementById("myNav");
 var inpss45435rwles = document.getElementById('inpssle');   inpss45435rwles.value="";
 mdpl_handleselect("zplayler", [{"file":"#","title":" "}], 1, var_versplayerpg, document.getElementById("inpssle").files);  
