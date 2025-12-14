@@ -292,7 +292,7 @@ else if(call[0].type && call[0].type==="application/pdf"){
 laoded_app_pdf(call[0].file);
 
 } else {   
-  fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, casturl:call[0].file, castname:call[0].title, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
+  fplayeri = fs_Playerjs({ lang:"pt", config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:call[0].type },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, casturl:call[0].file, castname:call[0].title, title:call[0].title, file:call[0].file, poster:img_ond, player:bmg,"url":location.href });
 is_playerd_allid(settingsplayer, call, fplayeri);  
  //is_playerd_allid(getUrlVars(location.href), call, fplayeri);       
                
@@ -302,7 +302,7 @@ openf_osdcd(fplayeri, document.getElementById("zplayler"), 3e3, document.getElem
 }
 
 else if(cc>=2){   
-     fplayeri = fs_Playerjs({ config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href });
+     fplayeri = fs_Playerjs({ lang:"pt", config:settingsplayer, OSD:osddisplay.checked, customtext:{ age:onget_d(cc) },id:evt, nocontrols:mdpl_handleselectcontoels, autoplay:0, loop:0, title:"", file:call, poster:"", player:bmg,"url":location.href });
 is_playerd_allid(settingsplayer, call, fplayeri);  
 // is_playerd_allid(getUrlVars(location.href), call, fplayeri);     
   
