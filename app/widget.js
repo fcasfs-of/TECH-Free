@@ -231,6 +231,15 @@ pdfThumbnails.loadDocument(PDFFILE);
  function closebtn_pos(ds){  var closebtn_possf="18px";   if(ds){  var inpcloswzz = document.getElementById("zass");  if(inpcloswzz && ds.info){     if(ds.info==1){  closebtn_possf="65px";   }       }    inpcloswzz.style.bottom=closebtn_possf;      }   }        
 
 
+function pl_ldglobal_events(objj){   if(objj){
+ if(objj.OnEvents){
+  objj.OnEvents("ui",function(e){  closebtn_pos(e);  });
+ }
+}  
+ }
+
+		  
+
 function openf_osdcd(plobf, plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
                                                   
   if(obb){  obb.innerHTML="";   }
@@ -239,7 +248,7 @@ function openf_osdcd(plobf, plsayer, timf,obb,kl){     var openf_osdcd_time=timf
      plobf.OnEvents("init",function(){    
     //vars = fplayeri.api("vars");
                                     
-plobf.OnEvents("ui",function(e){  closebtn_pos(e);  });
+pl_ldglobal_events(plobf);										  
       
    plobf.OnEvents("start",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
     plobf.OnEvents("new",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
