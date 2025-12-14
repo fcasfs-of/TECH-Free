@@ -127,7 +127,13 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
 
 
  
-                                          
+function PlayerjsEvents(event,id,data){
+   if(event=="ui"){
+     var inpcloswzz = document.getElementById("zass");  if(inpcloswzz){   var inpcloswdzzs=data;  if(inpcloswdzzs){  if(inpcloswdzzs==0){  inpcloswzz.style.bottom="15px";  }  else if(inpcloswdzzs==1){  inpcloswzz.style.bottom="65px";  } }   }  
+   }
+}
+
+												  
    plobf.OnEvents("start",function(){      
 Notificationss("Reproducing: "+plobf.api("title"));         
          
@@ -138,7 +144,6 @@ fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started'
 	    
  fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
 
- plobf.OnEvents("buffering",function(){    var inpcloswzz = document.getElementById("zass");  if(inpcloswzz){   var inpcloswdzzs=plobf.api("ui");  if(inpcloswdzzs){  if(inpcloswdzzs==0){  inpcloswzz.style.bottom="15px";  }  else if(inpcloswdzzs==1){  inpcloswzz.style.bottom="65px";  } }   }  });
 
  plobf.OnEvents("exitfullscreen",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Exiting FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
     plobf.OnEvents("fullscreen",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
