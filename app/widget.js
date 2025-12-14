@@ -228,12 +228,10 @@ pdfThumbnails.loadDocument(PDFFILE);
 
 
 
- function closebtn_pos(ds){  var closebtn_possf="15px";   if(ds){  var inpcloswzz = document.getElementById("zass");  if(inpcloswzz && ds.info){     if(ds.info==1){  closebtn_possf="65px";   }       }    inpcloswzz.style.bottom=closebtn_possf;      }   }        
+ function closebtn_pos(ds){  var closebtn_possf="18px";   if(ds){  var inpcloswzz = document.getElementById("zass");  if(inpcloswzz && ds.info){     if(ds.info==1){  closebtn_possf="65px";   }       }    inpcloswzz.style.bottom=closebtn_possf;      }   }        
 
 
 function openf_osdcd(plobf, plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
-
-plobf.OnEvents("ui",function(e){  closebtn_pos(e);  });
                                                   
   if(obb){  obb.innerHTML="";   }
 
@@ -241,6 +239,8 @@ plobf.OnEvents("ui",function(e){  closebtn_pos(e);  });
      plobf.OnEvents("init",function(){    
     //vars = fplayeri.api("vars");
                                     
+plobf.OnEvents("ui",function(e){  closebtn_pos(e);  });
+      
    plobf.OnEvents("start",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
     plobf.OnEvents("new",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Iniciando', pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
     plobf.OnEvents("exitfullscreen",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Saindo da Tela Cheia', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
