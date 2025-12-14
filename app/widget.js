@@ -228,8 +228,13 @@ pdfThumbnails.loadDocument(PDFFILE);
 
 
 
- function openf_osdcd(plobf, plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
+ function closebtn_pos(ds){  var closebtn_possf="15px";   if(ds){  var inpcloswzz = document.getElementById("zass");  if(inpcloswzz && ds.info){     if(ds.info==1){  closebtn_possf="65px";   }       }    inpcloswzz.style.bottom=closebtn_possf;      }   }        
 
+
+function openf_osdcd(plobf, plsayer, timf,obb,kl){     var openf_osdcd_time=timf;
+
+plobf.OnEvents("ui",function(e){  closebtn_pos(e);  });
+                                                  
   if(obb){  obb.innerHTML="";   }
 
     if(kl && kl.join("\",\"")!="\",\"" && kl.join("\",\"")!="" && kl.join("\",\"")!=null){  if(obb){  obb.innerHTML="<scr"+"ipt> var attrs_lic= {\""+kl.join("\",\"")+"\"};</scri"+"pt>";   }    }
