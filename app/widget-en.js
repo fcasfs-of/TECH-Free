@@ -137,7 +137,9 @@ fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started'
 //Notppl(fplayeri,get_iofd);  
 	    
  fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
-   
+
+ plobf.OnEvents("buffering",function(){    var inpcloswzz = document.getElementById("zass");  if(inpcloswzz){   var inpcloswdzzs=plobf.api("ui");  if(inpcloswdzzs){  if(inpcloswdzzs==0){  inpcloswzz.style.bottom="15px";  }  else if(inpcloswdzzs==1){  inpcloswzz.style.bottom="65px";  } }   }  });
+
  plobf.OnEvents("exitfullscreen",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Exiting FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
     plobf.OnEvents("fullscreen",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
     plobf.OnEvents("end",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Finishing', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
