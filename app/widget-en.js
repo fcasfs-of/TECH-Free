@@ -128,6 +128,8 @@ navigator.mediaSession.setActionHandler('seekforward', (details) => {
 
  
 										  
+plobf.OnEvents("ui",function(e){  closebtn_pos(e);  });
+												  
    plobf.OnEvents("start",function(){      
 Notificationss("Reproducing: "+plobf.api("title"));         
          
