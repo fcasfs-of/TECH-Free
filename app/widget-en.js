@@ -139,8 +139,6 @@ fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started'
  fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
 
 												  
- plobf.OnEvents("ui",function(event){    var inpcloswzz = document.getElementById("zass");  if(inpcloswzz){   var inpcloswdzzs=event.data;  if(inpcloswdzzs){  if(inpcloswdzzs==0){  inpcloswzz.style.bottom="15px";  }   if(inpcloswdzzs==1){  inpcloswzz.style.bottom="65px";  } }   }    });
-												  
  plobf.OnEvents("exitfullscreen",function(){     fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Exiting FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });     });
     plobf.OnEvents("fullscreen",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'FullScreen', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
     plobf.OnEvents("end",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Finishing', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
