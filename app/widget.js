@@ -273,7 +273,7 @@ pl_ldglobal_events(plobf);
 
 
 
-function mdpl_handleselect(evt, call, cc, bmg, ongh){   var mdpl_handleselectcontoels=0;
+function mdpl_handleselect(evt, call, cc, bmg, ongh){   closebtn_pos({ info:0 });   var mdpl_handleselectcontoels=0;
 if(settingsplayer){  
   
 settingsplayer["colortexts"]="fff";    settingsplayer["coloricons"]="00EEEE";
