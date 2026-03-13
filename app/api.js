@@ -123,11 +123,6 @@ document.querySelector('head').appendChild(ddselement);
 
 
 
- var dscdfript_cokkied = document.createElement("script");
-    dscdfript_cokkied.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/cast.js");
-document.getElementsByTagName("body")[0].appendChild(dscdfript_cokkied); 
-
-
 var fs_OSD = function(){};
 
   function startOSD(df, config){
@@ -167,7 +162,12 @@ var allpai_d={};
       var osdposito="top-left";    var osdpositdo="absolute";    var openf_osdcd_time=3e3;                           
 
 function fs_Playerjs(vars){   var fs_Playerjsdd="";
-  if(vars){
+                           
+ var dscdfript_cokkied = document.createElement("script");
+    dscdfript_cokkied.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/cast.js");
+document.getElementsByTagName("body")[0].appendChild(dscdfript_cokkied); 
+
+    if(vars){
       if(vars.id!=""){
     if(vars.title=="" || vars.title==null){  vars.title="Tech: Player";  }   
     if(vars.file=="" || vars.file==null){  vars.file="https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4";  }  
