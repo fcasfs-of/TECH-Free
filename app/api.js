@@ -122,6 +122,12 @@ document.querySelector('head').appendChild(ddselement);
   }
 
 
+
+ var dscdfript_cokkied = document.createElement("script");
+    dscdfript_cokkied.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/cast.js");
+document.getElementsByTagName("body")[0].appendChild(dscdfript_cokkied); 
+
+
 var fs_OSD = function(){};
 
   function startOSD(df, config){
