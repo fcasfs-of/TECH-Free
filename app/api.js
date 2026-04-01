@@ -256,7 +256,7 @@ document.getElementsByTagName("body")[0].appendChild(dscdfript_cokkied);
     if(vars.OSD==true){    startOSD(vars.id, vars.config.osd);   }
 
     fs_Playerjsdd.OSD = fs_OSD;
-    fs_Playerjsdd.Toast = new Toast(document.getElementById(vars.id), "bc", 1);
+    fs_Playerjsdd.Toast = new Toast(document.getElementById("oframe"+vars.id), "bc", 1);
       
 var inscursdsd = document.getElementById(vars.id);        
  var ggio_iudft=document.createElement("div");   
