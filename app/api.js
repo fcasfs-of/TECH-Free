@@ -256,7 +256,6 @@ document.getElementsByTagName("body")[0].appendChild(dscdfript_cokkied);
     if(vars.OSD==true){    startOSD(vars.id, vars.config.osd);   }
 
     fs_Playerjsdd.OSD = fs_OSD;
-    fs_Playerjsdd.Toast = new Toast(document.getElementById("oframe"+vars.id), "bc", 1);
       
 var inscursdsd = document.getElementById(vars.id);        
  var ggio_iudft=document.createElement("div");   
@@ -264,6 +263,10 @@ ggio_iudft.innerHTML='<style>  .toast-container {  user-select:none;  position: 
 if(inscursdsd){  inscursdsd.appendChild(ggio_iudft);   }
 
        if(vars.config){    fs_Player_Config(vars.config, vars.id, allpai_d[vars.id]);   }
+
+var fs_PlayerToast_Config=new Toast(document.getElementById("oframe"+vars.id), "bc", 1);
+fs_Playerjsdd.Toast = fs_PlayerToast_Config;
+
 
    }  
   }
