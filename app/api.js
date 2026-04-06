@@ -159,10 +159,10 @@ function PlayerjsPoster(x,y){!window.playerjs?window.playerjs=[]:'';if(x){if(x.p
 
    
 class Toast {
-  constructor(id="", pos = 'tr', maxStack = 2) {
+  constructor(id, pos = 'tr', maxStack = 2) {
     this.maxStack = maxStack;
     var objelemento_obj=document.body;
-    if(this.id){  var objelemento = this.id;
+    if(this.id){  objelemento = this.id;
     if(objelemento){ objelemento_obj=objelemento;  }    }
 
     this.container = document.querySelector(`.toast-container[data-position="${pos}"]`);
@@ -248,6 +248,9 @@ document.getElementsByTagName("body")[0].appendChild(dscdfript_cokkied);
     
    allpai_d[vars.id] = new Playerjs(vars);
    allpai_d[vars.id+".obj"]=document.getElementById(vars.id);
+   allpai_d[vars.id+".os"]=document.getElementById("oframe"+vars.id);
+   allpai_d[vars.id+".Toast"]=function(id){  return new Toast(id, "bc", 1);  };
+
 
   var fs_Playerjsdd=allpai_d[vars.id]; 
 
@@ -264,10 +267,8 @@ if(inscursdsd){  inscursdsd.appendChild(ggio_iudft);   }
 
        if(vars.config){    fs_Player_Config(vars.config, vars.id, allpai_d[vars.id]);   }
 
-var fs_PlayerToast_Config=new Toast(document.getElementById("oframe"+vars.id), "bc", 1);
-fs_Playerjsdd.Toast = fs_PlayerToast_Config;
-
-
+fs_Playerjsdd.Toast = function(type="", title="", msg="", duration = 3000){   allpai_d[vars.id+".Toast"](allpai_d[vars.id+".os"]).show(type, title, msg, duration);   ;
+																		   
    }  
   }
  return fs_Playerjsdd;   }
