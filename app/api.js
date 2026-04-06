@@ -267,7 +267,7 @@ if(inscursdsd){  inscursdsd.appendChild(ggio_iudft);   }
 
        if(vars.config){    fs_Player_Config(vars.config, vars.id, allpai_d[vars.id]);   }
 
-fs_Playerjsdd.Toast = function(type="", title="", msg="", duration = 3000){   allpai_d[vars.id+".Toast"](allpai_d[vars.id+".os"]).show(type, title, msg, duration);   ;
+fs_Playerjsdd.Toast = function(type="", title="", msg="", duration = 3000){   allpai_d[vars.id+".Toast"](allpai_d[vars.id+".os"]).show(type, title, msg, duration);   };
 																		   
    }  
   }
