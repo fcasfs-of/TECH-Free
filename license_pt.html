@@ -15,26 +15,257 @@
 
 </style>
 
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho */
+    header {
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Navegação rápida */
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffc107;
+    }
+
+    /* Seção de conteúdo principal */
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Seção de introdução */
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .intro h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #0d6efd;
+    }
+
+    .intro p {
+      font-size: 1.1em;
+      color: #555;
+    }
+
+    /* Funcionalidades destacadas */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+      color: #0d6efd;
+      font-size: 1.3em;
+    }
+
+    .feature-card p {
+      font-size: 1em;
+      color: #666;
+    }
+
+    /* Seção de vídeos de demonstração */
+    .demo-section {
+      margin-top: 60px;
+    }
+
+    .demo-section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+
+    .videos {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @media(max-width: 768px) {
+      .videos {
+        width: 100%;
+      }
+    }
+
+    /* Estilo dos vídeos */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* proporção 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .video-container iframe, 
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+
+    /* FAQ / Dúvidas frequentes */
+    .faq {
+      margin-top: 60px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #0d6efd;
+    }
+
+    .faq-item {
+      background-color: #fff;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      cursor: pointer;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      position: relative;
+      padding-right: 20px;
+      transition: color 0.3s;
+    }
+
+    .faq-item h3:hover {
+      color: #0d6efd;
+    }
+
+    .faq-item p {
+      display: none;
+      font-size: 1em;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    /* Botões de ação */
+    .btn {
+      display: inline-block;
+      background-color: #0d6efd;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  
   <link rel="icon" type="image/x-icon" href="https://player.fcasfs-of.cloud-fs.net/favicon.ico"/>
   
 </head>
 <body>
     <div style="padding:4px;">
-<br/>
+<header>
    <div class="skills__item" style="height:100%;">
           <img src="https://player.fcasfs-of.cloud-fs.net/player_banner.jpg" alt="Banner" style="width:40%;">
           <br/><p>Banner</p>
         </div>
-      
-      
-<h2>Informações de licença para Tech: Player</h2><br/><br/><br/>
- <div style="text-align: left;">
+    <nav>
+    <a href="#infos">Informações</a>
+    <a href="#contrato">Contrato</a>
+  </nav>
+ </header>     
+ 
+<main>
+     
+  <section class="intro" id="infos">
+    <h2>Informações de licença para Tech: Player</h2>
 Nome do aplicativo: "Tech: Player"<br/>
 Versão: "<span id="verapp"></span>"<br/>
+  </section>
 
-<br/>
-<h2>Contrato de Licença</h2><br/>
+ <div style="text-align: left;">
+  
+  <section class="intro" id="contrato">
+<h2>Contrato de Licença</h2>
 Ao baixar e usar o Tech: Player, você concorda em cumprir os termos e condições descritos neste contrato de licença. <br/>Leia este documento cuidadosamente antes de usar o aplicativo.<br/><br/>
+  </section>
+
+  <section class="features">
 
   <div class="timeline">
 <div class="container left">
@@ -95,11 +326,13 @@ Ao baixar e usar o Tech: Player, você concorda em cumprir os termos e condiçõ
     </div>
   </div>
        
- </div>
+ </div>  
+
+  
    
   <br/>
 <br/><br/><br/><br/>
-     </div>
+    </section> </div>  </main>
       
     </div>
   
