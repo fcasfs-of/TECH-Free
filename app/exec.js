@@ -1,4 +1,20 @@
 
+function removeExtension(filename) {
+            const lastDotIndex = filename.lastIndexOf('.');
+            if (lastDotIndex === -1 || lastDotIndex === 0) {
+                return filename;
+            }
+            return filename.substring(0, lastDotIndex);
+ }
+
+
+function F_getFileName(file) {
+    var fileParam = removeExtension(fstringno_valtext(getFileNameFromoUrl(fstringno_valtext(file, "")),""));
+if(fileParam==="watch" || fileParam==="embed"){  fileParam="";  }
+    return fileParam;   }
+
+
+
 function openlinkf(title,url,mn){    cmodal('<span class=\'adsrow\'> '+title+'</span>',url,'Close',mn,'yes');  } 
 
 
@@ -217,9 +233,9 @@ player_loop:0,
  file_desc:"",
 config:{ osd:{  theme:"light" }, fontweight:"bold" },
  list:[
-{ poster:"player_banner.jpg",title:""+F_getFileName(getfval_tygddet),file:""+getfval_tygddet }
+{ poster:"",title:""+F_getFileName(getfval_tygddet),file:""+getfval_tygddet }
 ],
- cover:"player_banner.jpg"  };
+ cover:""  };
 });
 
 }  }
