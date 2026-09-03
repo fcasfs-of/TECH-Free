@@ -188,6 +188,42 @@ var degetval_p="0";
 
 var getval_tyget=getUrlParameter("fileID");
 
+if (getval_tyget=="") {
+var getfval_tygddet=getUrlParameter("fileLINK");
+	if (getfval_tygddet!="") {
+var getfvald_ddfffle="1";
+var getfvald_tygetsle="1";
+var getfvald_tygetslpose="0";
+var getfvalddd_tyget=getUrlParameter("pos");
+if (getfvalddd_tyget!="") {
+getfvald_tygetslpose=getfvalddd_tyget;
+}
+
+if(getfvalddd_tyget==""){
+var getfvalddd6dd_tyget=getUrlParameter("time");
+if (getfvalddd6dd_tyget!="") {
+getfvald_tygetslpose=convertDurationtoSeconds(getfvalddd6dd_tyget);
+}   }
+
+
+onstart_file(function(){  return { 
+player_lang:"en", 
+pg_dark:false,
+player_osd:true,
+player_controls:0,
+player_autoplay:0,
+player_loop:0,
+ file_title:"",
+ file_desc:"",
+config:{ osd:{  theme:"light" }, fontweight:"bold" },
+ list:[
+{ poster:"player_banner.jpg",title:""+F_getFileName(getfval_tygddet),file:""+getfval_tygddet }
+],
+ cover:"player_banner.jpg"  };
+});
+
+}  }
+
 if (getval_tyget!="") {
 
 if (getUrlParameter("fp")=="On"){  degetval_p="1";  }
