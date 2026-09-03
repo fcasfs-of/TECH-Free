@@ -91,6 +91,17 @@ if(nn){  location.href=nn;  }
   
 
 
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+       var paramName = decodeURIComponent(sParameterName[0]);
+        var paramValue = sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        if (paramName === sParam) {            return paramValue;        }
+    }    
+return "";   }
+
 
 
 function getUrlVars(fd) {
