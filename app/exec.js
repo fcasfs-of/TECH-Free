@@ -223,26 +223,17 @@ if (getfvalddd6dd_tyget!="") {
 getfvald_tygetslpose=getfvalddd6dd_tyget;
 }   }
 
+    
+ const urlIdnput = document.getElementById('urlInput');
+if(urlIdnput){
+urlIdnput.value=getfval_tygddet;
+pegarlindf();
+}
+   
 
 var inpmyNavruz = document.getElementById("myNavrun");    
 inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  background:#000; color:#fff; transition: 0.2s;"></div><style>#zplayler ul {  width: 95%;    height: 95%; }  #zplayler ul li {     width: 100%;    cursor: pointer;  }    #zplayler ul li img {     pointer-events:none;   display: inline-block;    }       #myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style> <div id="custimmdf"></div> ';  
 
-
-onstart_file(function(){  return { 
-player_lang:"en", 
-pg_dark:false,
-player_osd:true,
-player_controls:0,
-player_autoplay:0,
-player_loop:0,
- file_title:"",
- file_desc:"",
-config:{ osd:{  theme:"light" }, fontweight:"bold" },
- list:[
-{ poster:"",title:""+F_getFileName(getfval_tygddet),file:""+getfval_tygddet }
-],
- cover:""  };
-});
 
 }  }
 
