@@ -227,6 +227,10 @@ getfvald_tygetslpose=getfvalddd6dd_tyget;
  const urlIdnput = document.getElementById('urlInput');
 if(urlIdnput){
 urlIdnput.value=getfval_tygddet;
+
+var inpmyNavruz = document.getElementById("myNavrun");    
+inpmyNavruz.innerHTML= '<div id="zplayler" style="width:100%; height:100%;  background:#000; color:#fff; transition: 0.2s;"></div><style>#zplayler ul {  width: 95%;    height: 95%; }  #zplayler ul li {     width: 100%;    cursor: pointer;  }    #zplayler ul li img {     pointer-events:none;   display: inline-block;    }       #myNavrun{ display:block; }   #myNavrun, #zplayler, #myNavrun #zplayler{position:fixed;width:100%; top:0px;left:0px;bottom:0px;right:0px; height:100%;z-index:1;}</style> <div id="custimmdf"></div> ';  
+
 pegarlindf();
 }
    
