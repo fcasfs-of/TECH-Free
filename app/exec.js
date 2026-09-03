@@ -1,3 +1,5 @@
+function fstringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
+
 
 function removeExtension(filename) {
             const lastDotIndex = filename.lastIndexOf('.');
