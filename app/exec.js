@@ -220,7 +220,7 @@ getfvald_tygetslpose=getfvalddd_tyget;
 if(getfvalddd_tyget==""){
 var getfvalddd6dd_tyget=getUrlParameter("time");
 if (getfvalddd6dd_tyget!="") {
-getfvald_tygetslpose=convertDurationtoSeconds(getfvalddd6dd_tyget);
+getfvald_tygetslpose=getfvalddd6dd_tyget;
 }   }
 
 
