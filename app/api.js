@@ -316,7 +316,7 @@ if(stringno_valtext(config.showplaylist,"0")=="1"){   fplayeri.api("showplaylist
 var configdcontextmenu_display="visible";
 var configdcontextmenu_displayrr="";
 if(config.contextmenu_display=="yes"){     configdcontextmenu_display="hidden";    }
-if(config.contextmenu=="false" || config.contextmenu===false){  configdcontextmenu_displayrr="  pjsdiv[i=\"0\"], pjsdiv[i=\"1\"],pjsdiv[i=\"2\"],pjsdiv[i=\"3\"],pjsdiv[i=\"4\"],pjsdiv[i=\"5\"],pjsdiv[i=\"6\"],pjsdiv[i=\"7\"],pjsdiv[i=\"8\"],pjsdiv[i=\"9\"],pjsdiv[i=\"9\"]:before{  visibility: hidden !important;  pointer-events: none !important;  }   ";  }
+if(config.contextmenu=="0" || config.contextmenu==0){  configdcontextmenu_displayrr="  pjsdiv[i=\"0\"], pjsdiv[i=\"1\"],pjsdiv[i=\"2\"],pjsdiv[i=\"3\"],pjsdiv[i=\"4\"],pjsdiv[i=\"5\"],pjsdiv[i=\"6\"],pjsdiv[i=\"7\"],pjsdiv[i=\"8\"],pjsdiv[i=\"9\"],pjsdiv[i=\"9\"]:before{  visibility: hidden !important;  pointer-events: none !important;  display: none !important;  }   ";  }
 
 var configfcontextmenu_dnameisplay=stringno_valtext(config.contextmenu_namedisplay,"");
 if(configfcontextmenu_dnameisplay==""){     configfcontextmenu_dnameisplay="FCASFS-OF TECH: Player";    }
