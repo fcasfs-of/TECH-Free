@@ -236,7 +236,7 @@ function fs_Playerjs(vars){   var fs_Playerjsdd="";
                            
  var dscdfript_cokkied = document.createElement("script");
     dscdfript_cokkied.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/cast.js");
-document.getElementsByTagName("body")[0].appendChild(dscdfript_cokkied); 
+//document.getElementsByTagName("body")[0].appendChild(dscdfript_cokkied); 
 
     if(vars){
       if(vars.id!=""){
