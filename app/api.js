@@ -265,7 +265,7 @@ function TEXH_PLAYER_OgerarCssOcultar() { const s = []; for (let i = 0; i <= 9; 
 function TEXH_PLAYER_OgerarCssPlayer(idd, config) {
     var configdcontextmenu_displayxc = "";   var configdcontextmenu_display = "visible";      var configdcontextmenu_displayrr = "";
     
-    if (config.contextmenu_display === "yes") {      configdcontextmenu_displayxc="display:none;  ";  configdcontextmenu_display = "hidden";    }
+    if (config.contextmenu_display === "yes") {      configdcontextmenu_displayxc="display:none !important;  ";  configdcontextmenu_display = "hidden !important";    }
     
     if (config.contextmenu === "0" || config.contextmenu === 0) {        configdcontextmenu_displayrr = TEXH_PLAYER_OgerarCssOcultar();    }
 
