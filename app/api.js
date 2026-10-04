@@ -263,9 +263,9 @@ fs_Playerjsdd.Toast = function(type="", title="", msg="", duration = 3000){   al
 function TEXH_PLAYER_OgerarCssOcultar() { const s = []; for (let i = 0; i <= 9; i++) s.push(`pjsdiv[i="${i}"]`); s.push(`pjsdiv[i="9"]:before`); return `  ${s.join(', ')}{  visibility: hidden !important;  pointer-events: none !important;  display: none !important;  }   `; }
 
 function TEXH_PLAYER_OgerarCssPlayer(idd, config) {
-    var configdcontextmenu_display = "visible";      var configdcontextmenu_displayrr = "";
+    var configdcontextmenu_displayxc = "";   var configdcontextmenu_display = "visible";      var configdcontextmenu_displayrr = "";
     
-    if (config.contextmenu_display === "yes") {        configdcontextmenu_display = "hidden";    }
+    if (config.contextmenu_display === "yes") {      configdcontextmenu_displayxc="display:none;  ";  configdcontextmenu_display = "hidden";    }
     
     if (config.contextmenu === "0" || config.contextmenu === 0) {        configdcontextmenu_displayrr = TEXH_PLAYER_OgerarCssOcultar();    }
 
@@ -293,8 +293,8 @@ function TEXH_PLAYER_OgerarCssPlayer(idd, config) {
     var idFormatado = stringno_valtext(idd, "");
     
     var cssResult = "<style>" +
-        "pjsdiv[i=\"9\"]{  visibility: hidden;   pointer-events: none;  } " +
-        "pjsdiv[i=\"9\"]:before{  visibility: " + configdcontextmenu_display + ";   content:'" + configfcontextmenu_dnameisplay + "'; } " +
+        "pjsdiv[i=\"9\"]{  "+configdcontextmenu_displayxc+"   visibility: hidden;   pointer-events: none;  } " +
+        "pjsdiv[i=\"9\"]:before{  "+configdcontextmenu_displayxc+"   visibility: " + configdcontextmenu_display + ";   content:'" + configfcontextmenu_dnameisplay + "'; } " +
         "#" + idFormatado + " *, #" + idFormatado + " *:before, #" + idFormatado + " *:after{ " +
             settifgfgndsdddfsfontrollsfd +
             settifgfgngdfdsfsfontrollsfd +
