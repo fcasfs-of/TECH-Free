@@ -2,7 +2,8 @@ let app_manifest = { "name": "TECH - PLAYER", "description": "Our audio and vide
 
 var settingsplayer={ color_icons:"#63B8FF", color_texts:"#00EEEE", config:{ fontstyle:"none", textdecoration:"none", texttransform:"none", textbold:true, }, controls:true, id:"fs001", active:"yes",typeplayer:"1",modeplayer:"url",loop:"0",autoplay:"1",title:"",poster:"",files:"#",fontstyle:"",textdecoration:"",texttransform:"",fontweight:"bold",colortexts:"FFFFFF",coloricons:"FFFFFF",volume:"1",mute:"0",menu:"0",seek:"0",share:"0",showplaylist:"0",fullscreen:"0",contextmenu_display:"no",share_disp:"no",contextmenu_namedisplay:"TECH - PLAYER: BETA", error:"" };
 
-var listfrr_is={};   var fplayeri;   var var_versionpropg="";
+var listfrr_is={};   var fplayeri;   var var_versionpropg="";   
+var adpp_vers="2.0.2.0";function fcas_techplayer_version_ac(){return adpp_vers+"";}
 
 function getUrlParameter(sParam) { var dgetUrlParameterd=""; var sPageURL = decodeURIComponent(location.href);/*window.location.search.substring(1)); */ if(sPageURL.split('?')){ var sURLVariables = sPageURL.split('?')[1].split('&'); if(sPageURL.split('?')[1].split('&')){ for (var i = 0; i < sURLVariables.length; i++) { var sParameterName = sURLVariables[i].split('='); if(sURLVariables[i].split('=')){ if (sParameterName[0] == sParam) { dgetUrlParameterd=sParameterName[1]; } } } } } return dgetUrlParameterd; }
 function mchangelag(nn) {  if(nn){  location.href=nn;  }  }
