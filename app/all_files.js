@@ -1,12 +1,4 @@
 const mdpl_fielsd = [];
 
-var listakf = [
-  "99f84mh00",
-  "99e84d4tk",
-  "99e84d5d",
-  "99e84d6f",
-  "99e84d6ja",
-  "99e84d6k",
-  "99e84f5d0a73"
-];
+var listakf = [ "99f84mh00", "99e84d4tk", "99e84d5d", "99e84d6f", "99e84d6ja", "99e84d6k", "99e84f5d0a73" ];
 
